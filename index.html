@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akademy</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/super.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/web.css">
+    <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css">
+</head>
+<body>
+    <div class="super super-all-absolute" id="logger">
+        <div class="super super-l8 logo super-relative">
+            <div class="super-all-absolute image"></div>
+        </div>
+        <div class="super super-l4 modal-box">
+            <div class="super super-l12 super-al-center">
+                <span class="super super-l12 company-logo">
+                </span>
+                <span class="super def super-al-center">
+                    Système de gestion académique de CHCL
+                </span>
+            </div>
+            <div class="super-l12 field">
+                <input class="input" name="username">
+                <label>Pseudo</label>
+            </div>
+            <div class="super-l12 field">
+                <span class="combined super-flex-center">
+                    <input class="input" type="password" name="passcode">
+                    <icon class="password-toggler ion-eye" alternate="ion-eye,ion-eye-disabled"></icon>
+                </span>
+                <label>Passcode</label>
+            </div>
+            <div class="super-l12 action super-flex-center">
+                <button class="super super-l4" id="login" type="submit">Connexion</button>
+                <div class="super super-l6 super-al-center remember">
+                    <input type="checkbox" name="stay"> je reste connecté
+                </div>
+            </div>
+            <div class="super super-l12 alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/zepto.js"></script>
+    <script src="js/localforage.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/events.js"></script>
+    <script>
+        localforage.getItem("akademy-data", function(e,v){
+            if(v != null){
+                window.location = "./akademy"
+            }
+        })
+    </script>
+</body>
+</html>
