@@ -1,0 +1,328 @@
+<div class="super super-all-absolute super-l12 student aio register-n-list">
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l12 super-flex-center list">
+            <div class="super super-l12 header super-flex-center">
+                <icon class="las la-user-graduate"></icon>
+                Liste des étudiants
+            </div>
+            <div class="super super-l12 body">
+                <% if(currentYear != null){ %>
+                <div class="super super-l12 sort super-flex-center">
+                    <label class="super"><icon class="las la-sort-amount-down-alt"></icon> Trier par</label>
+                    <div class="super super-l2 field static academic super-scrollable-y">
+                        <select class="super input" name="academic">
+                            <% for(var i in academic){ %>
+                            <option value="<%= academic[i].id %>" <%= academic[i].id == currentYear.id ? 'selected' : '' %> ><%= academic[i].academie %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="super super-l3 field faculty static">
+                        <select class="super input" name="fac">
+                            <option value="">Toutes les filières</option>
+                            <% for(var i in faculty){
+                               if(utils.isPartOf(faculty[i].id)){
+                            %>
+                            <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                            <%  }
+                               }
+                            %>
+                        </select>
+                    </div>
+                    <div class="super super-l3 field grade static">
+                        <select class="super input" name="grade">
+                            <option value="">Tous les Niveaux</option>
+                        </select>
+                    </div>
+                    <% if(allowModule(16)){ %>
+                    <div class="super super-l2 action">
+                        <button class="print-student disabled super super-l12"><icon class="las la-print"></icon> Imprimer</button>
+                    </div>
+                    <% } %>
+                </div>
+                <% } %>
+                <div class="super super-l12 list super-scrollable-y">
+                    <%
+                        var k = 0;
+                        for(var i in student){
+                            if(utils.isPartOf(student[i].niveau.filiere.id)){
+                        k++;
+                    %>
+                    <item class="super super-l12 student-item" data-id="<%= student[i].id %>" data-fac="<%= student[i].niveau.filiere.id %>" data-year="<%= student[i]._annee_academique %>" data-grade="<%= student[i]._niveau %>" data-filter="<%= student[i].prenom+' '+student[i].nom+' '+student[i].code %>">
+                    <div class="super super-l12 summary super-flex-center">
+                        <avatar style="background-image: url(<%= student[i].photo != null ? '../assets/avatars/'+student[i].photo : '' %>)">
+                            <%= student[i].photo != null ? '' : student[i].prenom[0].toUpperCase(); %>
+                        </avatar>
+                        <div class="super super-l7 data">
+                            <span class="super super-l12 name">
+                                   <%= student[i].nom.toUpperCase()+", "+student[i].prenom %>
+                                </span>
+                            <span class="super super-l12 suite super-flex-center">
+                                <span class="super el"><%= student[i].age %> ans</span>
+                                <span class="super el"><%= student[i].sexe == "M" ? "Homme" : "Femme" %></span>
+                            </span>
+                        </div>
+                        <div class="super super-l3 action see">
+                            <button class="light"><icon class="ion-eye"></icon> <span>Plus de détails</span></button>
+                        </div>
+                    </div>
+                    <div class="super super-l12 metadata super-flex-center">
+                        <div class="super avatar-box super-flex-center super-flex-column super-flex-align-center">
+                            <avatar class="super" style="background-image: url(<%= student[i].photo != null ? '../assets/avatars/'+student[i].photo : '' %>)">
+                                <%= student[i].photo != null ? '' : student[i].prenom[0].toUpperCase(); %>
+                            </avatar>
+                            <div class="super super-l12 code">
+                                <%= student[i].code %>
+                            </div>
+                        </div>
+                        <div class="super super-l10 super-flex super-flex-column">
+                            <div class="super super-l12 student-information super-flex">
+                                <div class="super super-l12 personals">
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">Filière</div>
+                                            <div class="super super-l6 content"><%= student[i].niveau.filiere.nom %></div>
+                                        </div>
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">Niveau d'étude</div>
+                                            <div class="super super-l6 content"><%= student[i].niveau.notation %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">E-mail</div>
+                                            <div class="super super-l6 content"><%= student[i].email %></div>
+                                        </div>
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">Téléphone</div>
+                                            <div class="super super-l6 content"><%= student[i].telephone %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">Lieu de naissance</div>
+                                            <div class="super super-l6 content"><%= student[i].lieu_naissance %></div>
+                                        </div>
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">Date naissance</div>
+                                            <div class="super super-l6 content"><%= student[i].date_naissance %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l12 row super-flex">
+                                            <div class="super super-l3 label">Adresse</div>
+                                            <div class="super super-l9 Icontent"><%= student[i].adresse %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">NIF</div>
+                                            <div class="super super-l6 content"><%= student[i].nif %></div>
+                                        </div>
+                                        <div class="super super-l6 row super-flex">
+                                            <div class="super super-l6 label">NINU</div>
+                                            <div class="super super-l6 content"><%= student[i].ninu %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l12 row super-flex">
+                                            <div class="super super-l3 label">Personne de référence</div>
+                                            <div class="super super-l9 content"><%= student[i].personne_ref == null ? "Aucun" : student[i].personne_ref %></div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 wrapper super-flex">
+                                        <div class="super super-l12 row super-flex">
+                                            <div class="super super-l3 label">Téléphone ref</div>
+                                            <div class="super super-l9 content"><%= student[i].telephone_ref %></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="super super-l12 super-flex actions super-flex-center">
+                                <div class="super super-l6 action state">
+                                    <% if(allowModule(15)){ %>
+                                    <div class="super super-l12 super-flex combined switch" value="A" data-index="<%= i %>">
+                                        <button class="super <%= student[i].etat == 'A' ? '' : 'off' %>" data-value="A" index="0"><%= student[i].sexe == 'M' ? 'Actif' : 'Active'  %></button>
+                                        <button class="super <%= student[i].etat == 'T' ? '' : 'off' %>" data-value="T" index="1">Terminé<%= student[i].sexe == 'M' ? '' : 'e' %></button>
+                                        <button class="super <%= student[i].etat == 'D' ? '' : 'off' %>" data-value="D" index="2">Dossier fermé</button>
+                                        <button class="super <%= student[i].etat == 'E' ? '' : 'off' %>" data-value="E" index="3">Exclu<%= student[i].sexe == 'M' ? '' : 'e' %></button>
+                                    </div>
+                                    <% } %>
+                                </div>
+                                <div class="super super-l6 super-flex-center super-flex-align-end action">
+                                    <% if(allowModule(13)){ %>
+                                    <button class="light edit" data-index="<%= i %>"><icon class="ion-edit"></icon> Modifier les informations</button>
+                                    <% } %>
+                                    <% if(allowModule(14)){ %>
+                                    <button class="light delete" data-index="<%= i %>"><icon class="ion-trash-b"></icon> Supprimer</button>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </item>
+                    <%
+                        }
+                      }
+                    %>
+                    <div class="super super-l12 super-flex-align-center empty-info <%= k ? 'not-super' : '' %> super-flex-center">
+                        <%= currentYear == null ? "Aucune année académique n'est en cours !" : "Aucun étudiant..." %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% if(allowModule(12) && currentYear != null){ %>
+        <div class="super super-all-absolute mask">
+        </div>
+        <div class="super float-action">
+            <input type="file" class="hidden-file" id="choose-file">
+            <button class="ion-android-document file-register"></button>
+            <button class="las la-plus register-n-list-switch student-form"></button>
+        </div>
+        <% } %>
+    </div>
+    <% if(allowModule(12)){ %>
+    <div class="super form-add register-zone super-scrollable-y">
+        <div class="super super-l12" id="studentForm">
+            <h1>Nouvel Étudiant</h1>
+            <div class="super super-l12 super-flex-center identification">
+                <div class="super avatar-box">
+                    <input type="file" accept="image/x-png,image/gif,image/jpeg" class="hidden-file" id="picture-file">
+                    <avatar class="super">
+                        <icon class="las la-user"></icon>
+                    </avatar>
+                    <icon class="super avatar-chooser ion-android-camera"></icon>
+                </div>
+                <div class="super super-l8 code-box">
+                    <span class="super super-l12">
+                        Code d'identification Système
+                    </span>
+                    <span class="super super-l12 code">
+                    </span>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex group">
+                <div class="super super-l6 field">
+                    <label>Nom de l'étudiant</label>
+                    <input type="text" class="input super-l12" name="st_nom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                </div><!--
+             --><div class="super super-l6 field">
+                <label>Prénom de l'étudiant</label>
+                <input type="text" class="input super-l12" name="st_prenom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+            </div>
+            </div>
+            <div class="super super-l12 super-flex group super-flex-end">
+                <div class="super super-l3 field">
+                    <label>Sexe</label>
+                    <select class="input super-l12" name="st_sexe" match="^[\\S]$">
+                        <option value=""></option>
+                        <option value="F">Féminin</option>
+                        <option value="M">Masculin</option>
+                    </select>
+                </div>
+                <div class="super super-l9 group">
+                    <label class="linked">Numéro de téléphone</label>
+                    <div class="super super-l12 field">
+                        <div class="super super-l12 combined super-flex-end">
+                            <div class="super super-l4" style="padding: .1em 0">+509</div>
+                            <input type="text" class="input super-l8" mask="####-####" match="^[234][0-9]{3}-?[0-9]{4}$"  placeholder="XXXX-XXXX" name="st_phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l12 field">
+                    <label>Adresse</label>
+                    <input type="text" class="input super-l12" name="st_address" match="^(#? *[0-9]+ *, *)?([A-Za-zÀ-ÖØ-öø-ÿ]+[\\s\\S]* *, *)?[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]( *, *[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*)?$">
+                </div>
+            </div>
+            <div class="super super-l12 group super-flex-end">
+                <div class="super super-l6 field">
+                    <label>Lieu de naissance</label>
+                    <input type="text" class="input super-l12" name="st_birthplace">
+                </div>
+                <div class="super super-l6">
+                    <label class="linked">Date de naissance</label>
+                    <div class="super super-l12 field">
+                        <div class="super super-l12 combined super-flex-center">
+                            <icon class="super las la-calendar-day"></icon>
+                            <input type="date" class="input end" name="st_birthdate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l12 field">
+                    <label>Adresse e-mail</label>
+                    <input type="text" class="input super-l12" name="st_email" match="^[a-z]+[a-z0-9.]*@[a-z]+[a-z0-9.]*\\.[a-z]+[a-z0-9]*$">
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field faculty">
+                    <label>Filière</label>
+                    <select type="text" class="input super-l12 faculties" name="st_fac" match="^[\\d]+$">
+                        <option value=""></option>
+                        <% for(var i in faculty){
+                           if(utils.isPartOf(faculty[i].id)){
+                        %>
+                            <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                        <%  }
+                           }
+                        %>
+                    </select>
+                </div>
+                <div class="super super-l6 field grade">
+                    <label>Niveau</label>
+                    <select type="text" class="input super-l12" name="st_skill" match="^[\\d]+$">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field">
+                    <label>NIF</label>
+                    <input type="text" class="input super-l12" mask="###-###-###-#" match="^([0-9]{3}-){3}[0-9]$" name="st_nif">
+                </div>
+                <div class="super super-l6 field">
+                    <label>NINU</label>
+                    <input type="text" class="input super-l12" mask="##########" match="^[1-5][0-9]{9}$" name="st_ninu">
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l9 group">
+                    <div class="super super-l12 field">
+                        <label>Nom de la personne de référence</label>
+                        <div class="super super-l12 combined super-flex-end">
+                            <input type="text" class="input super-l12" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$" name="st_person_ref">
+                        </div>
+                    </div>
+                </div>
+                <div class="super super-l9 group">
+                    <label class="linked">Téléphone de la personne de référence</label>
+                    <div class="super super-l12 field">
+                        <div class="super super-l12 combined super-flex-end">
+                            <div class="super super-l4" style="padding: .1em 0">+509</div>
+                            <input type="text" class="input super-l8" mask="####-####" match="^[34][0-9]{3}-?[0-9]{4}$"  placeholder="XXXX-XXXX" name="st_phone_ref">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 group">
+                <label class="super-l12">Mémo (facultatif)</label>
+                <div class="super super-l12 field limited extended">
+                    <textarea class="super super-l12 input" name="st_memo" style="height: 100px; resize: none" placeholder="Écrivez-le ici..."></textarea>
+                </div>
+            </div>
+            <div class="super super-l12 student-alert alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 action">
+                <button id="newStudent" data-index="-1">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

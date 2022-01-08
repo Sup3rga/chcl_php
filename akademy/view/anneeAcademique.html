@@ -1,0 +1,99 @@
+<div class="super super-all-absolute aio super-l12 academic register-n-list">
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l6 super-flex-center list">
+            <div class="super super-l12 header super-flex-center">
+                <icon class="ion-android-calendar"></icon>
+                Année Académique
+            </div>
+            <div class="super super-l12 body">
+                <%
+                var k = 0;
+                for(var i in academic){ %>
+                    <item class="super super-l12 <%= academic[i].etat == 'O' ? 'active' : ''%>" data-index="<%= i %>" data-filter="<%= academic[i].academie %>">
+                        <%= academic[i].academie %>
+                    </item>
+                <%
+                    k++;
+                }
+                if(k == 0){
+                %>
+                <div class="super super-l12 empty-info super-flex-center">
+                    La liste des années s'afficheront ici
+                </div>
+                <% } %>
+<!--                <item class="super super-l12 less">-->
+<!--                    Années académiques plus anciennes...-->
+<!--                </item>-->
+            </div>
+        </div>
+        <div class="super super-l5 presentation super-relative super-scrollable-y">
+            <div class="super super-l12 empty-info super-flex-center">
+                Les informations s'afficheront ici...
+            </div>
+            <div class="super super-l12 infos not-super">
+                <div class="super super-l12">
+                    Année académique : <span class="super academie"></span>
+                </div>
+                <canvas class="super super-l12 diagramme"></canvas>
+                <div class="super super-l12 action state-box">
+                    <label class="super super-l12">Etat de l'année</label>
+                    <div class="super combined switch automatic state" value="F">
+                        <button class="super red off" data-value="F" index="0">Fermée</button>
+                        <button class="super green" data-value="O" index="1">Ouverte</button>
+                    </div>
+                </div>
+                <div class="super super-l12 action">
+                    <% if(allowModule(10)){ %>
+                    <button id="editYear"><icon class="las la-edit"></icon> Modifier les informations</button>
+                    <% } %>
+                    <% if(allowModule(11)){ %>
+                    <button id="passYear"><icon class="las la-graduation-cap"></icon> Lancer la passation des étudiants</button>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="super super-all-absolute mask">
+        </div>
+        <% if(allowModule(10)){ %>
+        <div class="super float-action">
+            <button class="las la-plus register-n-list-switch aka-form"></button>
+        </div>
+        <% } %>
+    </div>
+    <% if(allowModule(10)){ %>
+    <div class="super form-add register-zone super-scrollable-y">
+        <h1>Nouvelle Année académique</h1>
+        <div class="super super-l4 super-flex-center anneeAcademique">
+            <span class="super super-l4 begin super-al-center"></span>
+            <span class="super super-l2 super-al-center">-</span>
+            <span class="super super-l4 end super-al-center"></span>
+        </div>
+        <div class="super super-l12" id="Aka-yearForm">
+            <label>Date de début de l'A.A</label>
+            <div class="super super-l12 field static">
+                <div class="super super-l12 combined super-flex-center">
+                    <icon class="super las la-calendar-day"></icon>
+                    <input type="date" class="input begin" name="anneeAka_begin">
+                </div>
+            </div>
+            <label>Date de fin de l'A.A</label>
+            <div class="super super-l12 field static">
+                <div class="super super-l12 combined super-flex-center">
+                    <icon class="super las la-calendar-day"></icon>
+                    <input type="date" class="input end" name="anneeAka_end">
+                </div>
+            </div>
+            <div class="super super-l12 anneeAka-year-alert alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 action">
+                <button id="newYear" data-index="-1">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

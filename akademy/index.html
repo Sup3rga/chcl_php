@@ -1,0 +1,175 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Akademy | Panel</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/line-awesome-1.3.0/css/line-awesome.css">
+    <link rel="stylesheet" href="../css/super.css">
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/web.css">
+</head>
+<body>
+    <div class="super super-l12 super-flex super-all-absolute akademy template">
+        <sidemenu class="super">
+            <div class="company super super-flex-center">
+                <div class="company-logo super"></div>
+                <span class="name">Akademy</span>
+            </div>
+            <div class="super super-l12 links">
+                <item class="super super-l12 active super-flex-center">
+                    <icon class="las la-home"></icon>
+                    <span class="super text">
+                        Dashboard
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-calendar-alt"></icon>
+                    <span class="super text">
+                        Année académique
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-user-graduate"></icon>
+                    <span class="super text">
+                        Étudiants
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-university"></icon>
+                    <span class="super text">
+                        Filières
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-highlighter"></icon>
+                    <span class="super text">
+                        Cours
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-diagnoses"></icon>
+                    <span class="super text">
+                        Professeurs
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-chart-pie"></icon>
+                    <span class="super text">
+                        Administration
+                    </span>
+                </item>
+                <item class="super super-l12 super-flex-center">
+                    <icon class="las la-users-cog"></icon>
+                    <span class="super text">
+                    Utilisateurs
+                </span>
+                </item>
+            </div>
+        </sidemenu>
+        <view class="super super-l12 super-flex">
+            <appbar class="super super-l12 super-flex-center">
+                <div class="super super-l5 search-zone">
+                    <div class="super super-l10 field static">
+                        <div class="combined super-flex-center">
+                            <input type="search" class="input super super-l10 search-bar" placeholder="Recherchez...">
+                            <icon class="ion-ios-search-strong"></icon>
+                        </div>
+                    </div>
+                </div><!--
+             --><div class="super super-l7 super-flex-center">
+                    <div class="action super super-l6" style="opacity: 0">
+                        <button><icon class="ion-plus"></icon> Nouvelle année académique</button>
+                    </div><!--
+                 --><div class="super super-l1"></div><!--
+                 --><div class="super super-l5 user-zone super-flex-center">
+                        <avatar class="super">
+                        </avatar>
+                        <div class="super super-l8 user-info">
+                            <span class="super super-l12 greeting"></span>
+                            <span class="super super-l12 name"></span>
+                        </div>
+                        <button class="super super-l2 ion-chevron-down" id="user-panel-toggler"></button>
+                    </div>
+                </div>
+            </appbar>
+            <panel class="super super-l12 super-relative">
+                <div class="super super-all-absolute waiter-load panel-loader">
+                    <div class="box super super-flex-center super-l12">
+                        <div class="super super-l12">
+                            <div class="super super-l12 animation-view super-al-center">
+                                <span class="bulbe"></span>
+                                <span class="bulbe"></span>
+                                <span class="bulbe"></span>
+                            </div>
+                            <span class="super super-l12 super-al-center text">Chargement en cours...</span>
+                        </div>
+                    </div>
+                </div>
+            </panel>
+        </view>
+    </div>
+    <div class="super super-l12 super-all-absolute not-super printview" id="printview">
+        <div class="super super-all-absolute super-l12 super-flex-center super-flex-align-center">
+            <div class="super super-l10 print-preview">
+                <div class="super super-l12 head">
+                    <div class="super super-l12 name">Campus Henri Christophe de Limonade</div>
+                    <div class="super super-l12 year">Année académique <span class="super info"></span> </div>
+                    <div class="super super-l12 text"></div>
+                </div>
+                <div class="super super-l12 list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="super super-l3 user-panel user-zone not-super">
+        <div class="super super-l12 super-al-center">
+            <avatar class="super">
+            </avatar>
+        </div>
+        <div class="super super-l12 user-info">
+            <span class="super super-l12 greeting"></span>
+            <span class="super super-l12 name"></span>
+        </div>
+        <div class="super super-l12 action super-flex-center">
+            <icon id="logout" class="las la-sign-out-alt"></icon>
+            Déconnexion
+        </div>
+    </div>
+    <div class="super super-all-absolute dialog-box super-flex-center">
+        <div class="super super-all-absolute super-flex-center wrapper">
+            <div class="super super-l4 box super-flex">
+                <div class="super super-l12 super-flex-center message">
+                </div>
+                <div class="super super-l12 action">
+                    <button class="no not-super light">Annuler</button>
+                    <button class="yes not-super light">Oui</button>
+                    <button class="ok light">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="super super-l12 super-all-absolute form-popup right-alignment">
+        <div class="super super-l4 box super-flex super-flex-column">
+            <div class="super super-l12 title">
+            </div>
+            <div class="super super-l12 body super-scrollable-y">
+            </div>
+            <div class="super super-l12 action super-al-right">
+                <button class="light" data-value="cancel">Annuler</button>
+                <button data-value="submit">Soumettre</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/zepto.js"></script>
+    <script src="../js/localforage.min.js"></script>
+    <script src="../js/ejs.min.js"></script>
+    <script src="../js/thunderspeed.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/chart.min.js"></script>
+    <script src="../js/booting.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/akademy.js"></script>
+</body>
+</html>
