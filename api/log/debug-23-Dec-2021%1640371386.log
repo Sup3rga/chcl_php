@@ -1,0 +1,36 @@
+[ 24-Dec-2021 15:35:13 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:41:39 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:45:55 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:48:44 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:49:42 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:50:24 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 15:50:45 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 24-Dec-2021 15:51:25 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 15:58:35 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 15:58:35 ] [Total] 1
+[ 24-Dec-2021 16:12:10 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:12:10 ] [Total] 1
+[ 24-Dec-2021 16:12:40 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:12:41 ] [Total] [1]
+[ 24-Dec-2021 16:13:23 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:13:23 ] [Total] [1]
+[ 24-Dec-2021 16:14:24 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:14:24 ] [Total] [1,2]
+[ 24-Dec-2021 16:14:40 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:14:49 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:15:20 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:15:20 ] [Total] [1,2]
+[ 24-Dec-2021 16:17:26 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:17:26 ] [Date] 2021-12-24
+[ 24-Dec-2021 16:17:26 ] [Date] 2021-12-24
+[ 24-Dec-2021 16:17:26 ] [Total] [1,2]
+[ 24-Dec-2021 16:17:54 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 24-Dec-2021 16:17:54 ] [Total] [1,2]
+[ 24-Dec-2021 16:17:56 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 24-Dec-2021 16:17:56 ] [Total] [1,2]
+[ 24-Dec-2021 16:18:02 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 24-Dec-2021 16:18:02 ] [Total] [1,2]
+[ 24-Dec-2021 16:18:03 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 24-Dec-2021 16:18:03 ] [Total] [1,2]
+[ 24-Dec-2021 16:39:51 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 24-Dec-2021 16:39:51 ] [Total] [1,2]

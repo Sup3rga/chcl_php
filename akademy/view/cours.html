@@ -1,0 +1,454 @@
+<div class="super super-all-absolute super-l12 course aio register-n-list">
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l12 super-flex super-flex-column list card-manager">
+            <div class="super super-l12 header super-flex super-flex-column">
+                <h1>
+                    <icon class="las la-pencil-ruler"></icon>
+                    Gestion des cours
+                </h1>
+                <div class="super super-l12">
+                    <div class="super onglet card-tab active" data-index="0">
+                        <span class="super super-l12 text">Tous les cours</span>
+                        <span class="super super-l12 line"></span>
+                    </div>
+                    <% if(allowModule(21)){ %>
+                    <div class="super onglet card-tab" data-index="1">
+                        <span class="super super-l12 text">Horaires</span>
+                        <span class="super super-l12 line"></span>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="super super-l12 body card-container">
+                <!-- liste -->
+                <card class="super super-l12 card active course-list super-flex super-flex-column" data-index="0">
+                    <% if(currentYear != null){ %>
+                    <div class="super super-l12 sort super-flex-center">
+                        <label class="super">
+                            <icon class="las la-sort-amount-down-alt"></icon> Trier par
+                        </label>
+                        <div class="super super-l2 field static academic super-scrollable-y">
+                            <select class="super input" name="academic">
+                                <% for(var i in academic){ %>
+                                <option value="<%= academic[i].id %>" <%= academic[i].id == currentYear.id ? 'selected' : '' %> ><%= academic[i].academie %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field session static sort-list">
+                            <select class="super input">
+                                <option value="1">Session 1</option>
+                                <option value="2">Session 2</option>
+                            </select>
+                        </div>
+                        <div class="super super-l3 field faculty static sort-list">
+                            <select class="super input">
+                                <option value="">Toutes les filières</option>
+                                <% for(var i in faculty){
+                                    if(utils.isPartOf(faculty[i].id)){
+                                %>
+                                <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                                <%   }
+                                   }
+                                %>
+                            </select>
+                        </div>
+                        <div class="super super-l3 field grade static">
+                            <select class="super input">
+                                <option value="">Tous les Niveaux</option>
+                            </select>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="super super-l12 list super-scrollable-y" height="90% !important">
+                        <%
+                        var seance = 0, hours = {}, total_h = 0, total_i = 0, k = 0;
+                        for(var i in faculty){
+                            if(utils.isPartOf(faculty[i].id)){
+                            k++;
+                        %>
+                        <div class="super super-l12 bloc" data-id="<%= faculty[i].id %>">
+                            <label class="super fac"><%= faculty[i].nom %></label>
+                        <% for(var j in course){
+                                if(course[j]._filiere == faculty[i].id){
+                        %>
+                            <item class="super super-l12 modal-item course-item" data-id="<%= course[j].id %>">
+                                <div class="super super-l12 summary super-flex-center">
+                                    <div class="super super-l8 data">
+                                            <span class="super super-l12 name">
+                                                <%= course[j].nom %>
+                                            </span>
+                                        <span class="super super-l12 suite super-flex-center">
+                                                <%
+                                                    seance = 0;
+                                                    for(var k in course[j].horaire){ seance++; }
+                                                %>
+                                            <span class="super el"><span class="nb_seance"><%= seance+" séance"+(seance > 1 ? "s" : "") %></span> par semaine en <%= course[j].niveau.notation %></span>
+                                            </span>
+                                    </div>
+                                    <div class="super super-l4 action see">
+                                        <button class="light"><icon class="ion-eye"></icon> <span>Plus de détails</span></button>
+                                    </div>
+                                </div>
+                                <div class="super super-l12 metadata">
+                                    <div class="super super-l12 student-information super-flex">
+                                        <div class="super super-l12 personals">
+                                            <div class="super super-l12 wrapper super-flex">
+                                                <div class="super super-l6 row super-flex">
+                                                    <div class="super super-l6 label">Professeur titulaire</div>
+                                                    <div class="super super-l6 content"><%= course[j].titulaire %></div>
+                                                </div>
+                                                <div class="super super-l6 row super-flex">
+                                                    <div class="super super-l6 label">Professeur suppléant</div>
+                                                    <div class="super super-l6 content"><%= course[j].suppleant == null ? "N/A" : course[j].suppleant %></div>
+                                                </div>
+                                            </div>
+                                            <div class="super super-l12 wrapper super-flex">
+                                                <div class="super super-l6 row super-flex">
+                                                    <div class="super super-l6 label">Niveau</div>
+                                                    <div class="super super-l6 content"><%= course[j].niveau.notation %></div>
+                                                </div>
+                                                <div class="super super-l6 row super-flex">
+                                                    <div class="super super-l6 label">Session</div>
+                                                    <div class="super super-l6 content"><%= course[j].session %></div>
+                                                </div>
+                                            </div>
+                                            <div class="super super-l12 wrapper super-flex">
+                                                <div class="super super-l6 row super-flex">
+                                                    <div class="super super-l6 label">Coéfficient</div>
+                                                    <div class="super super-l6 content"><%= course[j].coefficient %></div>
+                                                </div>
+                                            </div>
+                                            <div class="super super-l12 wrapper table-host">
+                                                <div class="super super-l12 row">
+                                                    <div class="super super-l12 label">Horaire de dispensation</div>
+                                                    <div class="super super-l12 table">
+                                                        <%
+                                                            hours = {};
+                                                            total_i = 0;
+                                                            for(var k in workDays){
+                                                                total_h = 0;
+                                                                for(var x in course[j].horaire){
+                                                                    if(course[j].horaire[x].day == k){
+                                                                        if(!(k in hours)) hours[k] = [];
+                                                                        hours[k].push({
+                                                                            interval : course[j].horaire[x].begin.replace(/:/, 'h : ').replace(/^0([0-9])/, '$1')+
+                                                                            " - "+
+                                                                            course[j].horaire[x].end.replace(/:/, 'h : ').replace(/^0([0-9])/, '$1'),
+                                                                            tp : course[j].horaire[x].tp,
+                                                                            academic: course[j].horaire[x].annee_academique
+                                                                        });
+                                                                        total_i++;
+                                                                    }
+                                                                    total_h++;
+                                                                }
+                                                                if(total_i >= total_h) break;
+                                                            }
+                                                            for(var k in hours){
+                                                                %>
+                                                                <div class="super <%= total_i <= 2 ? 'super-l12' : 'super-l6' %> super-flex-center range" data-ya="">
+                                                                    <div class="super day"><%= workDays[k] %></div>
+                                                                    <% for(var x in hours[k]){ %>
+                                                                        <div data-year="<%= hours[k][x].academic %>" class="super hour <%= hours[k][x].tp ? 'tp' : 'cm' %>"><%= hours[k][x].interval %></div>
+                                                                    <% } %>
+                                                                </div>
+                                                                <%
+                                                            }
+                                                        %>
+                                                        <div class="super super-l12 legend super-flex-center">
+                                                            <div class="super hint super-flex-center">
+                                                                <span class="square cm"></span>
+                                                                Cours magistral
+                                                            </div>
+                                                            <div class="super hint super-flex-center">
+                                                                <span class="square tp"></span>
+                                                                Travaux pratiques
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l12 super-flex actions super-flex-center">
+                                        <div class="super super-l6 action state">
+                                            <% if(allowModule(20)){ %>
+                                            <div class="super super-l12 super-flex combined switch" value="A" data-index="<%= j %>">
+                                                <button class="super <%= course[j].etat == 'E' ? '' : 'off' %>" data-value="E" index="0">En dispense</button>
+                                                <button class="super <%= course[j].etat == 'D' ? '' : 'off' %>" data-value="D" index="1">Déjà dispensé</button>
+                                                <button class="super <%= course[j].etat == 'S' ? '' : 'off' %>" data-value="S" index="2">Supprimé</button>
+                                                <button class="super <%= course[j].etat == 'N' ? '' : 'off' %>" data-value="N" index="3">Non dispensé</button>
+                                            </div>
+                                            <% } %>
+                                        </div>
+                                        <div class="super super-l6 super-flex-center super-flex-align-end action">
+                                            <% if(allowModule(18)){ %>
+                                            <button class="light edit" data-index="<%= j %>"><icon class="ion-edit"></icon> Modifier les informations</button>
+                                            <% } %>
+                                            <% if(allowModule(17)){ %>
+                                            <button class="light clone" data-index="<%= j %>"><icon class="las la-link"></icon> Cloner</button>
+                                            <% } %>
+                                            <% if(allowModule(19)){ %>
+                                            <button class="light delete" data-index="<%= j %>"><icon class="ion-trash-b"></icon> Supprimer</button>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </item>
+                        <%
+                                }
+                            }
+                        %>
+                        </div>
+                        <%
+                            }//part of
+                        } //fac
+                        %>
+                        <div class="super super-l12 empty-info <%= k ? 'not-super' : '' %> super-flex-center">
+                            Aucun Cours...
+                        </div>
+                    </div>
+
+                </card>
+                <!-- horaire -->
+                <% if(allowModule(21)){ %>
+                <card class="super super-l12 card schedular super-flex" data-index="1">
+
+                    <div class="super super-l3 sort-zone">
+                        <% if(currentYear != null){ %>
+                        <h1>
+                            <icon class="las la-stopwatch"></icon> Horaire des cours
+                        </h1>
+                        <div class="super super-l12 field static sort-list super-scrollable-y">
+                            <select class="super input" name="academic">
+                                <% for(var i in academic){ %>
+                                <option value="<%= academic[i].id %>" <%= academic[i].id == currentYear.id ? 'selected' : '' %> ><%= academic[i].academie %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="super super-l12 field static sort-list super-scrollable-y">
+                            <select class="super input" name="session">
+                                <option value="1">Session 1</option>
+                                <option value="2">Session 2</option>
+                            </select>
+                        </div>
+                        <div class="super super-l12 field faculty static sort-list">
+                            <select class="super input" name="facname">
+                                <option value="">Toutes les filières</option>
+                                <% for(var i in faculty){
+                                    if(utils.isPartOf(faculty[i].id)){
+                                %>
+                                <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                                <%  }
+                                   }
+                                %>
+                            </select>
+                        </div>
+                        <div class="super super-l12 field grade static">
+                            <select class="super input" name="grade">
+                                <option value="">Tous les Niveaux</option>
+                            </select>
+                        </div>
+                        <div class="super super-l12 field static">
+                            <select class="super input" name="teacher">
+                                <option value="">Tous les Professeurs</option>
+                                <% for(var i in teacher){ %>
+                                    <option value="<%= teacher[i].id %>"><%= teacher[i].prenom+" "+teacher[i].nom %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <% if(allowModule(22)){ %>
+                        <div class="super super-l12 action">
+                            <button class="print-schedular disabled super super-l12"><icon class="las la-print"></icon> Imprimer</button>
+                        </div>
+                        <% } %>
+                        <% } %>
+                    </div>
+                    <div class="super super-l9 visual super-relative">
+                        <div class="super super-l12 empty-info super-flex-center">
+                            Les horaires s'afficheront ici
+                        </div>
+                        <div class="super super-flex super-l12 not-super super-flex-column schedular-box">
+                            <div class="super super-l12 header super-flex super-flex-column">
+                                <div class="super super-l12 facname super-al-center">
+                                    Campus Henri Christophe de Limonade
+                                </div>
+                                <div class="super super-l12 schema super-flex-center">
+                                    <div class="arrow"><span></span></div>
+                                    <div class="arrow"><span></span></div>
+                                    <div class="arrow"><span></span></div>
+                                    <div class="arrow"><span></span></div>
+                                    <div class="arrow"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="super super-l12 grid super-flex-start">
+                                <% for(var i in workDays){ %>
+                                <div class="super dayColumn super-l12 super-flex-column super-flex" data-index="<%= i %>">
+                                    <div class="super super-l12 head box">
+                                        <%= workDays[i] %>
+                                    </div>
+                                    <div class="super super-l12 course-range">
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+
+                </card>
+                <% } %>
+
+            </div>
+        </div>
+        <% if(allowModule(17) && currentYear != null){ %>
+        <div class="super super-all-absolute mask">
+        </div>
+        <div class="super float-action">
+            <button class="las la-plus register-n-list-switch course-form"></button>
+        </div>
+        <% } %>
+    </div>
+    <% if(allowModule(17) && currentYear != null){ %>
+    <div class="super form-add register-zone super-scrollable-y">
+        <div class="super super-l12" id="courseForm">
+            <h1>Nouveau cours</h1>
+            <h2>Pour l'année académique : <%= currentYear.academie %></h2>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l8 field">
+                    <label>Nom du cours</label>
+                    <input type="text" class="input super-l12" name="cr_name" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '#+0-9&/:-]*[A-Za-zÀ-ÖØ-öø-ÿ]*$">
+                </div>
+                <div class="super super-l4 field">
+                    <label>Code du cours</label>
+                    <input type="text" class="input super-l12" name="cr_code" match="^[a-z]{2,3}-[0-9]{2,4}$">
+                </div>
+            </div>
+            <div class="super super-l12 hint-box alert-box">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-information rounded"></icon>
+                    <div class="super super-l10 text">
+                        Le code du cours doit être composé de <b>2</b> ou <b>3</b> lettres suivies d'un "-" (tiret) puis
+                        d'un nombre composé de 2 à 4 chiffres.
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field faculty">
+                    <label>Filière</label>
+                    <select type="text" class="input super-l12 faculties" name="cr_fac" match="^[0-9]+$">
+                        <option value=""></option>
+                        <% for(var i in faculty){
+                            if(utils.isPartOf(faculty[i].id)){
+                        %>
+                        <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                        <%  }
+                          }
+                        %>
+                    </select>
+                </div>
+                <div class="super super-l6 field grade">
+                    <label>Niveau</label>
+                    <select type="text" class="input super-l12" name="cr_grade" match="^[0-9]+$">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field">
+                    <label>Session</label>
+                    <select type="text" class="input super-l12" name="cr_session" match="^[0-9]+$">
+                        <option value=""></option>
+                        <option value="1">Session 1</option>
+                        <option value="2">Session 2</option>
+                    </select>
+                </div>
+                <div class="super super-l6 field">
+                    <label>Coefficient</label>
+                    <select type="text" class="input super-l12" name="cr_rate" match="^[0-9]+$">
+                        <option value=""></option>
+                        <% for(var i = 1; i < 6; i++){ %>
+                            <option value="<%= i %>"><%= i %></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex group super-flex-end">
+                <div class="super super-l6 field th_principale">
+                    <label>Titulaire</label>
+                    <select class="input super-l12" name="cr_principale" match="^[0-9]+$">
+                        <option value=""></option>
+                        <% for(var i in teacher){ %>
+                            <option value="<%= teacher[i].id %>"><%= teacher[i].prenom+" "+teacher[i].nom %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="super super-l6 field th_suppleant">
+                    <label>Suppléant</label>
+                    <select class="input super-l12" name="cr_suppleant" match="^[0-9]+$">
+                        <option value=""></option>
+                        <% for(var i in teacher){ %>
+                        <option value="<%= teacher[i].id %>"><%= teacher[i].prenom+" "+teacher[i].nom %></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="super super-l12 course-schedule">
+                <label class="super super-l12 free"><icon class="las la-calendar-plus"></icon> Les Horaires de cours</label>
+                <div class="super super-l12 scheduled-courses">
+                </div>
+                <div class="super super-l12 super-flex super-flex-column">
+                    <label>Choisissez le jour d'une séance du cours</label>
+                    <div class="super super-l12 action">
+                        <div class="super super-l12 super-flex combined days switch" value="0">
+                            <% for(var i in workDays){ %>
+                                <button class="super off" data-value="<%= i %>" index="<%= i %>"><%= workDays[i] %></button>
+                            <% } %>
+                        </div>
+                    </div>
+                    <label>Choisissez le type du cours</label>
+                    <div class="super super-l12 action">
+                        <div class="super super-l12 super-flex combined course_type switch" value="0">
+                            <button class="super off" data-value="0" index="<%= i %>">Cours magistral</button>
+                            <button class="super off" data-value="1" index="<%= i %>">Travaux pratiques</button>
+                        </div>
+                    </div>
+                    <label>Précisez l'intervalle d'heures de dispensation du cours</label>
+                    <div class="super super-l12 wrapper super-flex-end">
+                        <div class="super super-l6 field">
+                            <label>Heure de debut de cours</label>
+                            <input class="super super-l12 input begin" match="^(0[8-9]|1[0-8]):(0[0-9]|[1-5][0-9])$" mask="##:##">
+                        </div>
+                        <div class="super super-l6 field">
+                            <label>Heure de fin de cours</label>
+                            <input class="super super-l12 input end" match="^(0[8-9]|1[0-8]):(0[0-9]|[1-5][0-9])$" mask="##:##">
+                        </div>
+                    </div>
+                    <div class="super super-l12 hint-box alert-box">
+                        <div class="super super-l12 wrapper super-flex-center">
+                            <icon class="ion-information rounded"></icon>
+                            <div class="super super-l10 text">
+                                l'heure minimale est de <strong>08:00</strong> et l'heure maximale est de <strong>18:59</strong>.
+                                l'heure de début doit être inférieure d'au moins 1 heure par rapport à l'heure de fin,
+                                et la différence entre les deux dates doit être uniquement en heure, aucune minute additionnelle n'est
+                                prise en compte.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="super super-l12 action super-al-center">
+                        <button id="schedule" class="light super super-l12"><icon class="las la-business-time"></icon> Ajouter l'horaire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 course-alert alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 action">
+                <button id="newCourse" data-index="-1">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

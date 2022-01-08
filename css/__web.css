@@ -1,0 +1,847 @@
+/* line 6, ../sass/_var.scss */
+appbar .user-zone .user-info, .user-panel .user-info {
+  padding: .4em .1em .1em .4em;
+  padding: .4em .1em .1em .4em;
+}
+/* line 9, ../sass/_var.scss */
+appbar .user-zone .user-info .greeting, .user-panel .user-info .greeting {
+  font-family: Lexend-Light;
+  font-size: .7em;
+}
+/* line 13, ../sass/_var.scss */
+appbar .user-zone .user-info .name, .user-panel .user-info .name {
+  font-family: Poppins-SemiBold;
+  font-size: .9em;
+  position: relative;
+  top: -.4em;
+}
+
+/* line 4, ../sass/web.scss */
+.company-logo {
+  background-image: url("../assets/logo.jpg");
+  background-size: auto 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../sass/web.scss */
+#logger {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 15, ../sass/web.scss */
+#logger .company-logo {
+  height: 140px;
+  margin-top: -100px;
+  margin-bottom: 1em;
+}
+/* line 20, ../sass/web.scss */
+#logger .name {
+  font-family: Lexend-SemiBold;
+  font-size: 2.1em;
+  padding: .5em .3em .2em .3em;
+  color: #26708a;
+}
+/* line 26, ../sass/web.scss */
+#logger .logo {
+  background-image: linear-gradient(200deg, #4585a1, #002931);
+  height: 100vh;
+  clip-path: polygon(0 0, 70% 0, 100% 15%, 90% 70%, 100% 100%, 0 100%);
+}
+/* line 27, ../sass/web.scss */
+#logger .logo .image {
+  background-image: url("../assets/compo.png");
+  background-size: auto 80%;
+  left: 5%;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+/* line 45, ../sass/web.scss */
+#logger .def {
+  font-size: 1em;
+  padding: .3em .6em;
+  color: white;
+  background-color: #48a0b9;
+  -moz-border-radius: 1em 0.3em 1em 0.3em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em 0.3em 1em 0.3em;
+  font-family: Lexend;
+  margin-bottom: 1em;
+}
+/* line 54, ../sass/web.scss */
+#logger .modal-box {
+  padding: .3em 3em .3em 1em;
+}
+/* line 57, ../sass/web.scss */
+#logger .remember {
+  padding: .2em .5em;
+  font-family: OpenSans-Light;
+}
+/* line 60, ../sass/web.scss */
+#logger .remember input {
+  margin: 0 .8em;
+}
+
+/* line 66, ../sass/web.scss */
+view {
+  flex-direction: column;
+  height: 100%;
+}
+
+/* line 70, ../sass/web.scss */
+appbar {
+  height: 60px;
+}
+/* line 72, ../sass/web.scss */
+appbar .field {
+  height: 35px;
+  background-color: #ebf1f3 !important;
+}
+/* line 76, ../sass/web.scss */
+appbar .action {
+  height: 40px;
+  padding: 0;
+}
+/* line 79, ../sass/web.scss */
+appbar .action button {
+  height: inherit;
+  -moz-border-radius: 7em;
+  -webkit-border-radius: 7em;
+  border-radius: 7em;
+  padding: .4em .4em;
+  background: #8ab8c5;
+}
+/* line 86, ../sass/web.scss */
+appbar .search-zone {
+  padding-left: 1em;
+}
+/* line 89, ../sass/web.scss */
+appbar .user-zone {
+  height: 100%;
+  padding: 0 1em 0 .4em;
+  margin-left: 1em;
+}
+/* line 96, ../sass/web.scss */
+appbar .user-zone button {
+  border: 0;
+  border-radius: 5em;
+  padding: .7em 0;
+  background-color: rgba(250, 250, 250, 0.7);
+  color: #5aa7bd;
+  cursor: pointer;
+}
+/* line 103, ../sass/web.scss */
+appbar .user-zone button:hover {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+/* line 109, ../sass/web.scss */
+sidemenu {
+  padding: 0 4.5em .8em 1em;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d7481;
+  overflow: hidden;
+  overflow-y: auto;
+  clip-path: polygon(0 0, 80% 0, 100% 60px, 80% 100%, 0 100%);
+  -moz-box-shadow: 2px 0 2px 2px #333;
+  -webkit-box-shadow: 2px 0 2px 2px #333;
+  box-shadow: 2px 0 2px 2px #333;
+  transition-property: width, padding;
+  transition-duration: .2s;
+}
+/* line 121, ../sass/web.scss */
+sidemenu .links {
+  padding-top: 1em;
+}
+/* line 124, ../sass/web.scss */
+sidemenu .company {
+  color: white;
+  font-size: 1.4em;
+  width: inherit;
+  background-color: #2d7481;
+  height: 60px;
+}
+/* line 130, ../sass/web.scss */
+sidemenu .company .name {
+  font-family: Poppins-Bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 137, ../sass/web.scss */
+sidemenu .company-logo {
+  height: 45px;
+  width: 45px;
+  margin: 0 .5em 0 1em;
+  background-size: auto 80%;
+  background-color: #fff;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 146, ../sass/web.scss */
+sidemenu item, sidemenu .item {
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  padding: .4em .4em;
+  text-decoration: none;
+  margin: .2em 0 .4em 0;
+  cursor: pointer;
+  transition-property: background-color, width, height;
+  transition-duration: .4s;
+}
+/* line 154, ../sass/web.scss */
+sidemenu item icon, sidemenu .item icon {
+  padding: .3em 1em;
+  font-size: 1.3em;
+  color: #eee;
+}
+/* line 159, ../sass/web.scss */
+sidemenu item .text, sidemenu .item .text {
+  font-family: Poppins;
+  color: #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 166, ../sass/web.scss */
+sidemenu item:hover, sidemenu .item:hover {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+/* line 168, ../sass/web.scss */
+sidemenu item:hover icon, sidemenu item:hover .text, sidemenu .item:hover icon, sidemenu .item:hover .text {
+  color: #fff;
+}
+/* line 172, ../sass/web.scss */
+sidemenu item.active, sidemenu .item.active {
+  background-color: white;
+}
+/* line 174, ../sass/web.scss */
+sidemenu item.active icon, sidemenu .item.active icon {
+  color: #26708a;
+}
+/* line 177, ../sass/web.scss */
+sidemenu item.active .text, sidemenu .item.active .text {
+  font-family: Poppins-SemiBold;
+  color: #26708a;
+}
+/* line 183, ../sass/web.scss */
+sidemenu.minimal {
+  width: 80px;
+  padding: 0 4.5em .8em .4em;
+}
+/* line 187, ../sass/web.scss */
+sidemenu.minimal .company .company-logo {
+  margin: 0 .2em;
+}
+/* line 190, ../sass/web.scss */
+sidemenu.minimal .company .name {
+  width: 0%;
+  overflow: hidden;
+}
+/* line 195, ../sass/web.scss */
+sidemenu.minimal item, sidemenu.minimal .item {
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  width: 43px;
+  height: 43px;
+  margin-left: .4em;
+}
+/* line 200, ../sass/web.scss */
+sidemenu.minimal item icon, sidemenu.minimal .item icon {
+  padding: .2em;
+}
+/* line 203, ../sass/web.scss */
+sidemenu.minimal item .text, sidemenu.minimal .item .text {
+  width: 0;
+  opacity: 0;
+}
+
+/* line 210, ../sass/web.scss */
+panel {
+  background-color: rgba(250, 250, 250, 0.8);
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  padding: 1em;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* line 219, ../sass/web.scss */
+.akademy {
+  overflow: hidden;
+  background-color: rgba(250, 250, 250, 0.8);
+}
+/* line 223, ../sass/web.scss */
+.akademy.template .company {
+  background-color: #eee;
+  color: #ccc;
+}
+/* line 227, ../sass/web.scss */
+.akademy.template .company-logo {
+  background-color: #ddd;
+  background-image: unset;
+}
+/* line 231, ../sass/web.scss */
+.akademy.template sidemenu {
+  background-color: #eee;
+  overflow-y: hidden;
+}
+/* line 234, ../sass/web.scss */
+.akademy.template sidemenu item {
+  background-color: rgba(200, 200, 200, 0.2);
+  white-space: normal;
+  overflow: hidden;
+}
+/* line 238, ../sass/web.scss */
+.akademy.template sidemenu item icon, .akademy.template sidemenu item .text {
+  color: rgba(200, 200, 200, 0);
+}
+/* line 243, ../sass/web.scss */
+.akademy.template .field {
+  background-color: rgba(200, 200, 200, 0.2) !important;
+}
+/* line 245, ../sass/web.scss */
+.akademy.template .field .input::placeholder {
+  color: #ddd;
+}
+/* line 248, ../sass/web.scss */
+.akademy.template .field icon {
+  color: rgba(200, 200, 200, 0.2);
+}
+/* line 252, ../sass/web.scss */
+.akademy.template avatar {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+}
+/* line 257, ../sass/web.scss */
+.akademy.template .user-info .greeting {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+  border-radius: .5em;
+}
+/* line 262, ../sass/web.scss */
+.akademy.template .user-info .name {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+  border-radius: .5em;
+  height: 16px;
+  top: -.2em;
+}
+/* line 269, ../sass/web.scss */
+.akademy.template .user-info button {
+  color: #ddd !important;
+}
+
+/* line 276, ../sass/web.scss */
+.dashboard {
+  padding: .4em .8em;
+}
+/* line 278, ../sass/web.scss */
+.dashboard .welcome {
+  height: 290px;
+  background-color: #fff;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 282, ../sass/web.scss */
+.dashboard .welcome .text {
+  padding: .4em .8em;
+  font-family: Poppins;
+}
+/* line 285, ../sass/web.scss */
+.dashboard .welcome .text .greetings {
+  font-family: Poppins-SemiBold;
+  font-size: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* line 292, ../sass/web.scss */
+.dashboard .welcome .text .explain {
+  font-family: Lexend;
+  font-size: .9em;
+  color: #777;
+  padding: .8em .5em .5em .5em;
+}
+/* line 298, ../sass/web.scss */
+.dashboard .welcome .text .light {
+  background-color: #93b8c5;
+  padding: 0 .8em;
+  font-size: .8em;
+  color: white;
+  margin-left: .5em;
+  font-family: Poppins-Bold;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 308, ../sass/web.scss */
+.dashboard .welcome .welcome-img {
+  background-image: url("../assets/login.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  height: inherit;
+}
+
+/* line 318, ../sass/web.scss */
+.user-panel {
+  padding: 1em;
+  background-color: white;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  z-index: 2;
+  -moz-box-shadow: 0 2px 4px 0 #ccc;
+  -webkit-box-shadow: 0 2px 4px 0 #ccc;
+  box-shadow: 0 2px 4px 0 #ccc;
+}
+/* line 327, ../sass/web.scss */
+.user-panel avatar {
+  width: 70px;
+  height: 70px;
+  font-size: 1.6em;
+  line-height: 70px;
+}
+/* line 335, ../sass/web.scss */
+.user-panel .user-info .greeting {
+  font-size: .8em;
+}
+/* line 338, ../sass/web.scss */
+.user-panel .user-info .name {
+  font-size: 1em;
+  top: 0;
+}
+/* line 343, ../sass/web.scss */
+.user-panel .action {
+  padding: .5em;
+  font-family: Poppins;
+  color: #777;
+}
+/* line 347, ../sass/web.scss */
+.user-panel .action icon {
+  width: 43px;
+  height: 43px;
+  text-align: center;
+  line-height: 43px;
+  font-size: 1.2em;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #eee;
+  margin: 0 .4em;
+}
+/* line 356, ../sass/web.scss */
+.user-panel .action icon:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+/* line 366, ../sass/web.scss */
+.academic .list-presentation, .teacher .list-presentation {
+  height: 100%;
+}
+/* line 369, ../sass/web.scss */
+.academic .list, .teacher .list {
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+/* line 373, ../sass/web.scss */
+.academic .list .header, .teacher .list .header {
+  height: 70px;
+  font-family: Poppins-SemiBold;
+  font-size: 1.8em;
+}
+/* line 377, ../sass/web.scss */
+.academic .list .header icon, .teacher .list .header icon {
+  font-size: 1.8em;
+  padding: 0 .5em;
+}
+/* line 382, ../sass/web.scss */
+.academic .list .body, .teacher .list .body {
+  padding: .5em;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 390, ../sass/web.scss */
+.academic .list .body item, .teacher .list .body item {
+  padding: .5em;
+  font-family: Lexend;
+  font-size: 1.3em;
+  transition-duration: .2s;
+  transition-property: padding, font-size, color;
+}
+/* line 396, ../sass/web.scss */
+.academic .list .body item:hover, .teacher .list .body item:hover {
+  color: #2d5a81;
+  cursor: pointer;
+  padding-left: 1em;
+}
+/* line 401, ../sass/web.scss */
+.academic .list .body item.active, .teacher .list .body item.active {
+  color: #26708a;
+  font-size: 1.8em;
+  padding-left: 1em;
+  font-family: Lexend-SemiBold;
+}
+/* line 407, ../sass/web.scss */
+.academic .list .body item.less, .teacher .list .body item.less {
+  font-family: Poppins;
+  font-size: .7em;
+  width: auto;
+  background-color: #ddd;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  padding: .3em .5em;
+  color: #777;
+}
+/* line 419, ../sass/web.scss */
+.academic .presentation, .teacher .presentation {
+  padding: 1em .5em .5em .4em;
+}
+/* line 421, ../sass/web.scss */
+.academic .presentation .diagramme, .teacher .presentation .diagramme {
+  height: 50%;
+}
+/* line 425, ../sass/web.scss */
+.academic .form-add, .teacher .form-add {
+  height: 100%;
+}
+/* line 427, ../sass/web.scss */
+.academic .form-add h1, .teacher .form-add h1 {
+  padding: .5em;
+  font-family: Lexend-SemiBold;
+  font-size: 1.4em;
+}
+/* line 432, ../sass/web.scss */
+.academic .form-add .anneeAcademique, .teacher .form-add .anneeAcademique {
+  font-family: Lexend;
+  font-size: 1em;
+}
+/* line 436, ../sass/web.scss */
+.academic .form-add label, .teacher .form-add label {
+  font-family: Poppins;
+  font-size: .8em;
+}
+/* line 439, ../sass/web.scss */
+.academic .form-add label.linked, .teacher .form-add label.linked {
+  position: relative;
+  top: 1.8em;
+}
+/* line 444, ../sass/web.scss */
+.academic .form-add #Aka-yearForm, .teacher .form-add #Aka-yearForm {
+  padding: .5em 1em;
+}
+/* line 448, ../sass/web.scss */
+.academic .form-add .group .field:first-child, .teacher .form-add .group .field:first-child {
+  margin-right: .4em;
+}
+/* line 451, ../sass/web.scss */
+.academic .form-add .group .field:last-child, .teacher .form-add .group .field:last-child {
+  margin-left: .4em;
+}
+
+/* line 460, ../sass/web.scss */
+.administration .adminer {
+  height: 100%;
+  position: relative;
+  width: calc(100% * 7 / 12);
+}
+/* line 465, ../sass/web.scss */
+.administration .list, .administration .presentation {
+  height: 100%;
+}
+/* line 469, ../sass/web.scss */
+.administration .list .label {
+  font-family: Lexend;
+  font-size: 1.2em;
+  padding: .8em .5em;
+}
+/* line 474, ../sass/web.scss */
+.administration .list .body {
+  padding: .5em;
+  overflow-y: auto !important;
+}
+/* line 477, ../sass/web.scss */
+.administration .list .body item {
+  padding: .5em;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 2px 0 #ccc;
+  -webkit-box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #ccc;
+  height: 50px;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+/* line 486, ../sass/web.scss */
+.administration .list .body item.faculty {
+  font-family: Lexend;
+}
+/* line 489, ../sass/web.scss */
+.administration .list .body item .name {
+  font-family: Lexend;
+  font-size: 1em;
+  height: 100%;
+}
+/* line 494, ../sass/web.scss */
+.administration .list .body item .action {
+  padding: 0;
+  display: none;
+  height: 40px;
+}
+/* line 498, ../sass/web.scss */
+.administration .list .body item .action button {
+  height: inherit;
+  background-color: unset;
+  color: #2d525f;
+}
+/* line 502, ../sass/web.scss */
+.administration .list .body item .action button:hover {
+  color: #26708a;
+  background-color: rgba(200, 200, 200, 0.4);
+}
+/* line 508, ../sass/web.scss */
+.administration .list .body item.a {
+  background-color: rgba(230, 239, 253, 0.4);
+}
+/* line 510, ../sass/web.scss */
+.administration .list .body item.b {
+  background-color: rgba(252, 247, 218, 0.4);
+}
+/* line 512, ../sass/web.scss */
+.administration .list .body item.c {
+  background-color: rgba(227, 253, 250, 0.4);
+}
+/* line 514, ../sass/web.scss */
+.administration .list .body item.d {
+  background-color: rgba(255, 241, 238, 0.4);
+}
+/* line 516, ../sass/web.scss */
+.administration .list .body item.e {
+  background-color: rgba(248, 255, 231, 0.4);
+}
+/* line 518, ../sass/web.scss */
+.administration .list .body item.f {
+  background-color: rgba(255, 240, 231, 0.4);
+}
+/* line 520, ../sass/web.scss */
+.administration .list .body item:hover {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+/* line 522, ../sass/web.scss */
+.administration .list .body item:hover .action {
+  display: inline-flex;
+}
+/* line 528, ../sass/web.scss */
+.administration .list .adder {
+  padding: .4em;
+  height: 60px;
+}
+/* line 531, ../sass/web.scss */
+.administration .list .adder .field {
+  height: 50px;
+}
+/* line 533, ../sass/web.scss */
+.administration .list .adder .field .combined {
+  padding-right: 0;
+}
+/* line 536, ../sass/web.scss */
+.administration .list .adder .field .redo:hover {
+  cursor: pointer;
+  color: #2d525f;
+}
+/* line 540, ../sass/web.scss */
+.administration .list .adder .field #addFac {
+  background-color: unset;
+  font-size: 1.3em;
+  color: white;
+  background-color: #26708a;
+  height: 45px;
+  width: 50px;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-align: center;
+  border: 0;
+  display: inline-block;
+}
+/* line 555, ../sass/web.scss */
+.administration .presentation {
+  padding: .4em;
+}
+/* line 557, ../sass/web.scss */
+.administration .presentation .nom {
+  padding: .5em;
+  font-family: Lexend-SemiBold;
+  font-size: 1.2em;
+}
+/* line 562, ../sass/web.scss */
+.administration .presentation .statistics {
+  font-family: Poppins !important;
+  font-size: 1em;
+}
+/* line 565, ../sass/web.scss */
+.administration .presentation .statistics .field {
+  height: 40px;
+}
+/* line 569, ../sass/web.scss */
+.administration .presentation h1 {
+  padding: .8em .4em;
+  font-size: 1.2em;
+}
+/* line 574, ../sass/web.scss */
+.administration .presentation .grade-head .action button {
+  background-color: rgba(238, 238, 238, 0.45);
+  color: #26708a;
+  font-family: Lexend-SemiBold;
+}
+/* line 580, ../sass/web.scss */
+.administration .presentation .item {
+  padding: 0 .4em;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  font-family: Lexend;
+}
+/* line 585, ../sass/web.scss */
+.administration .presentation .item .notation {
+  font-family: Poppins;
+}
+/* line 588, ../sass/web.scss */
+.administration .presentation .item .action {
+  display: none;
+  height: inherit;
+}
+/* line 592, ../sass/web.scss */
+.administration .presentation .item button {
+  background-color: rgba(200, 200, 200, 0.1);
+  color: #26708a;
+  cursor: pointer;
+}
+/* line 596, ../sass/web.scss */
+.administration .presentation .item button:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+/* line 601, ../sass/web.scss */
+.administration .presentation .item:hover .action {
+  display: inline-flex;
+}
+
+/* line 613, ../sass/web.scss */
+.teacher .list item avatar {
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+}
+/* line 618, ../sass/web.scss */
+.teacher .list item .data {
+  font-size: .7em;
+  padding: .4em;
+}
+/* line 622, ../sass/web.scss */
+.teacher .list item .name {
+  font-family: Poppins-SemiBold;
+  font-size: 1.3em;
+}
+/* line 626, ../sass/web.scss */
+.teacher .list item .suite {
+  font-family: Lexend;
+  padding: .2em 0;
+  font-size: .9em;
+}
+/* line 630, ../sass/web.scss */
+.teacher .list item .suite .el {
+  padding: .2em;
+}
+/* line 632, ../sass/web.scss */
+.teacher .list item .suite .el:first-child {
+  color: #555;
+}
+/* line 634, ../sass/web.scss */
+.teacher .list item .suite .el:first-child::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 646, ../sass/web.scss */
+.teacher .identification {
+  padding: .4em;
+}
+/* line 648, ../sass/web.scss */
+.teacher .identification span {
+  font-family: Poppins-SemiBold;
+  color: #444;
+  font-size: 1.2em;
+}
+/* line 652, ../sass/web.scss */
+.teacher .identification span.code {
+  font-family: Poppins;
+  color: #000;
+  font-size: 1em;
+  padding: 0 .4em;
+}
+/* line 661, ../sass/web.scss */
+.teacher .infos avatar {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.4em;
+}
+/* line 667, ../sass/web.scss */
+.teacher .infos .name {
+  font-family: Lexend-SemiBold;
+  font-size: 1.2em;
+}
+/* line 671, ../sass/web.scss */
+.teacher .infos .row {
+  padding: .2em;
+}
+/* line 673, ../sass/web.scss */
+.teacher .infos .row .head {
+  font-size: .9em;
+  font-family: Poppins-SemiBold;
+  padding: .3em 0;
+}
+/* line 678, ../sass/web.scss */
+.teacher .infos .row .data {
+  font-family: Poppins;
+  font-size: 1em;
+  padding: .2em 0;
+  line-height: 1.2em;
+}
+/* line 684, ../sass/web.scss */
+.teacher .infos .row .sub-row {
+  font-family: Lexend;
+  font-size: 1em;
+}
+/* line 689, ../sass/web.scss */
+.teacher .infos label {
+  font-family: Poppins;
+  font-size: .85em;
+}

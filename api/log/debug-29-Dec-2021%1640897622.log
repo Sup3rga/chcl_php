@@ -1,0 +1,128 @@
+[ 29-Dec-2021 21:53:42 ] [ Civil ] Ok : 
+[ 29-Dec-2021 21:53:42 ] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[ 29-Dec-2021 21:55:49 ] [ Civil ] Ok : 
+[ 29-Dec-2021 21:55:49 ] [Reflection] User
+[ 29-Dec-2021 21:55:49 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 21:55:49 ] [Total] [1,2]
+[ 29-Dec-2021 21:58:23 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 21:58:23 ] [Total] [1,2]
+[ 29-Dec-2021 21:58:47 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 21:58:47 ] [Total] [1,2]
+[ 29-Dec-2021 21:58:54 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 21:58:54 ] [Total] [1,2]
+[ 29-Dec-2021 22:07:33 ] Connecting !
+[ 29-Dec-2021 22:07:37 ] [ connection ] {"user":1,"name":"Core Infinite","token":"bc_890b51@e360f92","ip":"::1"}
+[ 29-Dec-2021 22:07:40 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 29-Dec-2021 22:07:47 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:08:14 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 29-Dec-2021 22:08:24 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:08:44 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 29-Dec-2021 22:08:45 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:08:54 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 29-Dec-2021 22:08:54 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:09:00 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 29-Dec-2021 22:09:01 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:09:32 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:09:47 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:10:12 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:10:18 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:11:06 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:11:13 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:23:18 ] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':p1' at line 1
+[ 29-Dec-2021 22:25:18 ] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':p1' at line 1
+[ 29-Dec-2021 22:25:40 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:25:47 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:26:05 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:26:12 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:26:14 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:26:21 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:26:31 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:26:38 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:26:52 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:26:59 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:27:31 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:27:37 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:28:49 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:28:56 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:29:42 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:29:49 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:39:30 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:39:34 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:40:25 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:40:29 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:40:35 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:40:40 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:40:47 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:40:52 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:40:58 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 29-Dec-2021 22:41:00 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:41:02 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 29-Dec-2021 22:41:02 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:41:05 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:41:06 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:26 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:42:26 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:31 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:42:31 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:34 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 29-Dec-2021 22:42:34 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:36 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 29-Dec-2021 22:42:36 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:38 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 29-Dec-2021 22:42:38 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:40 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 29-Dec-2021 22:42:40 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:43 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:42:43 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:42:44 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 22:42:44 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:43:25 ] [Reflection] Faculty
+[ 29-Dec-2021 22:43:26 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:43:26 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:43:39 ] [Reflection] Faculty
+[ 29-Dec-2021 22:43:40 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:43:40 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:43:52 ] [Reflection] Faculty
+[ 29-Dec-2021 22:43:52 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:43:52 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:44:06 ] [Reflection] Faculty
+[ 29-Dec-2021 22:44:06 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:44:06 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:44:17 ] [Reflection] Faculty
+[ 29-Dec-2021 22:44:18 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:44:18 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:44:35 ] [Reflection] Faculty
+[ 29-Dec-2021 22:44:35 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 29-Dec-2021 22:44:35 ] [Total] [57,56,60,64,61,62,63,59]
+[ 29-Dec-2021 22:45:23 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:45:23 ] [Reflection] Teacher
+[ 29-Dec-2021 22:45:23 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:45:23 ] [Total] [57,56,60,64,65,62,63,59]
+[ 29-Dec-2021 22:46:10 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:46:10 ] [Reflection] Teacher
+[ 29-Dec-2021 22:46:10 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:46:10 ] [Total] [57,56,60,64,65,66,63,59]
+[ 29-Dec-2021 22:46:45 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:46:45 ] [Reflection] Teacher
+[ 29-Dec-2021 22:46:45 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:46:45 ] [Total] [57,56,60,64,65,66,64,59]
+[ 29-Dec-2021 22:47:15 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:47:15 ] [Reflection] Teacher
+[ 29-Dec-2021 22:47:15 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:47:15 ] [Total] [57,56,60,64,65,66,64,59]
+[ 29-Dec-2021 22:47:56 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:47:56 ] [Reflection] Teacher
+[ 29-Dec-2021 22:47:56 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:47:56 ] [Total] [57,56,60,64,65,66,64,59]
+[ 29-Dec-2021 22:48:23 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:48:23 ] [Reflection] Teacher
+[ 29-Dec-2021 22:48:24 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:48:24 ] [Total] [57,56,60,64,65,66,64,59]
+[ 29-Dec-2021 22:48:59 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:48:59 ] [Reflection] Teacher
+[ 29-Dec-2021 22:48:59 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 29-Dec-2021 22:48:59 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 29-Dec-2021 22:50:27 ] [ Civil ] Ok : 
+[ 29-Dec-2021 22:50:27 ] [Reflection] User
+[ 29-Dec-2021 22:50:27 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 22:50:27 ] [Total] [57,56,60,64,65,66,64,59,65]

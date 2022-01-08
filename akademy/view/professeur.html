@@ -1,0 +1,340 @@
+<div class="super super-all-absolute super-l12 teacher aio register-n-list">
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l12 super-flex-center list">
+            <div class="super super-l12 header super-flex-center">
+                <icon class="las la-chalkboard-teacher"></icon>
+                Liste des professeurs
+            </div>
+            <div class="super super-l12 body">
+                <div class="super super-l12 list super-scrollable-y">
+                <% var k = 0;
+                    for(var i in teacher){
+                    k++;
+                %>
+                    <item class="super super-l12 teacher-item" data-id="<%= teacher[i].id %>" data-filter="<%= teacher[i].prenom+" "+teacher[i].nom+" "+teacher[i].code %>">
+                        <div class="super super-l12 summary super-flex-center">
+                            <avatar style="background-image: url(<%= teacher[i].photo != null ? '../assets/avatars/'+teacher[i].photo : '' %>)">
+                                <%= teacher[i].photo != null ? '' : teacher[i].prenom[0].toUpperCase(); %>
+                            </avatar>
+                            <div class="super super-l7 data">
+                                <span class="super super-l12 name">
+                                   <%= teacher[i].nom.toUpperCase()+", "+teacher[i].prenom %>
+                                </span>
+                                <span class="super super-l12 suite super-flex-center">
+                                    <span class="super el"><%= teacher[i].age %> ans</span>
+                                    <span class="super el"><%= teacher[i].sexe == "M" ? "Homme" : "Femme" %></span>
+                                </span>
+                            </div>
+                            <div class="super super-l3 action see">
+                                <button class="light"><icon class="ion-eye"></icon> <span>Plus de détails</span></button>
+                            </div>
+                        </div>
+                        <div class="super super-l12 metadata super-flex-center">
+                            <div class="super avatar-box super-flex-center super-flex-column super-flex-align-center">
+                                <avatar class="super" style="background-image: url(<%= teacher[i].photo != null ? '../assets/avatars/'+teacher[i].photo : '' %>)">
+                                    <%= teacher[i].photo != null ? '' : teacher[i].prenom[0].toUpperCase(); %>
+                                </avatar>
+                                <div class="super super-l12 code">
+                                    <%= teacher[i].code %>
+                                </div>
+                            </div>
+                            <div class="super super-l10 super-flex super-flex-column">
+                                <div class="super super-l12 teacher-information super-flex">
+                                    <div class="super super-l9 personals">
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">Statut matrimonial</div>
+                                                <div class="super super-l6 content"><%= teacher[i].status_matrimonial %></div>
+                                            </div>
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">Niveau d'étude</div>
+                                                <div class="super super-l6 content"><%= teacher[i].niveau_etude %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">E-mail</div>
+                                                <div class="super super-l6 content"><%= teacher[i].email %></div>
+                                            </div>
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">Téléphone</div>
+                                                <div class="super super-l6 content"><%= teacher[i].telephone %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">Lieu de naissance</div>
+                                                <div class="super super-l6 content"><%= teacher[i].lieu_naissance %></div>
+                                            </div>
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">Date naissance</div>
+                                                <div class="super super-l6 content"><%= teacher[i].date_naissance %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l12 row super-flex">
+                                                <div class="super super-l3 label">Adresse</div>
+                                                <div class="super super-l9 Icontent"><%= teacher[i].adresse %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">NIF</div>
+                                                <div class="super super-l6 content"><%= teacher[i].nif %></div>
+                                            </div>
+                                            <div class="super super-l6 row super-flex">
+                                                <div class="super super-l6 label">NINU</div>
+                                                <div class="super super-l6 content"><%= teacher[i].ninu %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l12 row super-flex">
+                                                <div class="super super-l3 label">Poste</div>
+                                                <div class="super super-l9 content"><%= teacher[i].poste == null ? "Aucun" : teacher[i].poste.notation+(teacher[i].poste.filiere == null ? "" : " de "+teacher[i].poste.filiere ) %></div>
+                                            </div>
+                                        </div>
+                                        <div class="super super-l12 wrapper super-flex">
+                                            <div class="super super-l12 row super-flex">
+                                                <div class="super super-l3 label">Salaire</div>
+                                                <div class="super super-l9 content"><%= teacher[i].salaire+" GDES" %></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="super super-l3 courses super-scrollable-y super-relative">
+                                        <h3>Cours enseignés</h3>
+                                        <%
+                                            var hasFiliere = false;
+                                            for(var j in teacher[i].filieres){
+                                                hasFiliere = true;
+                                        %>
+                                            <div class="super super-l12 row super-flex super-flex-column">
+                                                <div class="super super-l12 label">
+                                                    <%= teacher[i].filieres[j].nom %>
+                                                </div>
+                                                <div class="super super-l12 content">
+                                                <%
+                                                    var hasCourse = false;
+                                                    for(var k in teacher[i].cours){
+                                                        hasCourse = true;
+                                                        if(teacher[i].cours[k]._filiere == teacher[i].filieres[j].id){
+                                                %>
+                                                    <div class="super super-l12 item">
+                                                        <%= teacher[i].cours[k].nom %>
+                                                    </div>
+                                                <%    }
+                                                    }
+                                                    if(!hasCourse){
+                                                %>
+                                                    <div class="super super-l12 item empty">Aucun cours pour l'instant dans cette filière</div>
+                                                <%  } %>
+                                                </div>
+                                            </div>
+                                        <% }
+                                           if(!hasFiliere){
+                                        %>
+                                            <div class="super super-l12 item empty-info">Aucun cours pour l'instant</div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="super super-l12 super-flex actions super-flex-center">
+                                    <div class="super super-l6 action state">
+                                        <% if(allowModule(26)){ %>
+                                        <div class="super super-l12 super-flex combined switch" value="M" data-index="<%= i %>">
+                                            <button class="super <%= teacher[i].etat == 'M' ? '' : 'off' %>" data-value="M" index="0">Mis<%= teacher[i].sexe == 'M' ? '' : 'e' %> en disponibilité</button>
+                                            <button class="super <%= teacher[i].etat == 'A' ? '' : 'off' %>" data-value="A" index="1">Acti<%= teacher[i].sexe == 'M' ? 'f' : 've'%></button>
+                                            <button class="super <%= teacher[i].etat == 'C' ? '' : 'off' %>" data-value="C" index="2">Congé d'étude</button>
+                                            <button class="super <%= teacher[i].etat == 'E' ? '' : 'off' %>" data-value="E" index="3">Exclu<%= teacher[i].sexe == 'M' ? '' : 'e'%></button>
+                                        </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="super super-l6 super-flex-center super-flex-align-end action">
+                                        <% if(allowModule(37) && !teacher[i].hasAccount){ %>
+                                        <button class="light account-linking" data-index="<%= i %>"><icon class="las la-user-cog"></icon> Lier à un compte</button>
+                                        <% } %>
+                                        <% if(allowModule(24)){ %>
+                                        <button class="light edit" data-index="<%= i %>"><icon class="ion-edit"></icon> Modifier les informations</button>
+                                        <% } %>
+                                        <% if(allowModule(25)){ %>
+                                        <button class="light delete" data-index="<%= i %>"><icon class="ion-trash-b"></icon> Supprimer</button>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </item>
+                <% } %>
+                    <div class="super super-l12 empty-info <%= k ? 'not-super' : '' %> super-flex-center">
+                        <%= currentYear == null ? "Aucune année académique n'est en cours..." : "Aucun Professeur..." %>
+                    </div>
+                    <div class="super not-super super-l12" id="linkingForm">
+                        <div class="super super-l12 field">
+                            <label>Pseudo</label>
+                            <input type="text" class="input super super-l12" name="th_pseudo">
+                        </div>
+                        <div class="super super-l12 field">
+                            <label>passcode</label>
+                            <span class="combined super-flex-center">
+                                <input class="input" type="password" name="th_passcode">
+                                <icon class="password-toggler ion-eye" alternate="ion-eye,ion-eye-disabled"></icon>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="super super-all-absolute mask">
+        </div>
+        <% if(currentYear != null){ %>
+        <div class="super float-action">
+            <% if(allowModule(27)){ %>
+            <button class="las la-print not-super print-teacher"></button>
+            <% } %>
+            <% if(allowModule(23)){ %>
+            <button class="las la-plus register-n-list-switch teach-form"></button>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+    <% if(allowModule(23) && currentYear != null){ %>
+    <div class="super form-add register-zone super-scrollable-y">
+        <div class="super super-l12" id="teacherForm">
+            <h1>Nouveau Professeur</h1>
+            <div class="super super-l12 super-flex-center identification">
+                <div class="super avatar-box">
+                    <input type="file" accept="image/x-png,image/gif,image/jpeg,text/xlsx" class="hidden-file" id="picture-file">
+                    <avatar class="super">
+                        <icon class="las la-user"></icon>
+                    </avatar>
+                    <icon class="super avatar-chooser ion-android-camera"></icon>
+                </div>
+                <div class="super super-l8 code-box">
+                    <span class="super super-l12">
+                        Code d'identification Système
+                    </span>
+                    <span class="super super-l12 code">
+                    </span>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex group">
+                <div class="super super-l6 field">
+                    <label>Nom du professeur</label>
+                    <input type="text" class="input super-l12" name="th_nom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                </div><!--
+             --><div class="super super-l6 field">
+                    <label>Prénom du professeur</label>
+                    <input type="text" class="input super-l12" name="th_prenom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                </div>
+            </div>
+            <div class="super super-l12 super-flex group">
+                <div class="super super-l3 field">
+                    <label>Sexe</label>
+                    <select class="input super-l12" name="th_sexe" match="^[\\S]$">
+                        <option value=""></option>
+                        <option value="F">Féminin</option>
+                        <option value="M">Masculin</option>
+                    </select>
+                </div><!--
+             --><div class="super super-l9 field">
+                    <label>Status matrimonial</label>
+                    <select class="input super-l12" name="th_status" match="^[\\S()]+$">
+                        <option value=""></option>
+                        <option value="Célibataire">Célibataire</option>
+                        <option value="Marié(e)">Marié(e)</option>
+                        <option value="Fiancé">Fiancé</option>
+                        <option value="Non spécifié">Non spécifié</option>
+                    </select>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field">
+                    <label>Adresse</label>
+                    <input type="text" class="input super-l12" name="th_address" match="^(#? *[0-9]+ *, *)?([A-Za-zÀ-ÖØ-öø-ÿ]+[\\s\\S]* *, *)?[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]( *, *[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*)?$">
+                </div>
+                <div class="super super-l6 group">
+                    <label class="linked">Téléphone</label>
+                    <div class="super super-l12 field">
+                        <div class="super super-l12 combined super-flex-end">
+                            <div class="super super-l4" style="padding: .1em 0">+509</div>
+                            <input type="text" class="input super-l8" mask="####-####" match="^[34][0-9]{3}-?[0-9]{4}$" placeholder="XXXX-XXXX" name="th_phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 group super-flex-end">
+                <div class="super super-l6 field">
+                    <label>Lieu de naissance</label>
+                    <input type="text" class="input super-l12"  match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*$" name="th_birthplace">
+                </div>
+                <div class="super super-l6">
+                    <label class="linked">Date de naissance</label>
+                    <div class="super super-l12 field">
+                        <div class="super super-l12 combined super-flex-center">
+                            <icon class="super las la-calendar-day"></icon>
+                            <input type="date" class="input end" match="^[0-9]{4}-[0-9]{2}-[0-9]{2}$" name="th_birthdate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field">
+                    <label>Niveau d'étude</label>
+                    <select type="text" class="input super-l12" match="^[\\w]+$" name="th_skill">
+                        <option value=""></option>
+                        <option value="Licence">Licence</option>
+                        <option value="Master">Master</option>
+                        <option value="Doctorat">Doctorat</option>
+                    </select>
+                </div>
+                <div class="super super-l6 field">
+                    <label>Adresse e-mail</label>
+                    <input type="text" class="input super-l12" match="^[a-z]+[a-z0-9.]*@[a-z]+[a-z0-9.]*\\.[a-z]+[a-z0-9]*$" name="th_email">
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l9 field">
+                    <label>Poste</label>
+                    <select type="text" class="input super-l12" match="^[\\d]+$" name="th_hierarchy">
+                        <option value=""></option>
+                        <% for(var i in hierarchy){ %>
+                        <option value="<%= hierarchy[i].id %>">
+                            <%= hierarchy[i].notation %>
+                            <%= hierarchy[i].filiere != null ? " de "+hierarchy[i].filiere : "" %>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="super super-l3 field">
+                    <label>Salaire</label>
+                    <input type="number" class="input super-l12" match="^[1-9][\\d]{4,5}$" min="10000" name="th_sales">
+                </div>
+            </div>
+            <div class="super super-l12 super-flex-end group">
+                <div class="super super-l6 field">
+                    <label>NIF</label>
+                    <input type="text" class="input super-l12" mask="###-###-###-#" match="^([0-9]{3}-){3}[0-9]$" name="th_nif">
+                </div>
+                <div class="super super-l6 field">
+                    <label>NINU</label>
+                    <input type="text" class="input super-l12" mask="##########" match="^[1-5][0-9]{9}$" name="th_ninu">
+                </div>
+            </div>
+            <div class="super super-l12 group">
+                <label class="super-l12">Mémo (facultatif)</label>
+                <div class="super super-l12 field extended limited">
+                    <textarea class="super super-l12 input" name="th_memo" style="height: 100px; resize: none" placeholder="Écrivez-le ici..."></textarea>
+                </div>
+            </div>
+            <div class="super super-l12 teacher-alert alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 action">
+                <button id="newTeacher" data-index="-1">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

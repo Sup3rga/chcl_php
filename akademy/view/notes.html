@@ -1,0 +1,166 @@
+<div class="super super-all-absolute super-l12 notes register-n-list">
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l12 super-flex super-flex-column list card-manager">
+            <div class="super super-l12 header super-flex super-flex-column">
+                <h1>
+                    <icon class="las la-sticky-note"></icon>
+                    Notes et Bulletins
+                </h1>
+                <div class="super super-l12">
+                    <div class="super onglet card-tab active" data-index="0">
+                        <span class="super super-l12 text">Évaluation</span>
+                        <span class="super super-l12 line"></span>
+                    </div>
+                    <% if(allowModule(42)){ %>
+                    <div class="super onglet card-tab" data-index="1">
+                        <span class="super super-l12 text">Palmarès</span>
+                        <span class="super super-l12 line"></span>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="super super-l12 body card-container">
+
+                <!-- liste -->
+                <card class="super super-l12 card active evaluation super-flex super-flex-column" data-index="0">
+                    <% if(currentYear != null){ %>
+                    <div class="super super-l12 sort super-flex-center">
+                        <label class="super super-l2"><icon class="las la-sort-amount-down-alt"></icon> Filtre</label>
+                        <div class="super super-l2 field static sort-list super-scrollable-y">
+                            <select class="super input" name="academic" disabled>
+                                <option value="<%= currentYear.id %>" ><%= currentYear.academie %></option>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field static sort-list super-scrollable-y">
+                            <select class="super input" name="session">
+                                <option value="1">Session 1</option>
+                                <option value="2">Session 2</option>
+                            </select>
+                        </div>
+                        <div class="super super-l4 field faculty static sort-list">
+                            <select class="super input" name="facname">
+                                <option value="">Toutes les filières</option>
+                                <% for(var i in faculty){
+                                    if(utils.isPartOf(faculty[i].id)){
+                                %>
+                                <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                                <%  }
+                                  }
+                                %>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field grade static">
+                            <select class="super input" name="grade">
+                                <option value="">Tous les Niveaux</option>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field static">
+                            <select class="super input" name="course">
+                                <option value="">Tous les Cours</option>
+                            </select>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="super super-l12 visual super-relative">
+                        <div class="super super-l12 empty-info super-flex-center">
+                            La liste des étudiants s'affichera ici...
+                        </div>
+                        <div class="super super-l12 not-super view-list super-flex super-flex-column">
+                            <div class="super super-l12 header super-flex-center">
+                                <div class="super super-l7 super-flex-center">
+                                    <div class="legend super">Cours</div>
+                                    <span class="super name"></span>
+                                </div>
+                                <div class="super super-l3 super-al-right maximum">
+                                </div>
+                                <div class="super super-l2 super-flex-center hint">
+                                    Note sur 100
+                                </div>
+                            </div>
+                            <div class="super super-l12 list">
+                            </div>
+                            <% if(allowModule(41)){ %>
+                            <div class="super super-l12 action super-flex-center super-flex-align-end">
+                                <button class="submit-notes disabled">Soumettre</button>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                </card>
+                <!-- palmares -->
+                <% if(allowModule(42) && currentYear != null){ %>
+                <card class="super super-l12 card palmares super-flex super-flex-column" data-index="1">
+                    <div class="super super-l12 sort super-flex-center">
+                        <label class="super super-l2"><icon class="las la-sort-amount-down-alt"></icon> Filtre</label>
+                        <div class="super super-l2 field static sort-list super-scrollable-y">
+                            <select class="super input" name="academic">
+                                <% for(var i in academic){ %>
+                                <option value="<%= academic[i].id %>" <%= academic[i].id == currentYear.id ? 'selected' : '' %> ><%= academic[i].academie %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field static sort-list super-scrollable-y">
+                            <select class="super input" name="session">
+                                <option value="1">Session 1</option>
+                                <option value="2">Session 2</option>
+                                <option value="0">Session 1 & 2</option>
+                            </select>
+                        </div>
+                        <div class="super super-l3 field faculty static sort-list">
+                            <select class="super input" name="facname">
+                                <option value="">Toutes les filières</option>
+                                <% for(var i in faculty){
+                                    if(utils.isPartOf(faculty[i].id)){
+                                %>
+                                <option value="<%= faculty[i].id %>"><%= faculty[i].nom %></option>
+                                <%  }
+                                   }
+                                %>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field grade static">
+                            <select class="super input" name="grade">
+                                <option value="">Tous les Niveaux</option>
+                            </select>
+                        </div>
+                        <div class="super super-l2 field static">
+                            <select class="super input" name="course">
+                                <option value="">Tous les Cours</option>
+                            </select>
+                        </div>
+                        <% if(allowModule(43)){ %>
+                        <div class="super super-l2 action">
+                            <button class="print-notes disabled super super-l12"><icon class="las la-print"></icon> Imprimer</button>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="super super-l12 visual super-relative">
+                        <div class="super super-l12 empty-info super-flex-center">
+                            La liste des étudiants s'affichera ici...
+                        </div>
+                        <div class="super super-l12 view-list results not-super super-scrollable-y">
+                            <div class="super super-l12 head super-al-center">
+                                <div class="super super-l12 name">Campus Henri Christophe de Limonade</div>
+                                <div class="super super-l12 year">Année académique <span class="super info"></span> </div>
+                                <div class="super super-l12 text">Résultats</div>
+                                <div class="super super-l12 extras super-flex">
+                                    <div class="super super-l6 fac">
+                                    </div>
+                                    <div class="super super-l6">
+                                    </div>
+                                    <div class="super super-l6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="super super-l12 list-view">
+
+                            </div>
+                        </div>
+                    </div>
+                </card>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

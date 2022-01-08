@@ -1,0 +1,297 @@
+<div class="super super-all-absolute super-l12 users aio register-n-list">
+    <%
+    var moduleNames = [
+    "Année Académique", //1
+    "Gestion des étudiants", //2
+    "Gestion des cours", //3
+    "Gestion des professeurs", //4
+    "Gestion de l'administration", //5
+    "Gestion des utilisateurs", //6
+    "Gestion des notes et palmarès", //7
+    "Modules extras", //8
+    "",
+    "Enregistrement d'année académique", //10
+    "Lancer la passation des étudiants", //11
+    "Enregistrer étudiant", //12
+    "Modifier étudiant", //13
+    "Supprimer étudiant", //14
+    "Modifier l'état d'un étudiant", //15
+    "Imprimer la liste des étudiants", //16
+    "Enregistrer un cours", //17
+    "Modifier un cours", //18
+    "Supprimer un cours", //19
+    "Modifier l'état d'un cours", //20
+    "Voir les horaires", //21
+    "Imprimer les horaires", //22
+    "Enregistrer professeur", //23
+    "Modifier professeur", //24
+    "Supprimer professeur", //25
+    "Modifier l'état d'un professeur", //26
+    "Imprimer la liste des professeurs", //27
+    "Enregistrer poste", //28
+    "Modifier poste", //29
+    "Supprimer poste", //30
+    "Enregistrer filière", //31
+    "Modifier filière", //32
+    "Supprimer filière", //33
+    "Ajouter un niveau à une filière/faculté", //34
+    "Modifier un niveau d'une filière/faculté", //35
+    "Supprimer un niveau d'une filière/faculté", //36
+    "Créer utilisateur", //37
+    "Modifier utilisateur", //38
+    "Supprimer utilisateur", //39
+    "Modifier l'état d'un utilisateur", //40
+    "Évaluer étudiant", //41
+    "Voir les palmarès", //42
+    "Imprimer les palmarès", //43
+    "Avoir l'accès à toutes les filières/facultés" //44
+    ];
+    var meOnly = !allowModule(37) && !allowModule(38) && !allowModule(39) && !allowModule(40);
+    %>
+    <div class="super super-l12 list-presentation super-flex list-zone">
+        <div class="super super-l12 super-flex super-flex-column list card-manager">
+            <div class="super super-l12 header super-flex super-flex-column">
+                <h1>
+                    <icon class="las la-users-cog"></icon>
+                    <span><%= meOnly ? 'Mon compte' : 'Gestion des Utilisateurs' %></span>
+                </h1>
+                <div class="super super-l12">
+                    <% if(!meOnly){ %>
+                        <div class="super onglet card-tab active" data-index="0">
+                            <span class="super super-l12 text">Tous les utilisateurs</span>
+                            <span class="super super-l12 line"></span>
+                        </div>
+                        <div class="super onglet card-tab <%= meOnly ? 'active' : '' %>" data-index="1">
+                        <span class="super super-l12 text">Moi</span>
+                        <span class="super super-l12 line"></span>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="super super-l12 body card-container">
+                <!-- liste -->
+                <% if(!meOnly){ %>
+                <card class="super super-l12 card active user-list" data-index="0">
+
+                    <div class="super super-l12 list super-scrollable-y">
+                        <%
+                        var k = 0;
+                        for(var i in users){
+                            if(users[i].id != id){
+                            k++;
+                        %>
+                        <item class="super super-l12 user-item" data-filter="<%= users[i].prenom+' '+users[i].nom+' '+users[i].pseudo %>">
+                            <div class="super super-l12 summary super-flex-center">
+                                <avatar style="background-image: url(<%= users[i].photo != null ? '../assets/avatars/'+users[i].photo : '' %>)">
+                                    <%= users[i].photo != null ? '' : users[i].prenom[0].toUpperCase(); %>
+                                </avatar>
+                                <div class="super super-l5 data">
+                                    <span class="super super-l12 name">
+                                           <%= users[i].nom.toUpperCase()+", "+users[i].prenom %>
+                                        </span>
+                                        <span class="super super-l12 suite super-flex-center">
+                                            <span class="super el"><%= users[i].pseudo %></span>
+                                        </span>
+                                </div>
+                                <div class="super super-l5 action see super-flex-center">
+                                    <% if(allowModule(38)){ %>
+                                    <button class="super super-l3 light edit" data-index="<%= i %>"><icon class="las la-edit"></icon></button>
+                                    <% }
+                                    if(allowModule(39)){ %>
+                                    <button class="super super-l3 light delete" data-index="<%= i %>"><icon class="las la-trash"></icon></button>
+                                    <% }
+                                    if(allowModule(40)){ %>
+                                    <span class="super super-l4 super-al-center" style="font-family: Poppins"> Actif : </span>
+                                    <div style="width: 55px" class="super toggler inside state <%= users[i].actif ? 'on' : '' %>" data-index="<%= i %>">
+                                        <div class="super case super-l10">
+                                            <div class="button"></div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </item>
+                        <%
+                            }
+                          }
+                        %>
+                        <div class="super super-l12 empty-info <%= k ? 'not-super' : '' %> super-flex-center">
+                            Aucun utilisateur...
+                        </div>
+
+                    </div>
+
+                </card>
+                <% } %>
+                <!-- Moi -->
+                <card class="super super-l12 card account <%= meOnly ? 'active' : '' %> super-flex" data-index="1">
+                    <div class="super avatar-zone super-al-center">
+                        <div class="super avatar-box">
+                            <input type="file" accept="image/x-png,image/gif,image/jpeg" class="hidden-file" id="personal_picture">
+                            <avatar class="super" style="background-image: <%= photo != null ? 'url(../assets/avatars/'+photo+')' : 'unset' %>">
+                                <% if(photo == null){ %>
+                                <icon class="las la-user"></icon>
+                                <% } %>
+                            </avatar>
+                            <icon class="super avatar-chooser ion-android-camera"></icon>
+                        </div>
+                    </div>
+                    <div class="super super-l7 personnal data">
+                        <label class="super super-l12 name">
+                            <%= nom+", "+prenom %>
+                        </label>
+                        <label class="super super-l12 pseudo">
+                            <%= pseudo %>
+                        </label>
+                        <div class="super super-l12 action">
+                            <button class="light" id="editMyself">Modifier mes informations personnelles</button>
+                        </div>
+                        <div class="super super-l12">
+                            <%
+                                var effectif = privileges.split(',').length,
+                                    total = 1;
+                                for(var i in modules){
+                                    total++;
+                                    for(var j in modules[i]) total++;
+                                }
+                            %>
+                            <label class="hint super super-l12 super-flex-center"><%= effectif+" privilèges sur "+total %> <span class="super"><%= Math.round(effectif / total * 10000) / 100 %>%</span></label>
+                            <div class="super super-l6 percent">
+                                <div class="super line" style="width: <%= effectif / total * 100 %>%"></div>
+                            </div>
+                        </div>
+                        <div class="super not-super super-l12" id="personalForm">
+                            <div class="super super-l12 super-flex group">
+                                <div class="super super-l12 field">
+                                    <label>Votre Nom</label>
+                                    <input type="text" class="input super-l12" name="usr_nom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                                </div>
+                            </div>
+                            <div class="super super-l12 super-flex group">
+                                <div class="super super-l12 field">
+                                    <label>Votre Prénom</label>
+                                    <input type="text" class="input super-l12" name="usr_prenom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                                </div>
+                            </div>
+                            <div class="super super-l12 field">
+                                <label>Pseudo</label>
+                                <input type="text" class="input super super-l12" name="usr_pseudo">
+                            </div>
+                            <div class="super super-flex-center super-l12">
+                                <input type="checkbox" class="super super-l2 password-edit-wish">
+                                <label style="font-family: Lexend; font-size: .9em">Je souhaiterais modifier mon passcode</label>
+                            </div>
+                            <div class="super-l12 not-super field pswd">
+                                <label>Actuel passcode</label>
+                                <span class="combined super-flex-center">
+                                    <input class="input" type="password" name="usr_passcode">
+                                    <icon class="password-toggler ion-eye" alternate="ion-eye,ion-eye-disabled"></icon>
+                                </span>
+                            </div>
+                            <div class="super-l12 not-super field pswd">
+                                <label>Nouveau passcode</label>
+                                <span class="combined super-flex-center">
+                                    <input class="input" type="password" name="usr_new_passcode">
+                                    <icon class="password-toggler ion-eye" alternate="ion-eye,ion-eye-disabled"></icon>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </card>
+
+            </div>
+        </div>
+        <% if(allowModule(37)){ %>
+        <div class="super super-all-absolute mask">
+        </div>
+        <div class="super float-action">
+            <button class="las la-plus register-n-list-switch user-form"></button>
+        </div>
+        <% } %>
+    </div>
+    <% if(allowModule(37)){ %>
+    <div class="super form-add register-zone super-scrollable-y">
+        <div class="super super-l12" id="userForm">
+            <h1>Nouvel Utilisateur</h1>
+            <div class="super super-l12 super-flex-center identification super-flex-align-center">
+                <div class="super avatar-box">
+                    <input type="file" accept="image/x-png,image/gif,image/jpeg" class="hidden-file" id="picture-file">
+                    <avatar class="super">
+                        <icon class="las la-user"></icon>
+                    </avatar>
+                    <icon class="super avatar-chooser ion-android-camera"></icon>
+                </div>
+            </div>
+            <div class="super super-l12 super-flex group">
+                <div class="super super-l6 field">
+                    <label>Nom de l'utilisateur</label>
+                    <input type="text" class="input super-l12" name="usr_nom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                </div><!--
+             --><div class="super super-l6 field">
+                    <label>Prénom de l'utilisateur</label>
+                    <input type="text" class="input super-l12" name="usr_prenom" match="^[A-Za-zÀ-ÖØ-öø-ÿ]+[A-Za-zÀ-ÖØ-öø-ÿ '-]*[A-Za-zÀ-ÖØ-öø-ÿ]$">
+                 </div>
+            </div>
+            <div class="super super-l12 field">
+                <label>Pseudo</label>
+                <input type="text" class="input super super-l12" name="usr_pseudo">
+            </div>
+            <div class="super super-l12 field">
+                <label>Poste</label>
+                <select type="text" class="input super-l12" match="^[\\d]+$" name="usr_hierarchy">
+                    <option value=""></option>
+                    <% for(var i in hierarchy){ %>
+                        <option value="<%= hierarchy[i].id %>">
+                            <%= hierarchy[i].notation %>
+                            <%= hierarchy[i].filiere != null ? " de "+hierarchy[i].filiere : "" %>
+                        </option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="super-l12 field">
+                <label>Passcode</label>
+                <span class="combined super-flex-center">
+                    <input class="input" type="password" name="usr_passcode">
+                    <icon class="password-toggler ion-eye" alternate="ion-eye,ion-eye-disabled"></icon>
+                </span>
+            </div>
+            <div class="super super-l12 privilegies">
+                <label class="head">Les privilièges du système</label>
+                <%
+                   for(var i in modules){
+                %>
+                    <div class="super super-l12 module-box">
+                        <div class="head modules super super-l12 super-flex-center <%= i == 6 ? 'selected' : ''%>">
+                            <input type="checkbox" class="input" id="label<%=i %>" <%= i == 6 ? "checked disabled" : ""%> data-value="<%= i %>">
+                            <label class="super super-l9" for="label<%= i %>">
+                                <%= moduleNames[i - 1] %>
+                            </label>
+                            <icon class="super more ion-chevron-down <%= i == 6 ? '' : 'not-super'%>"></icon>
+                        </div>
+                        <div class="super super-l12 sub-modules not-super">
+                            <% for(var j in modules[i]){ %>
+                                <div class="modules super super-l12 super-flex-center">
+                                    <input type="checkbox" id="label<%= modules[i][j] %>" class="input" data-value="<%= modules[i][j] %>">
+                                    <label for="label<%= modules[i][j] %>">
+                                        <%= moduleNames[modules[i][j] * 1 - 1] %>
+                                    </label>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+            <div class="super super-l12 student-alert alert-box not-super">
+                <div class="super super-l12 wrapper super-flex-center">
+                    <icon class="ion-alert"></icon>
+                    <div class="super super-l10 text">
+                    </div>
+                </div>
+            </div>
+            <div class="super super-l12 action">
+                <button id="newUser" data-index="-1">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

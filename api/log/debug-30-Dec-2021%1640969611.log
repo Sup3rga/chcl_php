@@ -1,0 +1,87 @@
+[ 30-Dec-2021 19:37:24 ] [Saving] 36752
+[ 30-Dec-2021 19:42:40 ] [Saving] 2000-04-12
+[ 30-Dec-2021 19:42:41 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 19:42:41 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 19:42:57 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 19:42:57 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 19:48:14 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 19:48:14 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 19:48:24 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 19:48:24 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 19:49:22 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 19:49:29 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 19:58:19 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 19:58:30 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 20:00:00 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:00:10 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 20:02:44 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:02:54 ] [Total] [57,56,60,58,59]
+[ 30-Dec-2021 20:06:37 ] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[ 30-Dec-2021 20:09:50 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:09:50 ] [Total] [57,56,60,61,58,59]
+[ 30-Dec-2021 20:09:56 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:10:06 ] [Total] [57,56,60,61,58,59]
+[ 30-Dec-2021 20:11:58 ] [Reflection] Teacher
+[ 30-Dec-2021 20:11:58 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:11:58 ] [Total] [57,56,60,61,62,59]
+[ 30-Dec-2021 20:14:37 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:14:48 ] [Total] [57,56,60,61,62,59]
+[ 30-Dec-2021 20:15:39 ] [Reflection] Teacher
+[ 30-Dec-2021 20:15:39 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:15:39 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:16:47 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:16:56 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:17:24 ] [Reflection] Teacher
+[ 30-Dec-2021 20:17:25 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:17:25 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:20:46 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:20:55 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:21:21 ] [Reflection] Teacher
+[ 30-Dec-2021 20:21:22 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 30-Dec-2021 20:21:22 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:21:27 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 20:21:28 ] [Total] [57,56,60,61,62,63,59]
+[ 30-Dec-2021 20:22:00 ] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[ 30-Dec-2021 20:22:00 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 30-Dec-2021 20:22:00 ] [Total] [57,56,60,64,61,62,63,59]
+[ 30-Dec-2021 20:22:09 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 30-Dec-2021 20:22:17 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:21:20 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:21:34 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:22:25 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:22:41 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:25:27 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:25:40 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:29:12 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:29:23 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:31:10 ] [ accesss ] [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;,&quot;17&quot;,&quot;18&quot;,&quot;19&quot;,&quot;20&quot;,&quot;21&quot;,&quot;22&quot;,&quot;23&quot;,&quot;24&quot;,&quot;25&quot;,&quot;26&quot;,&quot;27&quot;,&quot;28&quot;,&quot;29&quot;,&quot;30&quot;,&quot;31&quot;,&quot;32&quot;,&quot;33&quot;,&quot;34&quot;,&quot;35&quot;,&quot;36&quot;,&quot;37&quot;,&quot;38&quot;,&quot;39&quot;,&quot;40&quot;,&quot;41&quot;,&quot;42&quot;,&quot;43&quot;,&quot;44&quot;]
+[ 31-Dec-2021 01:32:52 ] [ accesss ] ["0","1","2","3","4","5","6","7","8","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44"]
+[ 31-Dec-2021 01:33:59 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:34:14 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:34:30 ] [ accesss ] 0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+[ 31-Dec-2021 01:35:59 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:36:12 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:36:33 ] [ accesss ] 0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+[ 31-Dec-2021 01:41:47 ] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[ 31-Dec-2021 01:42:24 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:42:35 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:42:43 ] [ removesession ] {"user":1,"token":"82776_e7_C6154f460","name":"Core Infinite","ip":"::1"}
+[ 31-Dec-2021 01:42:52 ] Connecting !
+[ 31-Dec-2021 01:43:01 ] [ connection ] {"user":1,"name":"Core Infinite","token":"66808&eFf4","ip":"::1"}
+[ 31-Dec-2021 01:43:19 ] Connecting !
+[ 31-Dec-2021 01:43:26 ] [ connection ] {"user":1,"name":"Core Infinite","token":"00833E41253B6B&&1E","ip":"::1"}
+[ 31-Dec-2021 01:47:24 ] Connecting !
+[ 31-Dec-2021 01:47:28 ] [ connection ] {"user":1,"name":"Core Infinite","token":"0_1&73984@17b@41Fb764_","ip":"::1"}
+[ 31-Dec-2021 01:51:16 ] Connecting !
+[ 31-Dec-2021 01:51:27 ] [ connection ] {"user":1,"name":"Core Infinite","token":"e20_&3F0a1","ip":"::1"}
+[ 31-Dec-2021 01:51:30 ] [Token] e20_&amp;3F0a1
+[ 31-Dec-2021 01:52:28 ] Connecting !
+[ 31-Dec-2021 01:52:38 ] [ connection ] {"user":1,"name":"Core Infinite","token":"&6@F9710971","ip":"::1"}
+[ 31-Dec-2021 01:52:41 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 01:52:55 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:52:58 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 01:52:59 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 01:53:01 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 01:53:12 ] [Total] [57,56,60,64,61,62,63,59]
+[ 31-Dec-2021 02:00:33 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 02:00:45 ] [Total] [57,56,60,64,61,62,63,59]

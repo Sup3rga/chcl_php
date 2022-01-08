@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^(.*)$ api/router.php
+</IfModule>
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<Files .[jpeg|jpg|gif|png]>
+	order allow,deny
+	allow from all
+</Files>
+
+Options -Indexes

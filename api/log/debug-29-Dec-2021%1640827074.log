@@ -1,0 +1,41 @@
+[ 29-Dec-2021 01:17:54 ] Bonjour
+[ 29-Dec-2021 01:18:16 ] Connecting !
+[ 29-Dec-2021 01:18:21 ] Connecting !
+[ 29-Dec-2021 01:19:04 ] Connecting !
+[ 29-Dec-2021 01:21:03 ] Connecting !
+[ 29-Dec-2021 01:58:18 ] Connecting !
+[ 29-Dec-2021 01:58:27 ] Connecting !
+[ 29-Dec-2021 02:03:02 ] Connecting !
+[ 29-Dec-2021 02:04:08 ] Connecting !
+[ 29-Dec-2021 02:04:14 ] [ connection ] {"user":1,"name":"Core Infinite","token":"0f7E5116E2f8_3@95E@9c20","ip":"::1"}
+[ 29-Dec-2021 02:04:27 ] Connecting !
+[ 29-Dec-2021 02:04:38 ] [ connection ] {"user":1,"name":"Core Infinite","token":"&73f9b","ip":"::1"}
+[ 29-Dec-2021 22:02:06 ] Connecting !
+[ 29-Dec-2021 22:02:19 ] Connecting !
+[ 29-Dec-2021 22:02:50 ] Connecting !
+[ 29-Dec-2021 22:06:36 ] Connecting !
+[ 29-Dec-2021 22:06:46 ] [ connection ] {"user":1,"name":"Core Infinite","token":"82776_e7_C6154f460","ip":"::1"}
+[ 29-Dec-2021 22:06:49 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 29-Dec-2021 22:07:00 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:07:15 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 29-Dec-2021 22:07:28 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:09:08 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 29-Dec-2021 22:09:17 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:09:36 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 29-Dec-2021 22:09:47 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:10:04 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 29-Dec-2021 22:10:06 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:10:24 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 29-Dec-2021 22:10:24 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:12:25 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 29-Dec-2021 22:12:27 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:13:24 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 29-Dec-2021 22:13:25 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:14:04 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 29-Dec-2021 22:14:05 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:14:11 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 29-Dec-2021 22:14:14 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:15:08 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 29-Dec-2021 22:15:18 ] [Total] [57,56,60,58,59]
+[ 29-Dec-2021 22:15:50 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 29-Dec-2021 22:15:55 ] [Total] [57,56,60,58,59]

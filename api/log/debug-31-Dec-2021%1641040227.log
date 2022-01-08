@@ -1,0 +1,180 @@
+[ 31-Dec-2021 13:30:27 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:30:27 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:32:23 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:32:23 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:32:58 ] [ accesss ] 0,1,2,3,4,5,6,7
+[ 31-Dec-2021 13:35:03 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:35:03 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:35:39 ] [ Civil ] Ok : 
+[ 31-Dec-2021 13:35:39 ] [Reflection] User
+[ 31-Dec-2021 13:35:39 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:35:39 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:36:02 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:36:02 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:15 ] [ removesession ] {"user":1,"token":"bc_890b51@e360f92","name":"Core Infinite","ip":"::1"}
+[ 31-Dec-2021 13:37:24 ] Connecting !
+[ 31-Dec-2021 13:37:24 ] [ connection ] {"user":13,"name":"Wilky Syndick","token":"617@&5856a71b&4Fc5_&06","ip":"::1"}
+[ 31-Dec-2021 13:37:28 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 13:37:28 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:34 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 31-Dec-2021 13:37:34 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:36 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 13:37:36 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:39 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 13:37:39 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:53 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 13:37:53 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:37:55 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 13:37:55 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:38:08 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 13:38:08 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:38:21 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:38:21 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:38:52 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:38:52 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:38:59 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 13:38:59 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:39:08 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 13:39:08 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:39:20 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 13:39:20 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:39:26 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 31-Dec-2021 13:39:26 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:13 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 31-Dec-2021 13:40:13 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:20 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 13:40:20 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:23 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 13:40:23 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:25 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 13:40:25 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:48 ] Connecting !
+[ 31-Dec-2021 13:40:48 ] [ connection ] {"user":1,"name":"Core Infinite","token":"a62@30064b&2&___12a630@44","ip":"::1"}
+[ 31-Dec-2021 13:40:50 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 13:40:50 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:53 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 13:40:53 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:40:57 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 13:40:57 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:42:24 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 13:42:24 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:43:37 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 13:43:37 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:43:40 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:43:40 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:44:58 ] [User] null
+[ 31-Dec-2021 13:48:50 ] [User] null : a62@30064b&amp;2&amp;___12a630@44
+[ 31-Dec-2021 13:49:26 ] [Reflection] User
+[ 31-Dec-2021 13:49:26 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 13:49:26 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:49:55 ] Connecting !
+[ 31-Dec-2021 13:49:56 ] [ connection ] {"user":14,"name":"Duckens Larose","token":"8285938137c1919&c2cb_62_c7b843","ip":"::1"}
+[ 31-Dec-2021 13:49:58 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 13:49:58 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:50:01 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 13:50:01 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:52:22 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 13:52:22 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:52:46 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 13:52:46 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 13:55:36 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 13:55:36 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 17:52:56 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 17:52:56 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 17:53:06 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 17:53:06 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 17:53:12 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 17:53:12 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 17:58:06 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 17:58:06 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:15 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:01:15 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:35 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:01:35 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:42 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 18:01:42 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:45 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 18:01:45 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:46 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 18:01:46 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:01:48 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 18:01:48 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:16 ] Connecting !
+[ 31-Dec-2021 18:02:16 ] [ connection ] {"user":1,"name":"Core Infinite","token":"17701813","ip":"::1"}
+[ 31-Dec-2021 18:02:17 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 18:02:17 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:22 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:02:22 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:30 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 18:02:30 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:35 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:02:35 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:40 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 18:02:40 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:42 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 18:02:42 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:43 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 18:02:43 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:02:45 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 31-Dec-2021 18:02:45 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:04:52 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 18:04:52 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:05:55 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 18:05:55 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:06:08 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:06:08 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:06:12 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 18:06:12 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:06:13 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:06:13 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:06:42 ] [ Civil ] Ok : 
+[ 31-Dec-2021 18:06:42 ] [Reflection] Teacher
+[ 31-Dec-2021 18:06:42 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:06:42 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:07:00 ] [ Civil ] Ok : 
+[ 31-Dec-2021 18:07:00 ] [Reflection] Teacher
+[ 31-Dec-2021 18:07:00 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:07:00 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:07:53 ] [Reflection] User
+[ 31-Dec-2021 18:09:58 ] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Marc' for key 'uk_pseudo'
+[ 31-Dec-2021 18:12:13 ] [Before] 
+[ 31-Dec-2021 18:12:13 ] [After] 
+[ 31-Dec-2021 18:12:13 ] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Marc' for key 'uk_pseudo'
+[ 31-Dec-2021 18:13:04 ] [Before] 
+[ 31-Dec-2021 18:13:04 ] [After] 
+[ 31-Dec-2021 18:13:04 ] [Reflection] User
+[ 31-Dec-2021 18:13:04 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:13:04 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:13:14 ] [ removesession ] {"user":1,"token":"17701813","name":"Core Infinite","ip":"::1"}
+[ 31-Dec-2021 18:13:28 ] Connecting !
+[ 31-Dec-2021 18:13:28 ] [ connection ] {"user":18,"name":"Marc Michel","token":"e31@1@4458&227acae_16&78","ip":"::1"}
+[ 31-Dec-2021 18:13:30 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 18:13:30 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:13:33 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 18:13:33 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:13:48 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 18:13:48 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:14:02 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:14:02 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:14:14 ] Connecting !
+[ 31-Dec-2021 18:14:15 ] [ connection ] {"user":1,"name":"Core Infinite","token":"88873604f8358b_2","ip":"::1"}
+[ 31-Dec-2021 18:14:16 ] [ ressource ] {"ip":"::1","ressource":"\/"}
+[ 31-Dec-2021 18:14:16 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:14:22 ] [ ressource ] {"ip":"::1","ressource":"\/student"}
+[ 31-Dec-2021 18:14:22 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:15:05 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:15:05 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:15:40 ] [ Civil ] Ok : 
+[ 31-Dec-2021 18:15:40 ] [Reflection] Teacher
+[ 31-Dec-2021 18:15:40 ] [ ressource ] {"ip":"::1","ressource":"\/teacher"}
+[ 31-Dec-2021 18:15:40 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:15:51 ] [ ressource ] {"ip":"::1","ressource":"\/users"}
+[ 31-Dec-2021 18:15:51 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:15:54 ] [ ressource ] {"ip":"::1","ressource":"\/admin"}
+[ 31-Dec-2021 18:15:54 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:16:09 ] [ ressource ] {"ip":"::1","ressource":"\/notes"}
+[ 31-Dec-2021 18:16:09 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:16:10 ] [ ressource ] {"ip":"::1","ressource":"\/course"}
+[ 31-Dec-2021 18:16:10 ] [Total] [57,56,60,64,65,66,64,59,65]
+[ 31-Dec-2021 18:16:12 ] [ ressource ] {"ip":"::1","ressource":"\/academic-year"}
+[ 31-Dec-2021 18:16:12 ] [Total] [57,56,60,64,65,66,64,59,65]

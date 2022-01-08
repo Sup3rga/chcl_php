@@ -1,0 +1,157 @@
+<div class="super super-l12 super-all-absolute administration super-flex">
+    <div class="super super-l7 card-manager super-relative adminer">
+        <div class="super super-l12 header">
+            <h1>
+                <icon class="las la-university"></icon>
+                Administration
+            </h1>
+            <div class="super super-l12">
+                <div class="super onglet card-tab active" data-index="0">
+                    <span class="super super-l12 text">Poste hiérarchique</span>
+                    <span class="super super-l12 line"></span>
+                </div>
+                <div class="super onglet card-tab" data-index="1">
+                    <span class="super super-l12 text">Filières</span>
+                    <span class="super super-l12 line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="super super-l12 body card-container">
+            <!-- Poste -->
+            <card class="super super-l12 card active poste" data-index="0">
+                <div class="super super-l12 list super-flex super-flex-column">
+                    <div class="super super-l12 adder" style="height: auto">
+                        <div class="super super-l12">
+                            <% if(allowModule(28)){ %>
+                            <div class="super super-l12 static field" id="posteForm" style="padding: 0">
+                                <div class="combined super-l12 super-flex-center">
+                                    <input type="text" class="super super-l3 input" placeholder="Nom du poste" name="poste_name">
+                                    <input type="number" class="super super-l3 input" min="1" placeholder="Effectif maximal" name="poste_capacity" style="text-align: center">
+                                    <select class="super super-l3 input" name="poste_linked">
+                                        <option value="">Affecté à</option>
+                                        <% for(var i in faculty){ %>
+                                            <option value="<%=faculty[i].id %>"><%= faculty[i].nom %></option>
+                                        <% } %>
+                                    </select>
+                                    <input type="number" min="1" max="5" class="super super-l3 input" placeholder="Valuer hiérarchique" name="poste_value" style="text-align: center">
+                                </div>
+                            </div>
+                            <% } %>
+                            <div class="super super-l12 action super-flex-center super-flex-align-end" style="padding: 0">
+                                <div class="super super-l8 label">
+                                    Les postes disponibles
+                                </div>
+                                <% if(allowModule(28)){ %>
+                                <button id="addPoste" class="disabled super super-l4"><icon class="las la-plus"></icon> Ajouter</button>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="super super-l12 super-scrollable-y body">
+                        <% for(var i in hierarchy){ %>
+                        <item class="super super-flex-center super-l12 poste">
+                            <span class="super super-l9 name super-flex-center" data-index="<%= i %>">
+                                <%= hierarchy[i].notation %>
+                                <%= hierarchy[i].filiere != null ? " de "+hierarchy[i].filiere : "" %>
+                            </span>
+                            <span class="super super-l3 action super-flex-center super-flex-align-end">
+                                <% if(allowModule(29)){ %>
+                                <button class="edit ion-edit light" data-index="<%= i %>"></button>
+                                <% } %>
+                                <% if(allowModule(30)){ %>
+                                <button class="delete ion-trash-b light" data-index="<%= i %>"></button>
+                                <% } %>
+                            </span>
+                        </item>
+                        <% } %>
+                    </div>
+                </div>
+            </card>
+            <!-- Filière -->
+            <card class="super super-l12 card fac super-flex" data-index="1">
+                <div class="super super-l12 list super-flex super-flex-column">
+                    <div class="super super-l12 adder super-flex-center super-flex-align-center">
+                        <% if(allowModule(31) && currentYear != null){ %>
+                        <div class="super super-l11 super-flex-center">
+                            <div class="super super-l12 static field">
+                                <div class="super super-l12 combined super-flex-center">
+                                    <input type="text" class="super super-l12 input" id="newFacText" placeholder="Ajoutez le nom d'une nouvelle filière">
+                                    <icon class="super not-super super-l2 las la-times redo"></icon>
+                                </div>
+                            </div>
+                            <div class="super super-l6 action super-flex-center super-flex-align-end">
+                                <button id="addFac"><icon class="las la-plus"></icon> Ajouter</button>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="super super-l12 label">
+                        <%= currentYear == null ? "..." : "Liste des filières" %>
+                    </div>
+                    <div class="super super-l12 super-scrollable-y body">
+                        <%
+                        var tab = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','p','q','r','s','t','u'];
+                        var k = 0;
+                        for(var i in faculty){ %>
+                        <item class="super super-flex-center faculty <%= tab[k % tab.length] %>" data-index="<%= i %>">
+                                <%= faculty[i].nom %>
+                                <% k++ %>
+                        </item>
+                        <% } %>
+                    </div>
+                </div>
+            </card>
+        </div>
+    </div>
+    <div class="super super-l5 presentation super-scrollable-y">
+        <div class="super super-l12 empty-info super-flex-center">
+            Les informations s'afficheront ici...
+        </div>
+        <div class="super super-l12 infos poste-infos not-super">
+        </div>
+        <div class="super super-l12 infos fac-infos not-super">
+            <span class="super super-l12 nom"></span>
+            <span class="super super-l12 statistics super-flex-center">
+                <span class="super super-l5">Année academique</span>
+                <span class="super super-l7 static field">
+                    <select class="input academic-list">
+                    </select>
+                </span>
+            </span>
+            <canvas class="super super-l12 histogramme-filiere"></canvas>
+            <div class="super super-l12 action">
+                <% if(allowModule(32)){ %>
+                <button class="edit"><icon class="ion-edit"></icon> Modifier</button>
+                <% }
+                if(allowModule(33)){ %>
+                <button class="delete"><icon class="ion-trash-a"></icon> Supprimer</button>
+                <% } %>
+            </div>
+            <div class="super super-flex-center super-l12 grade-head">
+                <h1 class="super super-l6">Niveau académique</h1>
+                <% if(allowModule(34)){ %>
+                <div class="super super-l6 action" style="padding: 0">
+                    <button class="add-grade super-l12 light" style="padding: 0.8em">
+                        <icon class="las la-plus"></icon> Ajouter un niveau
+                    </button>
+                </div>
+                <% } %>
+            </div>
+            <div class="super super-l12 grade-list">
+            </div>
+            <% if(allowModule(34)){ %>
+            <div class="not-super grade-form">
+                <div class="super super-l12 field">
+                    <label>Le nom du niveau</label>
+                    <input class="input" name="fac-grade-notation">
+                </div>
+                <div class="super super-l12 field">
+                    <label>Le nombre d'année correspondant au niveau</label>
+                    <input class="input" name="fac-grade-value" type="number" min="0" max="7">
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+</div>

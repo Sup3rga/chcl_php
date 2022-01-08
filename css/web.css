@@ -1,0 +1,1814 @@
+/* line 13, ../sass/_var.scss */
+appbar .user-zone .user-info, .user-panel .user-info {
+  padding: .4em .1em .1em .4em;
+  padding: .4em .1em .1em .4em;
+}
+/* line 16, ../sass/_var.scss */
+appbar .user-zone .user-info .greeting, .user-panel .user-info .greeting {
+  font-family: Lexend-Light;
+  font-size: .7em;
+}
+/* line 20, ../sass/_var.scss */
+appbar .user-zone .user-info .name, .user-panel .user-info .name {
+  font-family: Poppins-SemiBold;
+  font-size: .9em;
+  position: relative;
+  top: -.4em;
+}
+
+/* line 28, ../sass/_var.scss */
+.results .head .extras div, .teacher .list item .metadata .wrapper .row .label, .student .list item .metadata .wrapper .row .label, .course .list item .metadata .wrapper .row .label, .notes .list item .metadata .wrapper .row .label, .users .list item .metadata .wrapper .row .label, .list-printing .metadatas .metadata .wrapper .row .label, .teacher .list item .metadata .wrapper .row .content, .student .list item .metadata .wrapper .row .content, .course .list item .metadata .wrapper .row .content, .notes .list item .metadata .wrapper .row .content, .users .list item .metadata .wrapper .row .content, .list-printing .metadatas .metadata .wrapper .row .content, .teacher .list item .metadata .state button, .student .list item .metadata .state button, .course .list item .metadata .state button, .notes .list item .metadata .state button, .users .list item .metadata .state button, .list-printing .metadatas .metadata .state button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 34, ../sass/_var.scss */
+.results .head {
+  padding: .4em;
+  background-color: #d5e3e5;
+}
+/* line 37, ../sass/_var.scss */
+.results .head .name {
+  font-family: Poppins-SemiBold;
+  font-size: 1.3em;
+  padding: .3em 0;
+}
+/* line 42, ../sass/_var.scss */
+.results .head .year {
+  padding: .3em 0;
+  font-family: Lexend;
+  font-size: 1em;
+}
+/* line 47, ../sass/_var.scss */
+.results .head .text {
+  font-family: Lexend-SemiBold;
+  font-size: 1.1em;
+  padding: .4em 0;
+}
+/* line 52, ../sass/_var.scss */
+.results .head .extras {
+  padding: .3em 0;
+}
+/* line 54, ../sass/_var.scss */
+.results .head .extras div {
+  font-family: Rubik-Light;
+  font-size: .9em;
+}
+/* line 58, ../sass/_var.scss */
+.results .head .extras div.fac {
+  font-size: 1em;
+  text-align: left;
+  padding-left: .4em;
+  font-family: Poppins-SemiBold;
+}
+
+/* line 68, ../sass/_var.scss */
+.teacher .list item, .student .list item, .course .list item, .notes .list item, .users .list item, .list-printing .metadatas {
+  overflow: hidden;
+  height: 80px;
+  transition-property: box-shadow,height !important;
+}
+/* line 72, ../sass/_var.scss */
+.teacher .list item .see, .student .list item .see, .course .list item .see, .notes .list item .see, .users .list item .see, .list-printing .metadatas .see {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .2s;
+  font-size: .8em;
+}
+/* line 77, ../sass/_var.scss */
+.teacher .list item .see icon, .student .list item .see icon, .course .list item .see icon, .notes .list item .see icon, .users .list item .see icon, .list-printing .metadatas .see icon {
+  padding: 0 .5em;
+}
+/* line 81, ../sass/_var.scss */
+.teacher .list item:hover, .student .list item:hover, .course .list item:hover, .notes .list item:hover, .users .list item:hover, .list-printing .metadatas:hover {
+  cursor: default !important;
+  color: #000 !important;
+  padding-left: .5em !important;
+  -moz-box-shadow: 0 1px 2px 0 #ccc;
+  -webkit-box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #ccc;
+}
+/* line 86, ../sass/_var.scss */
+.teacher .list item:hover .see, .student .list item:hover .see, .course .list item:hover .see, .notes .list item:hover .see, .users .list item:hover .see, .list-printing .metadatas:hover .see {
+  opacity: 1;
+}
+/* line 90, ../sass/_var.scss */
+.teacher .list item .summary, .student .list item .summary, .course .list item .summary, .notes .list item .summary, .users .list item .summary, .list-printing .metadatas .summary {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  height: 70px;
+}
+/* line 95, ../sass/_var.scss */
+.teacher .list item .summary avatar, .student .list item .summary avatar, .course .list item .summary avatar, .notes .list item .summary avatar, .users .list item .summary avatar, .list-printing .metadatas .summary avatar {
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  transition-duration: .2s;
+  transition-property: opacity;
+}
+/* line 102, ../sass/_var.scss */
+.teacher .list item .summary .data, .student .list item .summary .data, .course .list item .summary .data, .notes .list item .summary .data, .users .list item .summary .data, .list-printing .metadatas .summary .data {
+  font-size: .7em;
+  padding: .4em;
+}
+/* line 106, ../sass/_var.scss */
+.teacher .list item .summary .data .name, .student .list item .summary .data .name, .course .list item .summary .data .name, .notes .list item .summary .data .name, .users .list item .summary .data .name, .list-printing .metadatas .summary .data .name {
+  font-family: Poppins-SemiBold;
+  font-size: 1.3em;
+}
+/* line 111, ../sass/_var.scss */
+.teacher .list item .summary .data .suite, .student .list item .summary .data .suite, .course .list item .summary .data .suite, .notes .list item .summary .data .suite, .users .list item .summary .data .suite, .list-printing .metadatas .summary .data .suite {
+  font-family: Lexend;
+  padding: .2em 0;
+  font-size: .9em;
+}
+/* line 116, ../sass/_var.scss */
+.teacher .list item .summary .data .suite .el, .student .list item .summary .data .suite .el, .course .list item .summary .data .suite .el, .notes .list item .summary .data .suite .el, .users .list item .summary .data .suite .el, .list-printing .metadatas .summary .data .suite .el {
+  padding: .2em;
+}
+/* line 119, ../sass/_var.scss */
+.teacher .list item .summary .data .suite .el:first-child, .student .list item .summary .data .suite .el:first-child, .course .list item .summary .data .suite .el:first-child, .notes .list item .summary .data .suite .el:first-child, .users .list item .summary .data .suite .el:first-child, .list-printing .metadatas .summary .data .suite .el:first-child {
+  color: #555;
+}
+/* line 122, ../sass/_var.scss */
+.teacher .list item .summary .data .suite .el:first-child::after, .student .list item .summary .data .suite .el:first-child::after, .course .list item .summary .data .suite .el:first-child::after, .notes .list item .summary .data .suite .el:first-child::after, .users .list item .summary .data .suite .el:first-child::after, .list-printing .metadatas .summary .data .suite .el:first-child::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 134, ../sass/_var.scss */
+.teacher .list item.open, .student .list item.open, .course .list item.open, .notes .list item.open, .users .list item.open, .list-printing .open.metadatas {
+  height: 420px;
+  overflow: hidden;
+  margin-bottom: .5em;
+  -moz-box-shadow: 0 1px 2px 0 #799eab;
+  -webkit-box-shadow: 0 1px 2px 0 #799eab;
+  box-shadow: 0 1px 2px 0 #799eab;
+}
+/* line 139, ../sass/_var.scss */
+.teacher .list item.open .see, .student .list item.open .see, .course .list item.open .see, .notes .list item.open .see, .users .list item.open .see, .list-printing .open.metadatas .see {
+  opacity: 1;
+}
+/* line 142, ../sass/_var.scss */
+.teacher .list item.open .summary, .student .list item.open .summary, .course .list item.open .summary, .notes .list item.open .summary, .users .list item.open .summary, .list-printing .open.metadatas .summary {
+  background-color: #eee;
+}
+/* line 144, ../sass/_var.scss */
+.teacher .list item.open .summary avatar, .student .list item.open .summary avatar, .course .list item.open .summary avatar, .notes .list item.open .summary avatar, .users .list item.open .summary avatar, .list-printing .open.metadatas .summary avatar {
+  opacity: 0;
+}
+/* line 149, ../sass/_var.scss */
+.teacher .list item .metadata, .student .list item .metadata, .course .list item .metadata, .notes .list item .metadata, .users .list item .metadata, .list-printing .metadatas .metadata {
+  padding: .2em;
+  font-size: .7em;
+  height: 300px;
+}
+/* line 153, ../sass/_var.scss */
+.teacher .list item .metadata .avatar-box, .student .list item .metadata .avatar-box, .course .list item .metadata .avatar-box, .notes .list item .metadata .avatar-box, .users .list item .metadata .avatar-box, .list-printing .metadatas .metadata .avatar-box {
+  width: 200px;
+  text-align: center;
+}
+/* line 156, ../sass/_var.scss */
+.teacher .list item .metadata .avatar-box avatar, .student .list item .metadata .avatar-box avatar, .course .list item .metadata .avatar-box avatar, .notes .list item .metadata .avatar-box avatar, .users .list item .metadata .avatar-box avatar, .list-printing .metadatas .metadata .avatar-box avatar {
+  width: 160px;
+  height: 160px;
+  font-size: 3em;
+  line-height: 160px;
+}
+/* line 162, ../sass/_var.scss */
+.teacher .list item .metadata .avatar-box .code, .student .list item .metadata .avatar-box .code, .course .list item .metadata .avatar-box .code, .notes .list item .metadata .avatar-box .code, .users .list item .metadata .avatar-box .code, .list-printing .metadatas .metadata .avatar-box .code {
+  font-family: Lexend;
+  color: #444;
+  font-size: 1.2em;
+  padding: .5em 0;
+}
+/* line 169, ../sass/_var.scss */
+.teacher .list item .metadata .wrapper, .student .list item .metadata .wrapper, .course .list item .metadata .wrapper, .notes .list item .metadata .wrapper, .users .list item .metadata .wrapper, .list-printing .metadatas .metadata .wrapper {
+  height: 25px;
+}
+/* line 171, ../sass/_var.scss */
+.teacher .list item .metadata .wrapper .row, .student .list item .metadata .wrapper .row, .course .list item .metadata .wrapper .row, .notes .list item .metadata .wrapper .row, .users .list item .metadata .wrapper .row, .list-printing .metadatas .metadata .wrapper .row {
+  height: inherit;
+  align-items: center;
+  padding: 0 .2em;
+}
+/* line 175, ../sass/_var.scss */
+.teacher .list item .metadata .wrapper .row .label, .student .list item .metadata .wrapper .row .label, .course .list item .metadata .wrapper .row .label, .notes .list item .metadata .wrapper .row .label, .users .list item .metadata .wrapper .row .label, .list-printing .metadatas .metadata .wrapper .row .label {
+  font-family: Poppins-SemiBold;
+}
+/* line 179, ../sass/_var.scss */
+.teacher .list item .metadata .wrapper .row .content, .student .list item .metadata .wrapper .row .content, .course .list item .metadata .wrapper .row .content, .notes .list item .metadata .wrapper .row .content, .users .list item .metadata .wrapper .row .content, .list-printing .metadatas .metadata .wrapper .row .content {
+  font-family: Lexend;
+}
+/* line 186, ../sass/_var.scss */
+.teacher .list item .metadata .state button, .student .list item .metadata .state button, .course .list item .metadata .state button, .notes .list item .metadata .state button, .users .list item .metadata .state button, .list-printing .metadatas .metadata .state button {
+  font-size: .9em;
+}
+/* line 189, ../sass/_var.scss */
+.teacher .list item .metadata .state button:first-child, .student .list item .metadata .state button:first-child, .course .list item .metadata .state button:first-child, .notes .list item .metadata .state button:first-child, .users .list item .metadata .state button:first-child, .list-printing .metadatas .metadata .state button:first-child {
+  -moz-border-radius: 1em 0 0 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em 0 0 1em;
+}
+/* line 192, ../sass/_var.scss */
+.teacher .list item .metadata .state button:last-child, .student .list item .metadata .state button:last-child, .course .list item .metadata .state button:last-child, .notes .list item .metadata .state button:last-child, .users .list item .metadata .state button:last-child, .list-printing .metadatas .metadata .state button:last-child {
+  -moz-border-radius: 0 1em 1em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 1em 1em 0;
+}
+
+/* line 200, ../sass/_var.scss */
+#studentForm .avatar-box, #teacherForm .avatar-box, #userForm .avatar-box, .account .avatar-zone .avatar-box {
+  position: relative;
+}
+/* line 202, ../sass/_var.scss */
+#studentForm .avatar-box avatar, #teacherForm .avatar-box avatar, #userForm .avatar-box avatar, .account .avatar-zone .avatar-box avatar {
+  width: 97px;
+  height: 97px;
+  line-height: 97px;
+  font-size: 3em;
+  color: #999;
+}
+/* line 209, ../sass/_var.scss */
+#studentForm .avatar-box .avatar-chooser, #teacherForm .avatar-box .avatar-chooser, #userForm .avatar-box .avatar-chooser, .account .avatar-zone .avatar-box .avatar-chooser {
+  width: 34px;
+  height: 34px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  line-height: 34px;
+  text-align: center;
+  background-color: #26708a;
+  color: white;
+  font-size: 1.1em;
+  position: absolute;
+  top: calc(97px - 30px);
+  left: calc(97px - 34px);
+}
+
+/* line 4, ../sass/web.scss */
+.company-logo {
+  background-image: url("../assets/logo.jpg");
+  background-size: auto 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 11, ../sass/web.scss */
+#logger {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 15, ../sass/web.scss */
+#logger .company-logo {
+  height: 140px;
+  margin-top: -100px;
+  margin-bottom: 1em;
+}
+/* line 20, ../sass/web.scss */
+#logger .name {
+  font-family: Lexend-SemiBold;
+  font-size: 2.1em;
+  padding: .5em .3em .2em .3em;
+  color: #26708a;
+}
+/* line 26, ../sass/web.scss */
+#logger .logo {
+  background-image: linear-gradient(200deg, #4585a1, #002931);
+  height: 100vh;
+}
+/* line 27, ../sass/web.scss */
+#logger .logo .image {
+  background-image: url("../assets/compo.png");
+  background-size: auto 80%;
+  left: 5%;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+/* line 45, ../sass/web.scss */
+#logger .def {
+  font-size: 1em;
+  padding: .3em .6em;
+  color: white;
+  background-color: #48a0b9;
+  -moz-border-radius: 1em 0.3em 1em 0.3em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em 0.3em 1em 0.3em;
+  font-family: Lexend;
+  margin-bottom: 1em;
+}
+/* line 54, ../sass/web.scss */
+#logger .modal-box {
+  padding: .3em 3em .3em 1em;
+}
+/* line 57, ../sass/web.scss */
+#logger .remember {
+  padding: .2em .5em;
+  font-family: OpenSans-Light;
+}
+/* line 60, ../sass/web.scss */
+#logger .remember input {
+  margin: 0 .8em;
+}
+
+/* line 66, ../sass/web.scss */
+view {
+  flex-direction: column;
+  height: 100%;
+}
+
+/* line 70, ../sass/web.scss */
+appbar {
+  height: 60px;
+}
+/* line 72, ../sass/web.scss */
+appbar .field {
+  height: 35px;
+  background-color: #ebf1f3 !important;
+}
+/* line 76, ../sass/web.scss */
+appbar .action {
+  height: 40px;
+  padding: 0;
+}
+/* line 79, ../sass/web.scss */
+appbar .action button {
+  height: inherit;
+  -moz-border-radius: 7em;
+  -webkit-border-radius: 7em;
+  border-radius: 7em;
+  padding: .4em .4em;
+  background: #8ab8c5;
+}
+/* line 86, ../sass/web.scss */
+appbar .search-zone {
+  padding-left: 1em;
+}
+/* line 89, ../sass/web.scss */
+appbar .user-zone {
+  height: 100%;
+  padding: 0 1em 0 .4em;
+  margin-left: 1em;
+}
+/* line 96, ../sass/web.scss */
+appbar .user-zone button {
+  border: 0;
+  border-radius: 5em;
+  padding: .7em 0;
+  background-color: rgba(250, 250, 250, 0.7);
+  color: #5aa7bd;
+  cursor: pointer;
+}
+/* line 103, ../sass/web.scss */
+appbar .user-zone button:hover {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+/* line 109, ../sass/web.scss */
+sidemenu {
+  padding: 0 1.5em 0.8em 1em;
+  width: 300px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d7481;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNjQ2NjMxIiB5MT0iMS4wODgxMDUiIHgyPSIwLjM1MzM2OSIgeTI9Ii0wLjA4ODEwNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA3MjAyMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(104deg, #072021, rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(104deg, #072021, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(346deg, #072021, rgba(0, 0, 0, 0));
+  overflow: hidden;
+  overflow-y: auto;
+  transition-property: width, padding, clip-path;
+  transition-duration: .2s;
+}
+/* line 124, ../sass/web.scss */
+sidemenu .links {
+  padding-top: 1em;
+}
+/* line 127, ../sass/web.scss */
+sidemenu .company {
+  color: white;
+  font-size: 1.4em;
+  width: inherit;
+  height: 60px;
+}
+/* line 133, ../sass/web.scss */
+sidemenu .company .name {
+  font-family: Poppins-Bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 140, ../sass/web.scss */
+sidemenu .company-logo {
+  height: 45px;
+  width: 45px;
+  margin: 0 .5em 0 1em;
+  background-size: auto 80%;
+  background-color: #fff;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 149, ../sass/web.scss */
+sidemenu item, sidemenu .item {
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  padding: .4em .4em;
+  text-decoration: none;
+  margin: .2em 0 .4em 0;
+  cursor: pointer;
+  transition-property: background-color, width, height;
+  transition-duration: .4s;
+}
+/* line 157, ../sass/web.scss */
+sidemenu item icon, sidemenu .item icon {
+  padding: .3em 1em;
+  font-size: 1.3em;
+  color: #eee;
+}
+/* line 162, ../sass/web.scss */
+sidemenu item .text, sidemenu .item .text {
+  font-family: Poppins;
+  color: #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 169, ../sass/web.scss */
+sidemenu item:hover, sidemenu .item:hover {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+/* line 171, ../sass/web.scss */
+sidemenu item:hover icon, sidemenu item:hover .text, sidemenu .item:hover icon, sidemenu .item:hover .text {
+  color: #fff;
+}
+/* line 175, ../sass/web.scss */
+sidemenu item.active, sidemenu .item.active {
+  background-color: white;
+}
+/* line 177, ../sass/web.scss */
+sidemenu item.active icon, sidemenu .item.active icon {
+  color: #26708a;
+}
+/* line 180, ../sass/web.scss */
+sidemenu item.active .text, sidemenu .item.active .text {
+  font-family: Poppins-SemiBold;
+  color: #26708a;
+}
+/* line 186, ../sass/web.scss */
+sidemenu.minimal {
+  width: 70px;
+  padding: 0 1.5em 0.8em 0.4em;
+}
+/* line 191, ../sass/web.scss */
+sidemenu.minimal .company .company-logo {
+  margin: 0 .2em;
+}
+/* line 194, ../sass/web.scss */
+sidemenu.minimal .company .name {
+  width: 0%;
+  overflow: hidden;
+}
+/* line 199, ../sass/web.scss */
+sidemenu.minimal item, sidemenu.minimal .item {
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  width: 43px;
+  height: 43px;
+  margin-left: .4em;
+}
+/* line 204, ../sass/web.scss */
+sidemenu.minimal item icon, sidemenu.minimal .item icon {
+  padding: .2em;
+}
+/* line 207, ../sass/web.scss */
+sidemenu.minimal item .text, sidemenu.minimal .item .text {
+  width: 0;
+  opacity: 0;
+}
+
+/* line 214, ../sass/web.scss */
+panel {
+  background-color: rgba(250, 250, 250, 0.8);
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  padding: 1em;
+  height: 100%;
+  overflow: unset;
+}
+
+/* line 222, ../sass/web.scss */
+.akademy {
+  overflow: hidden;
+  background-color: rgba(250, 250, 250, 0.8);
+}
+/* line 226, ../sass/web.scss */
+.akademy.template .company {
+  background-color: #eee;
+  color: #ccc;
+}
+/* line 230, ../sass/web.scss */
+.akademy.template .company-logo {
+  background-color: #ddd;
+  background-image: unset;
+}
+/* line 234, ../sass/web.scss */
+.akademy.template sidemenu {
+  background-color: #eee;
+  background-image: unset;
+  overflow-y: hidden;
+}
+/* line 238, ../sass/web.scss */
+.akademy.template sidemenu item {
+  background-color: rgba(200, 200, 200, 0.2);
+  white-space: normal;
+  overflow: hidden;
+}
+/* line 242, ../sass/web.scss */
+.akademy.template sidemenu item icon, .akademy.template sidemenu item .text {
+  color: rgba(200, 200, 200, 0);
+}
+/* line 247, ../sass/web.scss */
+.akademy.template .field {
+  background-color: rgba(200, 200, 200, 0.2) !important;
+}
+/* line 249, ../sass/web.scss */
+.akademy.template .field .input::placeholder {
+  color: #ddd;
+}
+/* line 252, ../sass/web.scss */
+.akademy.template .field icon {
+  color: rgba(200, 200, 200, 0.2);
+}
+/* line 256, ../sass/web.scss */
+.akademy.template avatar {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+}
+/* line 261, ../sass/web.scss */
+.akademy.template .user-info .greeting {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+  border-radius: .5em;
+}
+/* line 266, ../sass/web.scss */
+.akademy.template .user-info .name {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0);
+  border-radius: .5em;
+  height: 16px;
+  top: -.2em;
+}
+/* line 273, ../sass/web.scss */
+.akademy.template .user-info button {
+  color: #ddd !important;
+}
+
+/* line 280, ../sass/web.scss */
+.dashboard {
+  padding: .4em .8em;
+}
+/* line 282, ../sass/web.scss */
+.dashboard .welcome {
+  height: 290px;
+  background-color: #fff;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 286, ../sass/web.scss */
+.dashboard .welcome .text {
+  padding: .4em .8em;
+  font-family: Poppins;
+}
+/* line 289, ../sass/web.scss */
+.dashboard .welcome .text .greetings {
+  font-family: Poppins-SemiBold;
+  font-size: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* line 296, ../sass/web.scss */
+.dashboard .welcome .text .explain {
+  font-family: Lexend;
+  font-size: .9em;
+  color: #777;
+  padding: .8em .5em .5em .5em;
+}
+/* line 302, ../sass/web.scss */
+.dashboard .welcome .text .light {
+  background-color: #93b8c5;
+  padding: 0 .8em;
+  font-size: .8em;
+  color: white;
+  margin-left: .5em;
+  font-family: Poppins-Bold;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 312, ../sass/web.scss */
+.dashboard .welcome .welcome-img {
+  background-image: url("../assets/login.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  height: inherit;
+}
+/* line 320, ../sass/web.scss */
+.dashboard .canvas-wrapper {
+  padding: .4em;
+}
+
+/* line 325, ../sass/web.scss */
+.user-panel {
+  padding: 1em;
+  background-color: white;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  z-index: 2;
+  -moz-box-shadow: 0 2px 4px 0 #ccc;
+  -webkit-box-shadow: 0 2px 4px 0 #ccc;
+  box-shadow: 0 2px 4px 0 #ccc;
+}
+/* line 334, ../sass/web.scss */
+.user-panel avatar {
+  width: 70px;
+  height: 70px;
+  font-size: 1.6em;
+  line-height: 70px;
+}
+/* line 342, ../sass/web.scss */
+.user-panel .user-info .greeting {
+  font-size: .8em;
+}
+/* line 345, ../sass/web.scss */
+.user-panel .user-info .name {
+  font-size: 1em;
+  top: 0;
+}
+/* line 350, ../sass/web.scss */
+.user-panel .action {
+  padding: .5em;
+  font-family: Poppins;
+  color: #777;
+}
+/* line 354, ../sass/web.scss */
+.user-panel .action icon {
+  width: 43px;
+  height: 43px;
+  text-align: center;
+  line-height: 43px;
+  font-size: 1.2em;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #eee;
+  margin: 0 .4em;
+}
+/* line 363, ../sass/web.scss */
+.user-panel .action icon:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+/* line 373, ../sass/web.scss */
+.aio .list-presentation {
+  height: 100%;
+}
+/* line 376, ../sass/web.scss */
+.aio .list {
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+/* line 380, ../sass/web.scss */
+.aio .list .header {
+  height: 70px;
+  font-family: Poppins-SemiBold;
+  font-size: 1.8em;
+}
+/* line 384, ../sass/web.scss */
+.aio .list .header icon {
+  font-size: 1.8em;
+  padding: 0 .5em;
+}
+/* line 389, ../sass/web.scss */
+.aio .list .body {
+  padding: .5em;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* line 397, ../sass/web.scss */
+.aio .list .body item {
+  padding: .5em;
+  font-family: Lexend;
+  font-size: 1.3em;
+  transition-duration: .2s;
+  transition-property: padding, font-size, color;
+}
+/* line 403, ../sass/web.scss */
+.aio .list .body item:hover {
+  color: #2d5a81;
+  cursor: pointer;
+  padding-left: 1em;
+}
+/* line 408, ../sass/web.scss */
+.aio .list .body item.active {
+  color: #26708a;
+  font-size: 1.8em;
+  padding-left: 1em;
+  font-family: Lexend-SemiBold;
+}
+/* line 414, ../sass/web.scss */
+.aio .list .body item.less {
+  font-family: Poppins;
+  font-size: .7em;
+  width: auto;
+  background-color: #ddd;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  padding: .3em .5em;
+  color: #777;
+}
+/* line 426, ../sass/web.scss */
+.aio .presentation {
+  padding: 1em .5em .5em .4em;
+}
+/* line 428, ../sass/web.scss */
+.aio .presentation .diagramme {
+  height: 50%;
+}
+/* line 432, ../sass/web.scss */
+.aio .presentation .state-box label {
+  font-family: Lexend;
+  font-size: .9em;
+  padding: .4em;
+}
+/* line 437, ../sass/web.scss */
+.aio .presentation .state-box .combined {
+  height: 30px;
+}
+/* line 439, ../sass/web.scss */
+.aio .presentation .state-box .combined button {
+  height: 30px;
+  line-height: 0;
+  font-size: .9em;
+}
+/* line 443, ../sass/web.scss */
+.aio .presentation .state-box .combined button:first-child {
+  -moz-border-radius: 0.5em 0 0 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
+}
+/* line 446, ../sass/web.scss */
+.aio .presentation .state-box .combined button:last-child {
+  border-right: 1px solid #cde;
+  -moz-border-radius: 0 0.5em 0.5em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.5em 0.5em 0;
+}
+/* line 454, ../sass/web.scss */
+.aio .form-add {
+  height: 100%;
+}
+/* line 456, ../sass/web.scss */
+.aio .form-add h1 {
+  padding: .5em;
+  font-family: Lexend-SemiBold;
+  font-size: 1.4em;
+}
+/* line 461, ../sass/web.scss */
+.aio .form-add .anneeAcademique {
+  font-family: Lexend;
+  font-size: 1em;
+}
+/* line 465, ../sass/web.scss */
+.aio .form-add label {
+  font-family: Poppins;
+  font-size: .8em;
+}
+/* line 468, ../sass/web.scss */
+.aio .form-add label.linked {
+  position: relative;
+  top: 1.8em;
+}
+/* line 473, ../sass/web.scss */
+.aio .form-add #Aka-yearForm {
+  padding: .5em 1em;
+}
+/* line 477, ../sass/web.scss */
+.aio .form-add .group .field:first-child {
+  margin-right: .4em;
+}
+/* line 480, ../sass/web.scss */
+.aio .form-add .group .field:last-child {
+  margin-left: .4em;
+}
+
+/* line 489, ../sass/web.scss */
+.administration .adminer {
+  height: 100%;
+  position: relative;
+  width: calc(100% * 7 / 12);
+}
+/* line 494, ../sass/web.scss */
+.administration .list, .administration .presentation {
+  height: 100%;
+}
+/* line 498, ../sass/web.scss */
+.administration .list .label {
+  font-family: Lexend;
+  font-size: 1.2em;
+  padding: .8em .5em;
+}
+/* line 503, ../sass/web.scss */
+.administration .list .body {
+  padding: .5em;
+  overflow-y: auto !important;
+}
+/* line 506, ../sass/web.scss */
+.administration .list .body item {
+  padding: .5em;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 2px 0 #ccc;
+  -webkit-box-shadow: 0 1px 2px 0 #ccc;
+  box-shadow: 0 1px 2px 0 #ccc;
+  height: 50px;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+/* line 515, ../sass/web.scss */
+.administration .list .body item.faculty {
+  font-family: Lexend;
+}
+/* line 518, ../sass/web.scss */
+.administration .list .body item .name {
+  font-family: Lexend;
+  font-size: 1em;
+  height: 100%;
+}
+/* line 523, ../sass/web.scss */
+.administration .list .body item .action {
+  padding: 0;
+  display: none;
+  height: 40px;
+}
+/* line 527, ../sass/web.scss */
+.administration .list .body item .action button {
+  height: inherit;
+  background-color: unset;
+  color: #2d525f;
+}
+/* line 531, ../sass/web.scss */
+.administration .list .body item .action button:hover {
+  color: #26708a;
+  background-color: rgba(200, 200, 200, 0.4);
+}
+/* line 537, ../sass/web.scss */
+.administration .list .body item.a {
+  background-color: rgba(230, 239, 253, 0.4);
+}
+/* line 539, ../sass/web.scss */
+.administration .list .body item.b {
+  background-color: rgba(252, 247, 218, 0.4);
+}
+/* line 541, ../sass/web.scss */
+.administration .list .body item.c {
+  background-color: rgba(227, 253, 250, 0.4);
+}
+/* line 543, ../sass/web.scss */
+.administration .list .body item.d {
+  background-color: rgba(255, 241, 238, 0.4);
+}
+/* line 545, ../sass/web.scss */
+.administration .list .body item.e {
+  background-color: rgba(248, 255, 231, 0.4);
+}
+/* line 547, ../sass/web.scss */
+.administration .list .body item.f {
+  background-color: rgba(255, 240, 231, 0.4);
+}
+/* line 549, ../sass/web.scss */
+.administration .list .body item:hover {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+/* line 551, ../sass/web.scss */
+.administration .list .body item:hover .action {
+  display: inline-flex;
+}
+/* line 557, ../sass/web.scss */
+.administration .list .adder {
+  padding: .4em;
+  height: 60px;
+}
+/* line 560, ../sass/web.scss */
+.administration .list .adder .field {
+  height: 50px;
+}
+/* line 562, ../sass/web.scss */
+.administration .list .adder .field .combined {
+  padding-right: 0;
+}
+/* line 565, ../sass/web.scss */
+.administration .list .adder .field .redo:hover {
+  cursor: pointer;
+  color: #2d525f;
+}
+/* line 569, ../sass/web.scss */
+.administration .list .adder .field #addFac {
+  background-color: unset;
+  font-size: 1.3em;
+  color: white;
+  background-color: #26708a;
+  height: 45px;
+  width: 50px;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-align: center;
+  border: 0;
+  display: inline-block;
+}
+/* line 584, ../sass/web.scss */
+.administration .presentation {
+  padding: .4em;
+}
+/* line 586, ../sass/web.scss */
+.administration .presentation .nom {
+  padding: .5em;
+  font-family: Lexend-SemiBold;
+  font-size: 1.2em;
+}
+/* line 591, ../sass/web.scss */
+.administration .presentation .statistics {
+  font-family: Poppins !important;
+  font-size: 1em;
+}
+/* line 594, ../sass/web.scss */
+.administration .presentation .statistics .field {
+  height: 40px;
+}
+/* line 598, ../sass/web.scss */
+.administration .presentation h1 {
+  padding: .8em .4em;
+  font-size: 1.2em;
+}
+/* line 603, ../sass/web.scss */
+.administration .presentation .grade-head .action button {
+  background-color: rgba(238, 238, 238, 0.45);
+  color: #26708a;
+  font-family: Lexend-SemiBold;
+}
+/* line 609, ../sass/web.scss */
+.administration .presentation .item {
+  padding: 0 .4em;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  font-family: Lexend;
+}
+/* line 614, ../sass/web.scss */
+.administration .presentation .item .notation {
+  font-family: Poppins;
+}
+/* line 617, ../sass/web.scss */
+.administration .presentation .item .action {
+  display: none;
+  height: inherit;
+}
+/* line 621, ../sass/web.scss */
+.administration .presentation .item button {
+  background-color: rgba(200, 200, 200, 0.1);
+  color: #26708a;
+  cursor: pointer;
+}
+/* line 625, ../sass/web.scss */
+.administration .presentation .item button:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+/* line 630, ../sass/web.scss */
+.administration .presentation .item:hover .action {
+  display: inline-flex;
+}
+
+/* line 640, ../sass/web.scss */
+.teacher .sort, .student .sort, .course .sort, .notes .sort, .users .sort {
+  padding: .4em;
+}
+/* line 642, ../sass/web.scss */
+.teacher .sort label, .student .sort label, .course .sort label, .notes .sort label, .users .sort label {
+  font-family: Rubik;
+  font-size: 1.3em;
+  padding: .3em .5em;
+}
+/* line 648, ../sass/web.scss */
+.teacher .sort .action button, .student .sort .action button, .course .sort .action button, .notes .sort .action button, .users .sort .action button {
+  padding: .4em 1em;
+}
+/* line 652, ../sass/web.scss */
+.teacher .sort .field, .student .sort .field, .course .sort .field, .notes .sort .field, .users .sort .field {
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  height: 30px;
+  margin: 0 .2em;
+}
+/* line 658, ../sass/web.scss */
+.teacher .list, .student .list, .course .list, .notes .list, .users .list {
+  padding: 0 .4em;
+}
+/* line 662, ../sass/web.scss */
+.teacher .list item .courses, .student .list item .courses, .course .list item .courses, .notes .list item .courses, .users .list item .courses {
+  max-height: 180px;
+}
+/* line 664, ../sass/web.scss */
+.teacher .list item .courses h3, .student .list item .courses h3, .course .list item .courses h3, .notes .list item .courses h3, .users .list item .courses h3 {
+  font-family: Poppins;
+  padding: .4em .2em;
+}
+/* line 668, ../sass/web.scss */
+.teacher .list item .courses .row, .student .list item .courses .row, .course .list item .courses .row, .notes .list item .courses .row, .users .list item .courses .row {
+  padding: .1em;
+  margin: .2em 0;
+}
+/* line 671, ../sass/web.scss */
+.teacher .list item .courses .row .label, .student .list item .courses .row .label, .course .list item .courses .row .label, .notes .list item .courses .row .label, .users .list item .courses .row .label {
+  font-family: Poppins-SemiBold;
+  padding: .2em 0;
+}
+/* line 675, ../sass/web.scss */
+.teacher .list item .courses .row .content, .student .list item .courses .row .content, .course .list item .courses .row .content, .notes .list item .courses .row .content, .users .list item .courses .row .content {
+  padding: .1em;
+}
+/* line 677, ../sass/web.scss */
+.teacher .list item .courses .row .content .item, .student .list item .courses .row .content .item, .course .list item .courses .row .content .item, .notes .list item .courses .row .content .item, .users .list item .courses .row .content .item {
+  font-family: Poppins;
+  font-size: .8em;
+  padding: .2em 0 .2em .5em;
+  background-color: #eee;
+  margin: .15em 0;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+/* line 690, ../sass/web.scss */
+.teacher .identification, .student .identification, .course .identification, .notes .identification, .users .identification {
+  padding: .4em;
+}
+/* line 692, ../sass/web.scss */
+.teacher .identification span, .student .identification span, .course .identification span, .notes .identification span, .users .identification span {
+  font-family: Poppins-SemiBold;
+  color: #444;
+  font-size: 1.2em;
+}
+/* line 696, ../sass/web.scss */
+.teacher .identification span.code, .student .identification span.code, .course .identification span.code, .notes .identification span.code, .users .identification span.code {
+  font-family: Poppins;
+  color: #000;
+  font-size: 1em;
+  padding: 0 .4em;
+}
+/* line 705, ../sass/web.scss */
+.teacher .infos .avatar-box, .student .infos .avatar-box, .course .infos .avatar-box, .notes .infos .avatar-box, .users .infos .avatar-box {
+  padding: .8em .4em;
+}
+/* line 708, ../sass/web.scss */
+.teacher .infos avatar, .student .infos avatar, .course .infos avatar, .notes .infos avatar, .users .infos avatar {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.4em;
+}
+/* line 714, ../sass/web.scss */
+.teacher .infos .name, .student .infos .name, .course .infos .name, .notes .infos .name, .users .infos .name {
+  font-family: Lexend-SemiBold;
+  font-size: 1.6em;
+  margin-bottom: .2em;
+}
+/* line 719, ../sass/web.scss */
+.teacher .infos .row, .student .infos .row, .course .infos .row, .notes .infos .row, .users .infos .row {
+  padding: .2em;
+}
+/* line 721, ../sass/web.scss */
+.teacher .infos .row .head, .student .infos .row .head, .course .infos .row .head, .notes .infos .row .head, .users .infos .row .head {
+  font-size: .9em;
+  font-family: Poppins-SemiBold;
+  padding: .3em 0;
+}
+/* line 726, ../sass/web.scss */
+.teacher .infos .row .data, .student .infos .row .data, .course .infos .row .data, .notes .infos .row .data, .users .infos .row .data {
+  font-family: Poppins;
+  font-size: 1em;
+  padding: .2em 0;
+  line-height: 1.2em;
+}
+/* line 732, ../sass/web.scss */
+.teacher .infos .row .sub-row, .student .infos .row .sub-row, .course .infos .row .sub-row, .notes .infos .row .sub-row, .users .infos .row .sub-row {
+  font-family: Lexend;
+  font-size: 1em;
+}
+/* line 737, ../sass/web.scss */
+.teacher .infos label, .student .infos label, .course .infos label, .notes .infos label, .users .infos label {
+  font-family: Poppins;
+  font-size: .9em;
+}
+
+/* line 745, ../sass/web.scss */
+.teacher item.open {
+  height: 380px;
+}
+
+/* line 751, ../sass/web.scss */
+#studentForm .code-box, #teacherForm .code-box, #userForm .code-box {
+  padding-left: 1em;
+}
+
+/* line 761, ../sass/web.scss */
+#userForm .avatar-box avatar {
+  width: 121px;
+  height: 121px;
+  line-height: 121px;
+  font-size: 3em;
+  color: #999;
+}
+/* line 768, ../sass/web.scss */
+#userForm .avatar-box .avatar-chooser {
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  font-size: 1.2em;
+  top: calc(121px - 40px);
+  left: calc(121px - 43px);
+}
+/* line 777, ../sass/web.scss */
+#userForm .privilegies {
+  padding: .5em 0;
+}
+/* line 779, ../sass/web.scss */
+#userForm .privilegies label {
+  padding: .4em 0;
+}
+/* line 784, ../sass/web.scss */
+#userForm .module-box .sub-modules {
+  padding: 0 0 0 2em;
+}
+/* line 787, ../sass/web.scss */
+#userForm .module-box .modules {
+  padding: .4em;
+  margin: .2em 0;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 2px 0 #ccc;
+  -webkit-box-shadow: 0 0 2px 0 #ccc;
+  box-shadow: 0 0 2px 0 #ccc;
+  font-family: Poppins;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  font-size: .9em;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .2s;
+}
+/* line 798, ../sass/web.scss */
+#userForm .module-box .modules .input {
+  width: 50px;
+}
+/* line 801, ../sass/web.scss */
+#userForm .module-box .modules label, #userForm .module-box .modules .input {
+  cursor: pointer;
+}
+/* line 805, ../sass/web.scss */
+#userForm .module-box .modules.head label {
+  padding: 0;
+  font-family: Poppins-SemiBold;
+}
+/* line 810, ../sass/web.scss */
+#userForm .module-box .modules .more {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(238, 238, 238, 0.43);
+  text-align: center;
+  line-height: 30px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 818, ../sass/web.scss */
+#userForm .module-box .modules.selected {
+  background-color: #3d6d6d;
+  color: white;
+}
+/* line 821, ../sass/web.scss */
+#userForm .module-box .modules.selected .more {
+  color: #3d6d6d;
+}
+
+/* line 831, ../sass/web.scss */
+.course h2 {
+  font-size: 1em;
+  padding: .2em .4em;
+}
+/* line 835, ../sass/web.scss */
+.course label.free {
+  padding: .4em 0;
+  font-size: 1.3em;
+  font-family: Poppins-SemiBold;
+}
+/* line 841, ../sass/web.scss */
+.course .course-schedule .days, .course .course-schedule .course_type {
+  font-size: .8em;
+}
+/* line 843, ../sass/web.scss */
+.course .course-schedule .days button:first-child, .course .course-schedule .course_type button:first-child {
+  -moz-border-radius: 0.5em 0 0 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
+}
+/* line 846, ../sass/web.scss */
+.course .course-schedule .days button:last-child, .course .course-schedule .course_type button:last-child {
+  -moz-border-radius: 0 0.5em 0.5em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.5em 0.5em 0;
+}
+/* line 850, ../sass/web.scss */
+.course .course-schedule p {
+  padding: .4em;
+  font-size: .8em;
+  text-align: justify;
+  font-family: Merriweather-Light;
+  line-height: 1.5em;
+}
+/* line 858, ../sass/web.scss */
+.course .scheduled-courses {
+  padding: .4em;
+  border-bottom: 1px solid #ccc;
+}
+/* line 861, ../sass/web.scss */
+.course .scheduled-courses item {
+  padding: .5em .4em;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 1px 0 #ddd;
+  -webkit-box-shadow: 0 0 1px 0 #ddd;
+  box-shadow: 0 0 1px 0 #ddd;
+  font-family: Poppins;
+}
+/* line 866, ../sass/web.scss */
+.course .scheduled-courses item span {
+  font-family: Lexend;
+  font-size: .7em;
+  font-style: italic;
+  color: #777;
+}
+/* line 872, ../sass/web.scss */
+.course .scheduled-courses item icon {
+  cursor: pointer;
+  padding: .4em 0;
+}
+/* line 878, ../sass/web.scss */
+.course #schedule {
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 881, ../sass/web.scss */
+.course .header {
+  height: 100px !important;
+  padding: .2em .5em !important;
+  font-size: 1em !important;
+}
+/* line 886, ../sass/web.scss */
+.course .body {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+/* line 890, ../sass/web.scss */
+.course .wrapper.table-host {
+  height: auto !important;
+  min-height: 25px;
+}
+/* line 894, ../sass/web.scss */
+.course .hint-box {
+  padding: 0;
+  font-size: .9em;
+}
+/* line 897, ../sass/web.scss */
+.course .hint-box icon.rounded {
+  background-color: rgba(27, 70, 62, 0.25);
+}
+/* line 902, ../sass/web.scss */
+.course .bloc .fac {
+  font-family: Rubik;
+  max-width: 100%;
+  width: auto;
+  font-size: 1.1em;
+  padding: .3em 1em .3em .3em;
+  -moz-border-radius: 1em 4em 0 0;
+  -webkit-border-radius: 1em;
+  border-radius: 1em 4em 0 0;
+  background-color: #5b848e;
+  color: white;
+}
+/* line 911, ../sass/web.scss */
+.course .bloc .fac.none {
+  padding: 0;
+  display: none !important;
+}
+/* line 917, ../sass/web.scss */
+.course .table {
+  padding: .4em;
+}
+/* line 919, ../sass/web.scss */
+.course .table .range {
+  padding: .2em 0;
+  font-size: .9em;
+}
+/* line 922, ../sass/web.scss */
+.course .table .range .day {
+  background-color: #608592;
+  color: white;
+  width: 77px;
+  text-align: center;
+  padding: .4em;
+  font-family: Poppins;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+/* line 931, ../sass/web.scss */
+.course .table .range .hour {
+  padding: .4em;
+  font-family: Lexend;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -moz-border-radius: 0 0.4em 0.4em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.4em 0.4em 0;
+  margin: 0 .2em;
+}
+/* line 938, ../sass/web.scss */
+.course .table .range .hour.cm {
+  border-left: 4px solid #266b4b;
+}
+/* line 941, ../sass/web.scss */
+.course .table .range .hour.tp {
+  border-left: 4px solid #a48611;
+}
+/* line 947, ../sass/web.scss */
+.course .legend {
+  padding: 1em 0 .5em 0;
+}
+/* line 949, ../sass/web.scss */
+.course .legend .hint {
+  padding: .2em;
+  margin: 0 .5em;
+  font-family: Lexend;
+  font-size: .8em;
+}
+/* line 954, ../sass/web.scss */
+.course .legend .hint .square {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: .5em;
+  background-color: #3b4444;
+}
+/* line 960, ../sass/web.scss */
+.course .legend .hint .square.cm {
+  background-color: #266b4b;
+}
+/* line 963, ../sass/web.scss */
+.course .legend .hint .square.tp {
+  background-color: #a48611;
+}
+/* line 970, ../sass/web.scss */
+.course .action .state {
+  font-size: .8em;
+}
+
+/* line 976, ../sass/web.scss */
+.schedular .sort-zone, .schedular .visual, .schedular .schedular-box {
+  height: 100%;
+}
+/* line 979, ../sass/web.scss */
+.schedular .sort-zone {
+  padding: 1em 2em 2em .5em;
+}
+/* line 981, ../sass/web.scss */
+.schedular .sort-zone .field {
+  margin: .4em 0;
+  height: 40px;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+}
+/* line 987, ../sass/web.scss */
+.schedular .sort-zone .action button {
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: .6em 1em;
+}
+/* line 993, ../sass/web.scss */
+.schedular .visual {
+  overflow: hidden;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+/* line 998, ../sass/web.scss */
+.schedular-box {
+  height: 100%;
+}
+/* line 1000, ../sass/web.scss */
+.schedular-box .header {
+  background-color: #3e8685;
+  color: white;
+}
+/* line 1003, ../sass/web.scss */
+.schedular-box .header .facname {
+  font-size: 1.4em;
+  font-family: Poppins-SemiBold;
+  padding: .3em 0;
+}
+/* line 1008, ../sass/web.scss */
+.schedular-box .header .schema {
+  padding: .2em;
+}
+/* line 1010, ../sass/web.scss */
+.schedular-box .header .schema .arrow {
+  padding: 0 .4em;
+  background-color: #cde;
+  position: relative;
+  font-size: .8em;
+  height: 30px;
+  padding-left: 30px;
+}
+/* line 1017, ../sass/web.scss */
+.schedular-box .header .schema .arrow:first-child {
+  padding-left: .4em;
+}
+/* line 1020, ../sass/web.scss */
+.schedular-box .header .schema .arrow span {
+  height: 30px;
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  font-family: Lexend;
+  position: relative;
+  background-color: #cde;
+  z-index: 3;
+  color: #333;
+}
+/* line 1031, ../sass/web.scss */
+.schedular-box .header .schema .arrow::after {
+  position: absolute;
+  height: 21px;
+  display: inline-block;
+  content: " ";
+  width: 21px;
+  background-color: #cde;
+  right: -10px;
+  top: 5px;
+  z-index: 2;
+  -moz-box-shadow: 1px 1px 1px 0 #889;
+  -webkit-box-shadow: 1px 1px 1px 0 #889;
+  box-shadow: 1px 1px 1px 0 #889;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 1047, ../sass/web.scss */
+.schedular-box .grid {
+  height: 100%;
+  background-color: #eee;
+  overflow: hidden;
+  overflow-y: auto;
+}
+/* line 1052, ../sass/web.scss */
+.schedular-box .grid .dayColumn {
+  position: relative;
+  height: 100%;
+}
+/* line 1055, ../sass/web.scss */
+.schedular-box .grid .dayColumn:first-child .head {
+  -moz-border-radius: 0 0 0 0.8em;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 0 0.8em;
+}
+/* line 1059, ../sass/web.scss */
+.schedular-box .grid .dayColumn:last-child .head {
+  -moz-border-radius: 0 0 0.8em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 0.8em 0;
+}
+/* line 1062, ../sass/web.scss */
+.schedular-box .grid .dayColumn:last-child .course-range {
+  border-right: 1px solid #cbd7d5;
+}
+/* line 1066, ../sass/web.scss */
+.schedular-box .grid .dayColumn .head {
+  height: 30px;
+  font-family: Lexend-SemiBold;
+  font-size: .9em;
+  padding: 0 .2em;
+  line-height: 30px;
+  background-color: #93c5c7;
+  text-align: center;
+}
+/* line 1075, ../sass/web.scss */
+.schedular-box .grid .dayColumn .course-range {
+  height: 100%;
+  position: relative;
+  padding: .2em;
+  border-left: 1px solid #cbd7d5;
+}
+/* line 1080, ../sass/web.scss */
+.schedular-box .grid .dayColumn .course-range .row {
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #cbd7d5;
+  width: 93%;
+  font-family: Poppins;
+  font-size: .8em;
+  position: absolute;
+  text-align: center;
+}
+/* line 1090, ../sass/web.scss */
+.schedular-box .grid .dayColumn .course-range .row span:first-child {
+  font-family: Poppins-SemiBold;
+  font-size: .9em;
+}
+
+/* line 1104, ../sass/web.scss */
+.notes .visual, .notes .visual .view-list {
+  height: 100%;
+}
+/* line 1107, ../sass/web.scss */
+.notes .visual .header {
+  height: 40px;
+  padding: 0 .3em;
+  font-size: 1.3em;
+}
+/* line 1111, ../sass/web.scss */
+.notes .visual .header .name {
+  font-family: Poppins;
+}
+/* line 1114, ../sass/web.scss */
+.notes .visual .header .legend {
+  padding: .2em .4em;
+  margin-right: .4em;
+  font-family: Poppins-SemiBold;
+  font-size: .8em;
+  background-color: #26708a;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  color: white;
+}
+/* line 1123, ../sass/web.scss */
+.notes .visual .header .maximum {
+  font-family: Lexend;
+  font-size: .9em;
+  padding-right: .5em;
+}
+/* line 1128, ../sass/web.scss */
+.notes .visual .header .hint {
+  font-family: Poppins-Light;
+  font-size: .6em;
+  height: inherit;
+  padding: 0 .3em 0 .5em;
+  border-left: 1px solid #eee;
+}
+/* line 1136, ../sass/web.scss */
+.notes .visual .list {
+  height: 100%;
+}
+/* line 1138, ../sass/web.scss */
+.notes .visual .list .row {
+  height: 49px;
+  padding: 0 .2em;
+  border-bottom: 1px solid #ddd;
+}
+/* line 1142, ../sass/web.scss */
+.notes .visual .list .row .name {
+  font-family: Poppins-SemiBold;
+  font-size: 1em;
+}
+/* line 1146, ../sass/web.scss */
+.notes .visual .list .row .code {
+  font-family: Poppins;
+  font-size: .8em;
+}
+/* line 1150, ../sass/web.scss */
+.notes .visual .list .row .field {
+  height: 40px;
+}
+/* line 1155, ../sass/web.scss */
+.notes .visual .action {
+  height: 60px;
+  padding: 0 .5em;
+}
+/* line 1158, ../sass/web.scss */
+.notes .visual .action button {
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+
+/* line 1165, ../sass/web.scss */
+.results {
+  padding: .3em;
+}
+
+/* line 1172, ../sass/web.scss */
+table {
+  font-family: 'Merriweather-Light';
+  display: block;
+}
+/* line 1175, ../sass/web.scss */
+table tbody {
+  width: 100%;
+  display: block;
+}
+/* line 1179, ../sass/web.scss */
+table tr {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+/* line 1185, ../sass/web.scss */
+table tr td, table tr th {
+  height: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* line 1191, ../sass/web.scss */
+table tr td.name, table tr th.name {
+  justify-content: flex-start;
+  font-family: Poppins;
+  font-size: .8em;
+}
+/* line 1197, ../sass/web.scss */
+table tr th {
+  font-family: Poppins-SemiBold !important;
+  font-weight: normal;
+  font-size: .75em !important;
+  padding: 0;
+}
+/* line 1203, ../sass/web.scss */
+table tr:first-child {
+  padding: .3em;
+  background-color: #26708a;
+  color: #fff;
+  font-family: Roboto;
+  border-bottom: 0;
+}
+/* line 1210, ../sass/web.scss */
+table tr td {
+  font-size: .9em;
+  vertical-align: top;
+  height: inherit;
+  font-family: Lexend;
+}
+/* line 1215, ../sass/web.scss */
+table tr td.good {
+  color: #475d32;
+  height: 35px;
+  background-color: #e6f7d3;
+}
+/* line 1220, ../sass/web.scss */
+table tr td.bad {
+  color: #5d3232;
+  height: 35px;
+  background-color: #f7d3d3;
+}
+/* line 1225, ../sass/web.scss */
+table tr td.bareme {
+  background-color: #eee;
+}
+/* line 1227, ../sass/web.scss */
+table tr td.bareme td {
+  font-family: Poppins-Bold;
+  font-size: .8em;
+}
+
+/* line 1237, ../sass/web.scss */
+.list-printing .metadatas {
+  height: auto;
+  overflow: unset;
+}
+/* line 1242, ../sass/web.scss */
+.list-printing .metadata {
+  height: auto !important;
+}
+
+/* line 1249, ../sass/web.scss */
+.users .header {
+  height: 100px !important;
+  padding: .2em .5em !important;
+  font-size: 1em !important;
+}
+/* line 1254, ../sass/web.scss */
+.users .list {
+  padding: 1em .4em;
+}
+
+/* line 1260, ../sass/web.scss */
+.account .avatar-zone {
+  width: 200px;
+}
+/* line 1265, ../sass/web.scss */
+.account .avatar-zone .avatar-box avatar {
+  height: 140px;
+  font-size: 3em;
+  width: 140px;
+  line-height: 140px;
+}
+/* line 1272, ../sass/web.scss */
+.account .avatar-zone .avatar-box .avatar-chooser {
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  top: calc(140px - 43px);
+  left: calc(140px - 43px);
+}
+/* line 1281, ../sass/web.scss */
+.account .personnal {
+  padding: .5em;
+}
+/* line 1283, ../sass/web.scss */
+.account .personnal label {
+  font-family: Lexend;
+  font-size: 1em;
+  padding: .4em 0;
+}
+/* line 1287, ../sass/web.scss */
+.account .personnal label.name {
+  font-size: 2.1em;
+  font-family: Poppins-SemiBold;
+}
+/* line 1291, ../sass/web.scss */
+.account .personnal label.pseudo {
+  color: #999;
+}
+/* line 1295, ../sass/web.scss */
+.account .personnal .hint {
+  margin-bottom: 1.4em;
+}
+/* line 1297, ../sass/web.scss */
+.account .personnal .hint span {
+  color: #888;
+  font-family: OpenSans-Semibold;
+  padding: .3em .5em .3em 2em;
+}
+/* line 1303, ../sass/web.scss */
+.account .personnal .percent {
+  height: 4px;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  background-color: #ccc;
+}
+/* line 1307, ../sass/web.scss */
+.account .personnal .percent .line {
+  background-color: #26708a;
+  -moz-border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  height: 4px;
+}
