@@ -1,0 +1,222 @@
+$theme : #26708a;
+$theme_pale : #09a3d0;
+$field_theme : #ebf1f3;
+$theme_gradient : linear-gradient(200deg, #4585a1, #002931);
+$cm_bg : #266b4b;
+$tp_bg : #a48611;
+$extra_bg : #3b4444;
+$menu_width : 300px; //380px
+$min_menu_width : 70px;//80px;
+$menu_padding:  0 1.5em .8em 1em;//0 4.5em .8em 1em;
+$min_menu_padding: 0 1.5em .8em .4em;//0 4.5em .8em .4em;
+
+%user-info{
+  padding: .4em .1em .1em .4em;
+  padding: .4em .1em .1em .4em;
+  .greeting{
+    font-family: Lexend-Light;
+    font-size: .7em;
+  }
+  .name{
+    font-family: Poppins-SemiBold;
+    font-size: .9em;
+    position: relative;
+    top: -.4em;
+  }
+}
+
+%ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%head{
+  padding: .4em;
+  background-color: #d5e3e5;
+  .name{
+    font-family: Poppins-SemiBold;
+    font-size: 1.3em;
+    padding: .3em 0;
+  }
+  .year{
+    padding: .3em 0;
+    font-family: Lexend;
+    font-size: 1em;
+  }
+  .text{
+    font-family: Lexend-SemiBold;
+    font-size: 1.1em;
+    padding: .4em 0;
+  }
+  .extras{
+    padding: .3em 0;
+    div{
+      font-family: Rubik-Light;
+      font-size: .9em;
+      @extend %ellipsis;
+      &.fac{
+        font-size: 1em;
+        text-align: left;
+        padding-left: .4em;
+        font-family: Poppins-SemiBold;
+      }
+    }
+  }
+}
+
+%item-meta{
+  overflow: hidden;
+  height: 80px;
+  transition-property: box-shadow,height !important;
+  .see{
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .2s;
+    font-size: .8em;
+    icon{
+      padding: 0 .5em;
+    }
+  }
+  &:hover{
+    cursor: default !important;
+    color: #000 !important;
+    padding-left: .5em !important;
+    @include box-shadow(0 1px 2px 0 #ccc);
+    .see{
+      opacity: 1;
+    }
+  }
+  .summary {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    avatar {
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      transition-duration: .2s;
+      transition-property: opacity;
+    }
+    .data {
+      font-size: .7em;
+      padding: .4em;
+
+      .name {
+        font-family: Poppins-SemiBold;
+        font-size: 1.3em;
+      }
+
+      .suite {
+        font-family: Lexend;
+        padding: .2em 0;
+        font-size: .9em;
+
+        .el {
+          padding: .2em;
+
+          &:first-child {
+            color: #555;
+
+            &::after {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background-color: #ccc;
+              @include border-radius(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open{
+    height: 420px;
+    overflow: hidden;
+    margin-bottom: .5em;
+    @include box-shadow(0 1px 2px 0 mix(#ccc,$theme));
+    .see{
+      opacity: 1;
+    }
+    .summary{
+      background-color: #eee;
+      avatar{
+        opacity: 0;
+      }
+    }
+  }
+  .metadata{
+    padding: .2em;
+    font-size: .7em;
+    height: 300px;
+    .avatar-box{
+      width: 200px;
+      text-align: center;
+      avatar{
+        width: 160px;
+        height: 160px;
+        font-size: 3em;
+        line-height: 160px;
+      }
+      .code{
+        font-family: Lexend;
+        color: #444;
+        font-size: 1.2em;
+        padding: .5em 0;
+      }
+    }
+    .wrapper{
+      height: 25px;
+      .row{
+        height: inherit;
+        align-items: center;
+        padding: 0 .2em;
+        .label{
+          font-family: Poppins-SemiBold;
+          @extend %ellipsis;
+        }
+        .content{
+          font-family: Lexend;
+          @extend %ellipsis;
+        }
+      }
+    }
+    .state{
+      button {
+        @extend %ellipsis;
+        font-size: .9em;
+        &:first-child {
+          @include border-radius(1em 0 0 1em);
+        }
+        &:last-child{
+          @include border-radius(0 1em 1em 0);
+        }
+      }
+    }
+  }
+}
+
+%avatar-box{
+  position: relative;
+  avatar {
+    width: 97px;
+    height: 97px;
+    line-height: 97px;
+    font-size: 3em;
+    color: #999;
+  }
+  .avatar-chooser {
+    width: 34px;
+    height: 34px;
+    @include border-radius(100%);
+    line-height: 34px;
+    text-align: center;
+    background-color: $theme;
+    color: white;
+    font-size: 1.1em;
+    position: absolute;
+    top: calc(97px - 30px);
+    left: calc(97px - 34px);
+  }
+}

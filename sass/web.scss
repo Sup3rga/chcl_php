@@ -1,0 +1,1314 @@
+@import "compass/css3";
+@import "./_var.scss";
+
+.company-logo{
+  background-image: url("../assets/logo.jpg");
+  background-size: auto 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//login
+#logger{
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  .company-logo{
+    height: 140px;
+    margin-top: -100px;
+    margin-bottom: 1em;
+  }
+  .name{
+    font-family: Lexend-SemiBold;
+    font-size: 2.1em;
+    padding: .5em .3em .2em .3em;
+    color: $theme;
+  }
+  .logo{
+    .image{
+      background-image: url("../assets/compo.png");
+      background-size: auto 80%;
+      left: 5%;
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+    background-image: $theme_gradient;
+    height: 100vh;
+    //clip-path: polygon(0 0, 70% 0, 100% 15%, 90% 70%, 100% 100%, 0 100%);
+            //polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            //polygon(50% 0%, 100% 0, 89% 31%, 98% 59%, 99% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+            //polygon(56% 0, 88% 1%, 100% 24%, 84% 56%, 100% 100%, 1% 100%, 0% 70%, 0 0);
+            //polygon(0 0, 84% 1%, 100% 19%, 84% 50%, 88% 99%, 1% 100%, 0% 70%, 0% 30%);
+            //polygon(75% 0%, 100% 24%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+            //circle(80% at 25% 50%);
+    //background-color: $theme_pale;
+  }
+  .def{
+    font-size: 1em;
+    padding: .3em .6em;
+    color: white;
+    background-color: mix($theme, #6ad0e7);
+    @include border-radius(1em .3em 1em .3em);
+    font-family: Lexend;
+    margin-bottom: 1em;
+  }
+  .modal-box{
+    padding: .3em 3em .3em 1em;
+  }
+  .remember{
+    padding: .2em .5em;
+    font-family: OpenSans-Light;
+    input{
+      margin: 0 .8em;
+    }
+  }
+}
+
+view{
+  flex-direction: column;
+  height: 100%;
+}
+appbar{
+  height: 60px;
+  .field{
+    height: 35px;
+    background-color: $field_theme !important;
+  }
+  .action{
+    height: 40px;
+    padding: 0;
+    button{
+      height: inherit;
+      @include border-radius(7em);
+      padding: .4em .4em;
+      background: mix(#eff,$theme);
+    }
+  }
+  .search-zone{
+    padding-left: 1em;
+  }
+  .user-zone{
+    height: 100%;
+    padding: 0 1em 0 .4em;
+    margin-left: 1em;
+    .user-info{
+      @extend %user-info;
+    }
+    button{
+      border: 0;
+      border-radius: 5em;
+      padding: .7em 0;
+      background-color: rgba(250,250,250,0.7);
+      color: mix(#aaa, $theme_pale);
+      cursor: pointer;
+      &:hover{
+        background-color: rgba(240,240,240,0.7);
+      }
+    }
+  }
+}
+sidemenu{
+  padding: $menu_padding;
+  width: $menu_width;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: mix(#377,$theme);
+  @include background-image(linear-gradient(346deg, #072021, transparent));
+  overflow: hidden;
+  overflow-y: auto;
+  //clip-path: path("M0 0L260 0Q240 100 260 210Q280 390 250 500Q220 600 300 700L0 1000");
+          //polygon(0 0, 75% 0, 100% 160px, 85% 60%, 100% 100%, 0 100%);
+  transition-property: width, padding, clip-path;
+  transition-duration: .2s;
+  .links{
+    padding-top: 1em;
+  }
+  .company{
+    color: white;//$theme;
+    font-size: 1.4em;
+    width: inherit;
+    //background-color: mix(#377,$theme);
+    height: 60px;
+    .name{
+      font-family: Poppins-Bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .company-logo{
+    height: 45px;
+    width: 45px;
+    margin: 0 .5em 0 1em;
+    background-size: auto 80%;
+    background-color: #fff;
+    cursor: pointer;
+    @include border-radius(50%);
+  }
+  item,.item{
+    @include border-radius(2em);
+    padding: .4em .4em;
+    text-decoration: none;
+    margin: .2em 0 .4em 0;
+    cursor: pointer;
+    transition-property: background-color, width, height;
+    transition-duration: .4s;
+    icon{
+      padding: .3em 1em;
+      font-size: 1.3em;
+      color: #eee;
+    }
+    .text{
+      font-family: Poppins;
+      color: #eee;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:hover{
+      background-color: rgba(200,200,200,0.1);
+      icon, .text{
+        color: #fff;
+      }
+    }
+    &.active{
+      background-color: white;
+      icon{
+        color: $theme;
+      }
+      .text{
+        font-family: Poppins-SemiBold;
+        color: $theme;
+      }
+    }
+  }
+  &.minimal{
+    width: $min_menu_width;
+    padding: $min_menu_padding;
+    //clip-path: path("M 0 0 L70 0Q50 100 70 300Q80 400 60 500 Q40 600 120 800L0 1000");
+    .company {
+      .company-logo{
+        margin: 0 .2em;
+      }
+      .name{
+        width: 0%;
+        overflow: hidden;
+      }
+    }
+    item,.item{
+      @include border-radius(100%);
+      width: 43px;
+      height: 43px;
+      margin-left: .4em;
+      icon{
+        padding: .2em;
+      }
+      .text{
+        width: 0;
+        opacity: 0;
+      }
+    }
+  }
+}
+panel{
+  background-color: rgba(250,250,250,0.8);
+  @include border-radius(1em);
+  padding: 1em;
+  height: 100%;
+  overflow: unset;
+}
+
+.akademy{
+  overflow: hidden;
+  background-color: rgba(250,250,250,0.8);
+  &.template{
+    .company{
+      background-color: #eee;
+      color: #ccc;
+    }
+    .company-logo{
+      background-color: #ddd;
+      background-image: unset;
+    }
+    sidemenu{
+      background-color: #eee;
+      @include background-image(unset);
+      overflow-y: hidden;
+      item{
+        background-color: rgba(200,200,200,0.2);
+        white-space: normal;
+        overflow: hidden;
+        icon,.text{
+          color: rgba(200,200,200,0);
+        }
+      }
+    }
+    .field{
+      background-color: rgba(200,200,200,0.2) !important;
+      .input::placeholder{
+        color: #ddd;
+      }
+      icon{
+        color: rgba(200,200,200,0.2);
+      }
+    }
+    avatar{
+      background-color: rgba(200,200,200,0.2);
+      color: rgba(200,200,200,0);
+    }
+    .user-info{
+      .greeting{
+        background-color: rgba(200,200,200,0.2);
+        color: rgba(200,200,200,0);
+        border-radius: .5em;
+      }
+      .name{
+        background-color: rgba(200,200,200,0.2);
+        color: rgba(200,200,200,0);
+        border-radius: .5em;
+        height: 16px;
+        top: -.2em;
+      }
+      button{
+        color: #ddd !important;
+      }
+    }
+  }
+}
+
+.dashboard{
+  padding: .4em .8em;
+  .welcome{
+    height: 290px;
+    background-color: #fff;
+    @include border-radius(.8em);
+    .text{
+      padding: .4em .8em;
+      font-family: Poppins;
+      .greetings{
+        font-family: Poppins-SemiBold;
+        font-size: 1.6em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .explain{
+        font-family: Lexend;
+        font-size: .9em;
+        color: #777;
+        padding: .8em .5em .5em .5em;
+      }
+      .light{
+        background-color: mix(#fff,$theme);
+        padding: 0 .8em;
+        font-size: .8em;
+        color: white;
+        margin-left: .5em;
+        font-family: Poppins-Bold;
+        @include border-radius(.8em);
+      }
+    }
+    .welcome-img{
+      background-image: url("../assets/login.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      height: inherit;
+    }
+  }
+  .canvas-wrapper{
+    padding: .4em;
+  }
+}
+
+.user-panel{
+  padding: 1em;
+  background-color: white;
+  @include border-radius(.4em);
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  z-index: 2;
+  @include box-shadow(0 2px 4px 0 #ccc);
+  avatar{
+    width: 70px;
+    height: 70px;
+    font-size: 1.6em;
+    line-height: 70px;
+  }
+  .user-info{
+    @extend %user-info;
+    .greeting{
+      font-size: .8em;
+    }
+    .name{
+      font-size: 1em;
+      top: 0;
+    }
+  }
+  .action{
+    padding: .5em;
+    font-family: Poppins;
+    color: #777;
+    icon{
+      width: 43px;
+      height: 43px;
+      text-align: center;
+      line-height: 43px;
+      font-size: 1.2em;
+      @include border-radius(100%);
+      background-color: #eee;
+      margin: 0 .4em;
+      &:hover{
+        cursor: pointer;
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+//Annees académiques
+.aio{
+  .list-presentation{
+    height: 100%;
+  }
+  .list{
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    .header{
+      height: 70px;
+      font-family: Poppins-SemiBold;
+      font-size: 1.8em;
+      icon{
+        font-size: 1.8em;
+        padding: 0 .5em;
+      }
+    }
+    .body{
+      padding: .5em;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      display: inline-flex;
+      align-items: center;
+      flex-direction: column;
+      item{
+        padding: .5em;
+        font-family: Lexend;
+        font-size: 1.3em;
+        transition-duration: .2s;
+        transition-property: padding, font-size, color;
+        &:hover{
+          color: mix(#347,$theme);
+          cursor: pointer;
+          padding-left: 1em;
+        }
+        &.active{
+          color: $theme;
+          font-size: 1.8em;
+          padding-left: 1em;
+          font-family: Lexend-SemiBold;
+        }
+        &.less{
+          font-family: Poppins;
+          font-size: .7em;
+          width: auto;
+          background-color: #ddd;
+          @include border-radius(1em);
+          padding: .3em .5em;
+          color: #777;
+        }
+      }
+    }
+  }
+  .presentation{
+    padding: 1em .5em .5em .4em;
+    .diagramme{
+      height: 50%;
+    }
+    .state-box{
+      label{
+        font-family: Lexend;
+        font-size: .9em;
+        padding: .4em;
+      }
+      .combined{
+        height: 30px;
+        button {
+          height: 30px;
+          line-height: 0;
+          font-size: .9em;
+          &:first-child {
+            @include border-radius(.5em 0 0 .5em);
+          }
+          &:last-child {
+            border-right: 1px solid #cde;
+            @include border-radius(0 .5em .5em 0);
+          }
+        }
+      }
+    }
+  }
+  .form-add{
+    height: 100%;
+    h1{
+      padding: .5em;
+      font-family: Lexend-SemiBold;
+      font-size: 1.4em;
+    }
+    .anneeAcademique{
+      font-family: Lexend;
+      font-size: 1em;
+    }
+    label{
+      font-family: Poppins;
+      font-size: .8em;
+      &.linked{
+        position: relative;
+        top: 1.8em;
+      }
+    }
+    #Aka-yearForm{
+      padding: .5em 1em;
+    }
+    .group{
+      .field:first-child{
+        margin-right: .4em;
+      }
+      .field:last-child{
+        margin-left: .4em;
+      }
+    }
+  }
+}
+
+//Administration
+.administration{
+  .adminer{
+    height: 100%;
+    position: relative;
+    width: calc(100% * 7 / 12);
+  }
+  .list, .presentation{
+    height: 100%;
+  }
+  .list{
+    .label{
+      font-family: Lexend;
+      font-size: 1.2em;
+      padding: .8em .5em;
+    }
+    .body{
+      padding: .5em;
+      overflow-y: auto !important;
+      item{
+        padding: .5em;
+        line-height: 1.2em;
+        margin-bottom: .5em;
+        background-color: #fff;
+        @include box-shadow(0 1px 2px 0 #ccc);
+        height: 50px;
+        @include border-radius(.4em);
+        cursor: pointer;
+        &.faculty{
+          font-family: Lexend;
+        }
+        .name{
+          font-family: Lexend;
+          font-size: 1em;
+          height: 100%;
+        }
+        .action{
+          padding: 0;
+          display: none;
+          height: 40px;
+          button{
+            height: inherit;
+            background-color: unset;
+            color: mix($theme, #333);
+            &:hover{
+              color: $theme;
+              background-color: rgba(200,200,200,0.4);
+            }
+          }
+        }
+        &.a{background-color: rgba(230, 239, 253, 0.4)
+        }
+        &.b{background-color: rgba(252, 247, 218, 0.4)
+        }
+        &.c{background-color: rgba(227, 253, 250, 0.4)
+        }
+        &.d{background-color: rgba(255, 241, 238, 0.4)
+        }
+        &.e{background-color: rgba(248, 255, 231, 0.4)
+        }
+        &.f{background-color: rgba(255, 240, 231, 0.4)
+        }
+        &:hover{
+          background-color: rgba(200,200,200,0.1);
+          .action{
+            display: inline-flex;
+          }
+        }
+      }
+    }
+    .adder{
+      padding: .4em;
+      height: 60px;
+      .field{
+        height: 50px;
+        .combined{
+          padding-right: 0;
+        }
+        .redo:hover{
+          cursor: pointer;
+          color: mix(#333,$theme);
+        }
+        #addFac{
+          background-color: unset;
+          font-size: 1.3em;
+          color: white;
+          background-color: $theme;
+          height: 45px;
+          width: 50px;
+          @include border-radius(1em);
+          text-align: center;
+          border: 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .presentation{
+    padding: .4em;
+    .nom{
+      padding: .5em;
+      font-family: Lexend-SemiBold;
+      font-size: 1.2em;
+    }
+    .statistics{
+      font-family: Poppins !important;
+      font-size: 1em;
+      .field{
+        height: 40px;
+      }
+    }
+    h1{
+      padding: .8em .4em;
+      font-size: 1.2em;
+    }
+    .grade-head{
+      .action button{
+        background-color: rgba(238, 238, 238, 0.45);
+        color: $theme;
+        font-family: Lexend-SemiBold;
+      }
+    }
+    .item{
+      padding: 0 .4em;
+      height: 50px;
+      border-bottom: 1px solid #eee;
+      font-family: Lexend;
+      .notation{
+        font-family: Poppins;
+      }
+      .action{
+        display: none;
+        height: inherit;
+      }
+      button{
+        background-color: rgba(200,200,200,.1);
+        color: $theme;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(100,100,100,.2);
+        }
+      }
+      &:hover{
+        .action{
+          display: inline-flex;
+        }
+      }
+    }
+  }
+}
+
+//Professeur
+.teacher,.student, .course, .notes, .users{
+  .sort{
+    padding: .4em;
+    label{
+      font-family: Rubik;
+      font-size: 1.3em;
+      padding: .3em .5em;
+    }
+    .action{
+      button{
+        padding: .4em 1em;
+      }
+    }
+    .field{
+      @include border-radius(.4em);
+      height: 30px;
+      margin: 0 .2em;
+    }
+  }
+  .list{
+    padding: 0 .4em;
+    item{
+      @extend %item-meta;
+      .courses{
+        max-height: 180px;
+        h3{
+          font-family: Poppins;
+          padding: .4em .2em;
+        }
+        .row{
+          padding: .1em;
+          margin: .2em 0;
+          .label{
+            font-family: Poppins-SemiBold;
+            padding: .2em 0;
+          }
+          .content{
+            padding: .1em;
+            .item{
+              font-family: Poppins;
+              font-size: .8em;
+              padding: .2em 0 .2em .5em;
+              background-color: #eee;
+              margin: .15em 0;
+              @include border-radius(.4em);
+            }
+          }
+        }
+      }
+    }
+  }
+  .identification{
+    padding: .4em;
+    span{
+      font-family: Poppins-SemiBold;
+      color: #444;
+      font-size: 1.2em;
+      &.code{
+        font-family: Poppins;
+        color: #000;
+        font-size: 1em;
+        padding: 0 .4em;
+      }
+    }
+  }
+  .infos{
+    .avatar-box{
+      padding: .8em .4em;
+    }
+    avatar{
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      font-size: 1.4em;
+    }
+    .name{
+      font-family: Lexend-SemiBold;
+      font-size: 1.6em;
+      margin-bottom: .2em;
+    }
+    .row{
+      padding: .2em;
+      .head{
+        font-size: .9em;
+        font-family: Poppins-SemiBold;
+        padding: .3em 0;
+      }
+      .data{
+        font-family: Poppins;
+        font-size: 1em;
+        padding: .2em 0;
+        line-height: 1.2em;
+      }
+      .sub-row{
+        font-family: Lexend;
+        font-size: 1em;
+      }
+    }
+    label{
+      font-family: Poppins;
+      font-size: .9em;
+    }
+  }
+}
+
+.teacher item{
+  &.open{
+    height: 380px;
+  }
+}
+
+#studentForm, #teacherForm, #userForm{
+  .code-box{
+    padding-left: 1em;
+  }
+  .avatar-box {
+    @extend %avatar-box;
+  }
+}
+
+#userForm{
+  .avatar-box{
+    avatar {
+      width: 121px;
+      height: 121px;
+      line-height: 121px;
+      font-size: 3em;
+      color: #999;
+    }
+    .avatar-chooser {
+      width: 43px;
+      height: 43px;
+      line-height: 43px;
+      font-size: 1.2em;
+      top: calc(121px - 40px);
+      left: calc(121px - 43px);
+    }
+  }
+  .privilegies{
+    padding: .5em 0;
+    label{
+      padding: .4em 0;
+    }
+  }
+  .module-box{
+    .sub-modules{
+      padding: 0 0 0 2em;
+    }
+    .modules{
+      padding: .4em;
+      margin: .2em 0;
+      background-color: #fff;
+      @include box-shadow(0 0 2px 0 #ccc);
+      font-family: Poppins;
+      @include border-radius(.4em);
+      font-size: .9em;
+      cursor: pointer;
+      transition-property: background-color;
+      transition-duration: .2s;
+      .input{
+        width: 50px;
+      }
+      label,.input{
+        cursor: pointer;
+      }
+      &.head{
+        label{
+          padding: 0;
+          font-family: Poppins-SemiBold;
+        }
+      }
+      .more{
+        width: 30px;
+        height: 30px;
+        background-color: rgba(238, 238, 238, 0.43);
+        text-align: center;
+        line-height: 30px;
+        @include border-radius(100%);
+      }
+      &.selected{
+        background-color: #3d6d6d;
+        color: white;
+        .more{
+          color: #3d6d6d;
+        }
+      }
+    }
+  }
+}
+
+//cours
+.course{
+  h2{
+    font-size: 1em;
+    padding: .2em .4em;
+  }
+  label.free{
+    padding: .4em 0;
+    font-size: 1.3em;
+    font-family: Poppins-SemiBold;
+  }
+  .course-schedule{
+    .days,.course_type{
+      font-size: .8em;
+      button:first-child{
+        @include border-radius(.5em 0 0 .5em);
+      }
+      button:last-child{
+        @include border-radius(0 .5em .5em 0);
+      }
+    }
+    p{
+      padding: .4em;
+      font-size: .8em;
+      text-align: justify;
+      font-family: Merriweather-Light;
+      line-height: 1.5em;
+    }
+  }
+  .scheduled-courses{
+    padding: .4em;
+    border-bottom: 1px solid #ccc;
+    item{
+      padding: .5em .4em;
+      background-color: #fff;
+      @include box-shadow(0 0 1px 0 #ddd);
+      font-family: Poppins;
+      span{
+        font-family: Lexend;
+        font-size: .7em;
+        font-style: italic;
+        color: #777;
+      }
+      icon{
+        cursor: pointer;
+        padding: .4em 0;
+      }
+    }
+  }
+  #schedule{
+    @include border-radius(.8em);
+  }
+  .header{
+    height: 100px !important;
+    padding: .2em .5em !important;
+    font-size: 1em !important;
+  }
+  .body{
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+  .wrapper.table-host{
+    height: auto !important;
+    min-height: 25px;
+  }
+  .hint-box{
+    padding: 0;
+    font-size: .9em;
+    icon.rounded{
+      background-color: rgba(27, 70, 62, 0.25);
+    }
+  }
+  .bloc{
+    .fac{
+      font-family: Rubik;
+      max-width: 100%;
+      width: auto;
+      font-size: 1.1em;
+      padding: .3em 1em .3em .3em;
+      @include border-radius(1em 4em 0 0);
+      background-color: #5b848e;
+      color: white;
+      &.none{
+        padding: 0;
+        display: none !important;
+      }
+    }
+  }
+  .table{
+    padding: .4em;
+    .range{
+      padding: .2em 0;
+      font-size: .9em;
+      .day{
+        background-color: mix(#999,$theme);
+        color: white;
+        width: 77px;
+        text-align: center;
+        padding: .4em;
+        font-family: Poppins;
+        @include border-radius(.4em);
+      }
+      .hour{
+        padding: .4em;
+        font-family: Lexend;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        @include border-radius(0 .4em .4em 0);
+        margin: 0 .2em;
+        &.cm{
+          border-left: 4px solid $cm_bg;
+        }
+        &.tp{
+          border-left: 4px solid $tp_bg;
+        }
+      }
+    }
+  }
+  .legend{
+    padding: 1em 0 .5em 0;
+    .hint{
+      padding: .2em;
+      margin: 0 .5em;
+      font-family: Lexend;
+      font-size: .8em;
+      .square{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: .5em;
+        background-color: $extra_bg;
+        &.cm{
+          background-color: $cm_bg;
+        }
+        &.tp{
+          background-color: $tp_bg;
+        }
+      }
+    }
+  }
+  .action{
+    .state{
+      font-size: .8em;
+    }
+  }
+}
+.schedular{
+  .sort-zone,.visual,.schedular-box{
+    height: 100%;
+  }
+  .sort-zone{
+    padding: 1em 2em 2em .5em;
+    .field{
+      margin: .4em 0;
+      height: 40px;
+      @include border-radius(.8em);
+    }
+    .action{
+      button{
+        @include border-radius(.4em);
+        padding: .6em 1em;
+      }
+    }
+  }
+  .visual{
+    overflow: hidden;
+    @include border-radius(.5em);
+  }
+}
+.schedular-box{
+  height: 100%;
+  .header{
+    background-color: #3e8685;
+    color: white;
+    .facname{
+      font-size: 1.4em;
+      font-family: Poppins-SemiBold;
+      padding: .3em 0;
+    }
+    .schema{
+      padding: .2em;
+      .arrow{
+        padding: 0 .4em;
+        background-color: #cde;
+        position: relative;
+        font-size: .8em;
+        height: 30px;
+        padding-left: 30px;
+        &:first-child{
+          padding-left: .4em;
+        }
+        span{
+          height: 30px;
+          display: block;
+          width: 100%;
+          line-height: 30px;
+          font-family: Lexend;
+          position: relative;
+          background-color: #cde;
+          z-index: 3;
+          color: #333;
+        }
+        &::after{
+          position: absolute;
+          height: 21px;
+          display: inline-block;
+          content: " ";
+          width: 21px;
+          background-color: #cde;
+          right: -10px;
+          top: 5px;
+          z-index: 2;
+          @include box-shadow(1px 1px 1px 0 #889);
+          @include transform(rotate(-45deg));
+        }
+      }
+    }
+  }
+  .grid{
+    height: 100%;
+    background-color: #eee;
+    overflow: hidden;
+    overflow-y: auto;
+    .dayColumn{
+      position: relative;
+      height: 100%;
+      &:first-child .head{
+        @include border-radius(0 0 0 .8em);
+      }
+      &:last-child {
+        .head {
+          @include border-radius(0 0 .8em 0);
+        }
+        .course-range{
+          border-right: 1px solid #cbd7d5;
+        }
+      }
+      .head{
+        height: 30px;
+        font-family: Lexend-SemiBold;
+        font-size: .9em;
+        padding: 0 .2em;
+        line-height: 30px;
+        background-color: #93c5c7;
+        text-align: center;
+      }
+      .course-range{
+        height: 100%;
+        position: relative;
+        padding: .2em;
+        border-left: 1px solid #cbd7d5;
+        .row{
+          @include border-radius(.2em);
+          background-color: #cbd7d5;
+          //overflow: hidden;
+          width: 93%;
+          font-family: Poppins;
+          font-size: .8em;
+          position: absolute;
+          text-align: center;
+          span{
+            &:first-child{
+              font-family: Poppins-SemiBold;
+              font-size: .9em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Notes
+.notes{
+  .visual{
+    &, .view-list{
+      height: 100%;
+    }
+    .header{
+      height: 40px;
+      padding: 0 .3em;
+      font-size: 1.3em;
+      .name{
+        font-family: Poppins;
+      }
+      .legend{
+        padding: .2em .4em;
+        margin-right: .4em;
+        font-family: Poppins-SemiBold;
+        font-size: .8em;
+        background-color: $theme;
+        @include border-radius(.4em);
+        color: white;
+      }
+      .maximum{
+        font-family: Lexend;
+        font-size: .9em;
+        padding-right: .5em;
+      }
+      .hint{
+        font-family: Poppins-Light;
+        font-size: .6em;
+        height: inherit;
+        padding: 0 .3em 0 .5em;
+        border-left: 1px solid #eee;
+      }
+    }
+    .list{
+      height: 100%;
+      .row{
+        height: 49px;
+        padding: 0 .2em;
+        border-bottom: 1px solid #ddd;
+        .name{
+          font-family: Poppins-SemiBold;
+          font-size: 1em;
+        }
+        .code{
+          font-family: Poppins;
+          font-size: .8em;
+        }
+        .field{
+          height: 40px;
+        }
+      }
+    }
+    .action{
+      height: 60px;
+      padding: 0 .5em;
+      button{
+        @include border-radius(.4em);
+      }
+    }
+  }
+}
+
+.results{
+  padding: .3em;
+  .head{
+    @extend %head;
+  }
+}
+
+table{
+  font-family: 'Merriweather-Light';
+  display: block;
+  tbody{
+    width: 100%;
+    display: block;
+  }
+  tr{
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    td,th{
+      height: inherit;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      &.name{
+        justify-content: flex-start;
+        font-family: Poppins;
+        font-size: .8em;
+      }
+    }
+    th{
+      font-family: Poppins-SemiBold !important;
+      font-weight: normal;
+      font-size: .75em !important;
+      padding: 0;
+    }
+    &:first-child{
+      padding: .3em;
+      background-color: $theme;
+      color: #fff;
+      font-family: Roboto;
+      border-bottom: 0;
+    }
+    td{
+      font-size: .9em;
+      vertical-align: top;
+      height: inherit;
+      font-family: Lexend;
+      &.good{
+        color: #475d32;
+        height: 35px;
+        background-color: #e6f7d3;
+      }
+      &.bad{
+        color: #5d3232;
+        height: 35px;
+        background-color: #f7d3d3;
+      }
+      &.bareme{
+        background-color: #eee;
+        td{
+          font-family: Poppins-Bold;
+          font-size: .8em;
+        }
+      }
+    }
+  }
+}
+
+.list-printing{
+  .metadatas{
+    @extend %item-meta;
+    height: auto;
+    overflow: unset;
+  }
+  .metadata{
+    height: auto !important;
+  }
+}
+
+//users
+.users{
+  .header{
+    height: 100px !important;
+    padding: .2em .5em !important;
+    font-size: 1em !important;
+  }
+  .list{
+    padding: 1em .4em;
+  }
+}
+
+.account{
+  .avatar-zone{
+    width: 200px;
+    .avatar-box {
+      @extend %avatar-box;
+
+      avatar {
+        height: 140px;
+        font-size: 3em;
+        width: 140px;
+        line-height: 140px;
+      }
+
+      .avatar-chooser {
+        width: 43px;
+        height: 43px;
+        line-height: 43px;
+        top: calc(140px - 43px);
+        left: calc(140px - 43px);
+      }
+    }
+  }
+  .personnal{
+    padding: .5em;
+    label{
+      font-family: Lexend;
+      font-size: 1em;
+      padding: .4em 0;
+      &.name{
+        font-size: 2.1em;
+        font-family: Poppins-SemiBold;
+      }
+      &.pseudo{
+        color: #999;
+      }
+    }
+    .hint{
+      margin-bottom: 1.4em;
+      span{
+        color: #888;
+        font-family: OpenSans-Semibold;
+        padding: .3em .5em .3em 2em;
+      }
+    }
+    .percent{
+      height: 4px;
+      @include border-radius(.4em);
+      background-color: #ccc;
+      .line{
+        background-color: $theme;
+        @include border-radius(.4em);
+        height: 4px;
+      }
+    }
+  }
+}
